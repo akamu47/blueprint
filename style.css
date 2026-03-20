@@ -413,7 +413,7 @@ small {
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 900px;
   padding: var(--space-8);
 }
@@ -447,7 +447,7 @@ small {
 
 .hero-scroll-indicator {
   position: absolute;
-  bottom: var(--space-8);
+  bottom: var(--space-4);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -459,6 +459,8 @@ small {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   animation: bounce-subtle 2s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
 }
 
 @keyframes bounce-subtle {
@@ -2090,4 +2092,13 @@ hr {
   background: rgba(59,130,246,0.15);
   color: #3B82F6;
   border-color: rgba(59,130,246,0.3);
+}
+
+/* Chart Height Fix */
+.chart-container canvas {
+  max-height: 280px !important;
+}
+.chart-container .chart-header + canvas,
+.chart-container .chart-header ~ canvas {
+  max-height: 260px !important;
 }

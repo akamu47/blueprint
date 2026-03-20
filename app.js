@@ -56,7 +56,8 @@ function initCharts() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRatio: 1.8,
         indexAxis: 'y',
         plugins: { legend: { display: false } },
         scales: {
@@ -95,7 +96,8 @@ function initCharts() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
         scales: {
           x: { grid: { display: false } },
           y: { beginAtZero: true, grid: { color: WHITE_10 } }
@@ -135,7 +137,8 @@ function initCharts() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
         scales: {
           x: { grid: { display: false } },
           y: { min: 95, grid: { color: WHITE_10 } }
@@ -164,7 +167,8 @@ function initCharts() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
         plugins: {
           annotation: {},
           legend: { display: false }
@@ -205,7 +209,8 @@ function initCharts() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
         plugins: { legend: { position: 'bottom' } },
         scales: {
           x: { stacked: false, grid: { display: false } },
@@ -235,7 +240,8 @@ function initCharts() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
         plugins: { legend: { display: false } },
         scales: {
           x: { grid: { display: false } },
@@ -265,7 +271,8 @@ function initCharts() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
         plugins: { legend: { display: false } },
         scales: {
           x: { grid: { display: false } },
@@ -293,7 +300,8 @@ function initCharts() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
         plugins: { legend: { display: false } },
         scales: {
           x: { grid: { display: false } },
@@ -319,7 +327,8 @@ function initCharts() {
       },
       options: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
         cutout: '65%',
         plugins: {
           legend: { position: 'bottom' }

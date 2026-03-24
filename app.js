@@ -1,5 +1,5 @@
 /**
- * Manifesto for a Better Britain — Main Application Script
+ * blueprint for a Better Britain V2 — Main Application Script
  * Charts, navigation, chatbot, and scroll animations.
  */
 
@@ -15,17 +15,17 @@ Chart.defaults.plugins.legend.labels.usePointStyle = true;
 Chart.defaults.plugins.legend.labels.pointStyle = 'circle';
 Chart.defaults.plugins.legend.labels.padding = 16;
 Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(10, 22, 40, 0.95)';
-Chart.defaults.plugins.tooltip.titleColor = '#00B4A0';
+Chart.defaults.plugins.tooltip.titleColor = '#3B82F6';
 Chart.defaults.plugins.tooltip.bodyColor = '#ffffff';
-Chart.defaults.plugins.tooltip.borderColor = 'rgba(0,180,160,0.3)';
+Chart.defaults.plugins.tooltip.borderColor = 'rgba(59,130,246,0.3)';
 Chart.defaults.plugins.tooltip.borderWidth = 1;
 Chart.defaults.plugins.tooltip.padding = 12;
 Chart.defaults.plugins.tooltip.cornerRadius = 8;
 Chart.defaults.animation = { duration: 800, easing: 'easeOutQuart' };
 
-const TEAL = '#00B4A0';
-const TEAL_50 = 'rgba(0,180,160,0.5)';
-const TEAL_20 = 'rgba(0,180,160,0.2)';
+const TEAL = '#3B82F6';
+const TEAL_50 = 'rgba(59,130,246,0.5)';
+const TEAL_20 = 'rgba(59,130,246,0.2)';
 const BLUE = '#3B82F6';
 const BLUE_50 = 'rgba(59,130,246,0.5)';
 const BLUE_20 = 'rgba(59,130,246,0.2)';
@@ -33,12 +33,182 @@ const RED = '#EF4444';
 const RED_50 = 'rgba(239,68,68,0.5)';
 const AMBER = '#F59E0B';
 const AMBER_50 = 'rgba(245,158,11,0.5)';
+const PURPLE = '#8B5CF6';
+const PURPLE_50 = 'rgba(139,92,246,0.5)';
+const GREEN = '#22C55E';
+const GREEN_50 = 'rgba(34,197,94,0.5)';
 const WHITE_30 = 'rgba(255,255,255,0.3)';
 const WHITE_10 = 'rgba(255,255,255,0.1)';
 
 // ─── Chart Initialization ───
 function initCharts() {
-  // G7 Business Investment
+
+  // ═══ TRUST: Politicians "out for themselves" ═══
+  const trustCtx = document.getElementById('chart-trust-politicians');
+  if (trustCtx) {
+    new Chart(trustCtx, {
+      type: 'line',
+      data: {
+        labels: ['1944', '1972', '1986', '1994', '2000', '2005', '2009', '2014', '2019', '2021', '2024'],
+        datasets: [{
+          label: '"Out for themselves" %',
+          data: [35, 38, 46, 52, 57, 56, 60, 48, 54, 63, 67],
+          borderColor: RED,
+          backgroundColor: RED_50,
+          fill: false,
+          tension: 0.3,
+          pointRadius: 4,
+          pointBackgroundColor: RED,
+          borderWidth: 2.5
+        }, {
+          label: '"Almost never" trust gov %',
+          data: [null, null, null, null, null, 23, 28, 26, 31, 35, 45],
+          borderColor: AMBER,
+          backgroundColor: AMBER_50,
+          fill: false,
+          tension: 0.3,
+          pointRadius: 4,
+          pointBackgroundColor: AMBER,
+          borderWidth: 2,
+          borderDash: [5, 3]
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
+        plugins: {
+          legend: { position: 'top' }
+        },
+        scales: {
+          y: { beginAtZero: true, max: 80, grid: { color: WHITE_10 }, ticks: { callback: v => v + '%' } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+  }
+
+  // ═══ NET MIGRATION ═══
+  const migCtx = document.getElementById('chart-net-migration');
+  if (migCtx) {
+    new Chart(migCtx, {
+      type: 'bar',
+      data: {
+        labels: ['2015', '2016\nRef.', '2017', '2018', '2019', '2020', '2021', '2022', '2023\nPeak', '2024', '2025'],
+        datasets: [{
+          label: 'Net Migration (thousands)',
+          data: [332, 326, 283, 261, 271, 36, 279, 745, 944, 543, 204],
+          backgroundColor: function(context) {
+            const v = context.dataset.data[context.dataIndex];
+            if (v > 700) return RED_50;
+            if (v > 400) return AMBER_50;
+            return TEAL_50;
+          },
+          borderColor: function(context) {
+            const v = context.dataset.data[context.dataIndex];
+            if (v > 700) return RED;
+            if (v > 400) return AMBER;
+            return TEAL;
+          },
+          borderWidth: 1.5,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => `Net migration: ${ctx.formattedValue}k`
+            }
+          }
+        },
+        scales: {
+          y: { beginAtZero: true, grid: { color: WHITE_10 }, ticks: { callback: v => v + 'k' } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+  }
+
+  // ═══ DEBT EXPLOSION ═══
+  const debtCtx = document.getElementById('chart-debt-explosion');
+  if (debtCtx) {
+    new Chart(debtCtx, {
+      type: 'bar',
+      data: {
+        labels: ['2000', '2005', '2008', '2010', '2013', '2016', '2019', '2022', '2024', '2026'],
+        datasets: [{
+          label: 'Net Debt (£bn)',
+          data: [310, 420, 530, 950, 1190, 1600, 1790, 2370, 2700, 2871],
+          backgroundColor: function(context) {
+            const idx = context.dataIndex;
+            if (idx >= 8) return RED_50;
+            if (idx >= 5) return AMBER_50;
+            return TEAL_20;
+          },
+          borderColor: function(context) {
+            const idx = context.dataIndex;
+            if (idx >= 8) return RED;
+            if (idx >= 5) return AMBER;
+            return TEAL;
+          },
+          borderWidth: 1.5,
+          borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => `£${ctx.formattedValue}bn` } }
+        },
+        scales: {
+          y: { beginAtZero: true, grid: { color: WHITE_10 }, ticks: { callback: v => '£' + (v >= 1000 ? (v/1000).toFixed(1) + 'tn' : v + 'bn') } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+  }
+
+  // ═══ DEBT INTEREST VS KEY SPENDING ═══
+  const debtSpendCtx = document.getElementById('chart-debt-vs-spending');
+  if (debtSpendCtx) {
+    new Chart(debtSpendCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Debt Interest', 'Education\n(schools)', 'Defence', 'Transport'],
+        datasets: [{
+          label: '£ billions (2025-26)',
+          data: [111.2, 65.3, 61.7, 21.8],
+          backgroundColor: [RED_50, PURPLE_50, BLUE_50, TEAL_20],
+          borderColor: [RED, PURPLE, BLUE, TEAL],
+          borderWidth: 1.5,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 1.6,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => `£${ctx.formattedValue}bn` } }
+        },
+        scales: {
+          y: { beginAtZero: true, grid: { color: WHITE_10 }, ticks: { callback: v => '£' + v + 'bn' } },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+  }
+
+  // ═══ G7 BUSINESS INVESTMENT ═══
   const g7Ctx = document.getElementById('chart-g7-investment');
   if (g7Ctx) {
     new Chart(g7Ctx, {
@@ -68,7 +238,7 @@ function initCharts() {
     });
   }
 
-  // LSE Listings Crisis
+  // ═══ LSE LISTINGS ═══
   const lseCtx = document.getElementById('chart-lse-listings');
   if (lseCtx) {
     new Chart(lseCtx, {
@@ -98,203 +268,28 @@ function initCharts() {
         responsive: true,
         maintainAspectRatio: true,
         aspectRatio: 1.6,
+        plugins: { legend: { position: 'top' } },
         scales: {
-          x: { grid: { display: false } },
-          y: { beginAtZero: true, grid: { color: WHITE_10 } }
+          y: { beginAtZero: true, grid: { color: WHITE_10 } },
+          x: { grid: { display: false } }
         }
       }
     });
   }
 
-  // UK Productivity
-  const prodCtx = document.getElementById('chart-productivity');
-  if (prodCtx) {
-    new Chart(prodCtx, {
-      type: 'line',
-      data: {
-        labels: ['2019', '2020', '2021', '2022', '2023', '2024', '2025'],
-        datasets: [
-          {
-            label: 'Actual',
-            data: [100, 97.8, 99.1, 100.5, 101.0, 101.8, 102.4],
-            borderColor: TEAL,
-            backgroundColor: TEAL_20,
-            fill: true,
-            tension: 0.4,
-            pointRadius: 4,
-            pointBackgroundColor: TEAL
-          },
-          {
-            label: 'Pre-2008 Trend',
-            data: [100, 102.0, 104.0, 106.1, 108.2, 110.4, 112.6],
-            borderColor: WHITE_30,
-            borderDash: [6, 4],
-            fill: false,
-            tension: 0.4,
-            pointRadius: 0
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        aspectRatio: 1.6,
-        scales: {
-          x: { grid: { display: false } },
-          y: { min: 95, grid: { color: WHITE_10 } }
-        }
-      }
-    });
-  }
-
-  // Tax Burden
-  const taxCtx = document.getElementById('chart-tax-burden');
-  if (taxCtx) {
-    new Chart(taxCtx, {
-      type: 'line',
-      data: {
-        labels: ['2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030'],
-        datasets: [{
-          label: 'Tax Burden (% GDP)',
-          data: [33.0, 33.1, 33.5, 34.2, 35.0, 35.8, 36.4, 36.9, 37.3, 37.7, 38.1, 38.5],
-          borderColor: AMBER,
-          backgroundColor: 'rgba(245,158,11,0.15)',
-          fill: true,
-          tension: 0.4,
-          pointRadius: 3,
-          pointBackgroundColor: AMBER
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        aspectRatio: 1.6,
-        plugins: {
-          annotation: {},
-          legend: { display: false }
-        },
-        scales: {
-          x: { grid: { display: false } },
-          y: { min: 32, max: 40, grid: { color: WHITE_10 } }
-        }
-      }
-    });
-  }
-
-  // AI Savings
-  const aiCtx = document.getElementById('chart-ai-savings');
-  if (aiCtx) {
-    new Chart(aiCtx, {
-      type: 'bar',
-      data: {
-        labels: ['Year 1', 'Year 2', 'Year 3', 'Year 4', 'Year 5', 'Year 6', 'Year 7', 'Year 8', 'Year 9', 'Year 10'],
-        datasets: [
-          {
-            label: 'Investment',
-            data: [-0.8, -0.7, -0.6, -0.5, -0.3, -0.1, -0.1, -0.05, -0.05, 0],
-            backgroundColor: RED_50,
-            borderColor: RED,
-            borderWidth: 1,
-            borderRadius: 4
-          },
-          {
-            label: 'Savings',
-            data: [0.2, 0.5, 1.0, 1.8, 2.4, 3.0, 3.0, 3.0, 3.0, 3.0],
-            backgroundColor: TEAL_50,
-            borderColor: TEAL,
-            borderWidth: 1,
-            borderRadius: 4
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        aspectRatio: 1.6,
-        plugins: { legend: { position: 'bottom' } },
-        scales: {
-          x: { stacked: false, grid: { display: false } },
-          y: { grid: { color: WHITE_10 }, ticks: { callback: v => `£${v}bn` } }
-        }
-      }
-    });
-  }
-
-  // AIM Market Decline
-  const aimCtx = document.getElementById('chart-aim-decline');
-  if (aimCtx) {
-    new Chart(aimCtx, {
-      type: 'line',
-      data: {
-        labels: ['2007', '2009', '2011', '2013', '2015', '2017', '2019', '2021', '2023', '2025'],
-        datasets: [{
-          label: 'AIM-Listed Companies',
-          data: [1694, 1293, 1143, 1087, 1044, 950, 855, 815, 740, 679],
-          borderColor: RED,
-          backgroundColor: 'rgba(239,68,68,0.15)',
-          fill: true,
-          tension: 0.4,
-          pointRadius: 4,
-          pointBackgroundColor: RED
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        aspectRatio: 1.6,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { grid: { display: false } },
-          y: { min: 500, grid: { color: WHITE_10 } }
-        }
-      }
-    });
-  }
-
-  // Young Homeownership
-  const homeCtx = document.getElementById('chart-homeownership');
-  if (homeCtx) {
-    new Chart(homeCtx, {
-      type: 'line',
-      data: {
-        labels: ['1996', '2000', '2004', '2008', '2012', '2016', '2020', '2024'],
-        datasets: [{
-          label: '20-39 Year Olds Owning a Home (%)',
-          data: [54, 51, 47, 40, 35, 30, 28, 26],
-          borderColor: BLUE,
-          backgroundColor: BLUE_20,
-          fill: true,
-          tension: 0.4,
-          pointRadius: 4,
-          pointBackgroundColor: BLUE
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: true,
-        aspectRatio: 1.6,
-        plugins: { legend: { display: false } },
-        scales: {
-          x: { grid: { display: false } },
-          y: { min: 20, max: 60, grid: { color: WHITE_10 }, ticks: { callback: v => v + '%' } }
-        }
-      }
-    });
-  }
-
-  // Energy Costs
+  // ═══ ENERGY COSTS ═══
   const energyCtx = document.getElementById('chart-energy-costs');
   if (energyCtx) {
     new Chart(energyCtx, {
       type: 'bar',
       data: {
-        labels: ['UK', 'Germany', 'Italy', 'France', 'USA', 'Finland'],
+        labels: ['Finland', 'France', 'Sweden', 'USA', 'Germany', 'Italy', 'UK'],
         datasets: [{
-          label: 'Industrial Energy Cost (p/kWh)',
-          data: [25.33, 18.5, 16.2, 12.8, 7.5, 4.37],
-          backgroundColor: [RED_50, AMBER_50, AMBER_50, WHITE_30, WHITE_30, TEAL_50],
-          borderColor: [RED, AMBER, AMBER, 'transparent', 'transparent', TEAL],
-          borderWidth: [2, 1, 1, 0, 0, 2],
+          label: 'p/kWh',
+          data: [4.37, 8.12, 6.54, 7.89, 15.21, 18.45, 25.33],
+          backgroundColor: [TEAL_20, TEAL_20, TEAL_20, TEAL_20, AMBER_50, AMBER_50, RED_50],
+          borderColor: [TEAL, TEAL, TEAL, TEAL, AMBER, AMBER, RED],
+          borderWidth: 1.5,
           borderRadius: 4
         }]
       },
@@ -304,104 +299,122 @@ function initCharts() {
         aspectRatio: 1.6,
         plugins: { legend: { display: false } },
         scales: {
-          x: { grid: { display: false } },
-          y: { beginAtZero: true, grid: { color: WHITE_10 }, ticks: { callback: v => v + 'p' } }
+          y: { beginAtZero: true, grid: { color: WHITE_10 }, ticks: { callback: v => v + 'p' } },
+          x: { grid: { display: false } }
         }
       }
     });
   }
 
-  // Undersaving
-  const saveCtx = document.getElementById('chart-undersaving');
-  if (saveCtx) {
-    new Chart(saveCtx, {
-      type: 'doughnut',
+  // ═══ HOMEOWNERSHIP ═══
+  const homeCtx = document.getElementById('chart-homeownership');
+  if (homeCtx) {
+    new Chart(homeCtx, {
+      type: 'line',
       data: {
-        labels: ['Undersaving (14.6m)', 'Adequate Savings (19.4m)'],
+        labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020', '2025'],
         datasets: [{
-          data: [14.6, 19.4],
-          backgroundColor: [RED_50, TEAL_50],
-          borderColor: ['#0A1628', '#0A1628'],
-          borderWidth: 3
+          label: '% owning a home (20-39)',
+          data: [52, 49, 44, 40, 36, 32, 28, 26],
+          borderColor: RED,
+          backgroundColor: 'rgba(239,68,68,0.08)',
+          fill: true,
+          tension: 0.3,
+          pointRadius: 4,
+          pointBackgroundColor: RED,
+          borderWidth: 2.5
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: true,
         aspectRatio: 1.6,
-        cutout: '65%',
-        plugins: {
-          legend: { position: 'bottom' }
+        plugins: { legend: { display: false } },
+        scales: {
+          y: { beginAtZero: false, min: 20, max: 60, grid: { color: WHITE_10 }, ticks: { callback: v => v + '%' } },
+          x: { grid: { display: false } }
         }
       }
     });
   }
 }
 
+
 // ─── Navigation ───
-function initNavigation() {
-  const toggle = document.getElementById('navToggle');
-  const links = document.getElementById('navLinks');
+function initNav() {
   const navbar = document.getElementById('navbar');
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  const links = navLinks?.querySelectorAll('.nav-link') || [];
 
-  if (toggle && links) {
-    toggle.addEventListener('click', () => {
-      const isOpen = links.classList.toggle('nav-links-open');
-      toggle.classList.toggle('nav-toggle-active');
-      toggle.setAttribute('aria-expanded', isOpen);
-    });
+  // Scroll state
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (navbar) {
+      navbar.classList.toggle('nav-scrolled', y > 60);
+    }
+    lastScroll = y;
+  }, { passive: true });
 
-    links.querySelectorAll('.nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        links.classList.remove('nav-links-open');
-        toggle.classList.remove('nav-toggle-active');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-  }
+  // Mobile toggle
+  navToggle?.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('active', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
 
-  // Sticky nav background on scroll
-  if (navbar) {
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY;
-      if (scrollY > 100) {
-        navbar.classList.add('nav-scrolled');
-      } else {
-        navbar.classList.remove('nav-scrolled');
-      }
-      lastScroll = scrollY;
-    }, { passive: true });
-  }
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        const navHeight = navbar ? navbar.offsetHeight : 0;
-        const y = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      }
+  // Close mobile menu on link click
+  links.forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle?.classList.remove('active');
+      navToggle?.setAttribute('aria-expanded', 'false');
     });
   });
 
-  // Active nav link highlighting
+  // Active section highlighting
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach(link => {
-          link.classList.toggle('nav-link-active', link.getAttribute('href') === '#' + id);
+        const id = entry.target.id;
+        links.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
         });
       }
     });
-  }, { rootMargin: '-20% 0px -80% 0px' });
-  sections.forEach(section => observer.observe(section));
+  }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
+
+  sections.forEach(sec => observer.observe(sec));
 }
+
+
+// ─── Scroll Animations (IntersectionObserver fallback) ───
+function initScrollAnimations() {
+  if (CSS.supports && CSS.supports('animation-timeline', 'scroll()')) return;
+
+  const els = document.querySelectorAll('.fade-in');
+  if (!els.length) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  els.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s cubic-bezier(0.16,1,0.3,1), transform 0.6s cubic-bezier(0.16,1,0.3,1)';
+    obs.observe(el);
+  });
+}
+
 
 // ─── Chatbot ───
 function initChatbot() {
@@ -411,128 +424,114 @@ function initChatbot() {
   const input = document.getElementById('chatbotInput');
   const send = document.getElementById('chatbotSend');
   const messages = document.getElementById('chatbotMessages');
-  let history = [];
 
   if (!toggle || !panel) return;
 
   toggle.addEventListener('click', () => {
-    panel.classList.toggle('chatbot-panel-open');
-    panel.setAttribute('aria-hidden', !panel.classList.contains('chatbot-panel-open'));
-    if (panel.classList.contains('chatbot-panel-open')) {
-      toggle.style.display = 'none';
-      input.focus();
-    }
+    const open = panel.classList.toggle('open');
+    panel.setAttribute('aria-hidden', !open);
+    if (open) input?.focus();
   });
 
-  close.addEventListener('click', () => {
-    panel.classList.remove('chatbot-panel-open');
+  close?.addEventListener('click', () => {
+    panel.classList.remove('open');
     panel.setAttribute('aria-hidden', 'true');
-    toggle.style.display = '';
   });
 
-  function addMessage(role, text) {
+  function addMessage(text, isUser) {
     const div = document.createElement('div');
-    div.className = `chatbot-message chatbot-message-${role}`;
-    div.innerHTML = `<p>${text}</p>`;
+    div.className = `chatbot-message ${isUser ? 'chatbot-message--user' : 'chatbot-message-assistant'}`;
+    const p = document.createElement('p');
+    p.textContent = text;
+    div.appendChild(p);
     messages.appendChild(div);
     messages.scrollTop = messages.scrollHeight;
   }
 
-  async function sendMessage() {
-    const text = input.value.trim();
+  async function handleSend() {
+    const text = input?.value?.trim();
     if (!text) return;
+
+    addMessage(text, true);
     input.value = '';
-    addMessage('user', escapeHtml(text));
-    history.push({ role: 'user', content: text });
 
-    // Show typing indicator
-    const typing = document.createElement('div');
-    typing.className = 'chatbot-message chatbot-message-assistant chatbot-typing';
-    typing.innerHTML = '<p><span class="typing-dots"><span>.</span><span>.</span><span>.</span></span></p>';
-    messages.appendChild(typing);
-    messages.scrollTop = messages.scrollHeight;
-
+    // Try API, fall back to static responses
     try {
-      const res = await fetch(`${API}/api/chat`, {
+      const res = await fetch(`${API}/chat`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text, history: history.slice(-10) })
+        body: JSON.stringify({ message: text })
       });
-      const data = await res.json();
-      typing.remove();
-      const reply = data.reply || data.error || 'Sorry, I encountered an error.';
-      addMessage('assistant', formatMarkdown(reply));
-      history.push({ role: 'assistant', content: reply });
-    } catch (err) {
-      typing.remove();
-      addMessage('assistant', 'Sorry, I\'m unable to connect to the research assistant right now. Please try again later.');
+      if (res.ok) {
+        const data = await res.json();
+        addMessage(data.response || data.reply || 'No response received.', false);
+        return;
+      }
+    } catch (e) {
+      // Fall through to static
     }
+
+    // Static fallback
+    const lower = text.toLowerCase();
+    let reply;
+    if (lower.includes('trust') || lower.includes('believe') || lower.includes('politician')) {
+      reply = 'The blueprint documents a comprehensive trust collapse: 45% of the public "almost never" trust government (BSA 41, record high), while just 9% trust politicians to tell the truth (Ipsos). This is driven by the growing gap between promises and delivery — see Section 1, "The Crisis of Trust."';
+    } else if (lower.includes('five') || lower.includes('change') || lower.includes('priority') || lower.includes('start')) {
+      reply = 'Section 3 identifies five priority changes: (1) Fix How Government Delivers, (2) Build — Homes, Infrastructure, Planning, (3) Cheap, Clean, Secure Power, (4) Simplify Tax and Procurement, (5) Unlock Capital for Growth. Each includes specific reforms, costs, and the "Wolverhampton test" — what it means for ordinary families.';
+    } else if (lower.includes('implementation') || lower.includes('gap') || lower.includes('delivery') || lower.includes('nothing changes')) {
+      reply = 'Section 2 identifies five patterns of failure: the Planning Trap, Cost Estimation Failure, Political Cycle Disruption, the Rhetoric-Resource Gap, and Institutional Capacity Erosion. It proposes a Delivery Architecture including a statutory Delivery Unit, civil service reform, and anti-reversion transparency mechanisms.';
+    } else if (lower.includes('tier') || lower.includes('debate') || lower.includes('ready')) {
+      reply = 'Section 4 organises reforms into three tiers: Tier 1 (Ready to Go — delivery unit, planning fast-track, AI deployment), Tier 2 (Needs Design Work — IT/NI merger, National Investment Bank, energy reform), and Tier 3 (Long-Term Questions — triple lock, IHT abolition, constitutional reform). This honesty about readiness is deliberate.';
+    } else if (lower.includes('debt') || lower.includes('borrow') || lower.includes('deficit') || lower.includes('interest')) {
+      reply = 'National debt has reached \u00a32.87 trillion (Jan 2026) \u2014 approximately \u00a3102,000 per household, up from \u00a30.5 trillion in 2008. Debt interest alone costs \u00a3111.2 billion per year (OBR 2025-26 forecast), which is more than Britain spends on either education or defence. The OBR projects debt rising to 96.5% of GDP by 2028-29. This is the compound cost of low growth \u2014 and why restoring growth is the only sustainable solution.';
+    } else if (lower.includes('productivity') || lower.includes('wage') || lower.includes('growth')) {
+      reply = 'UK output per hour was only 2.4% above 2019 levels at end-2025. Average real wages are just 3.5% above 2009-10 levels after 14 years. The Resolution Foundation calculates workers earn \u00a311,000 less per year than they would under pre-2008 trends. If GDP had grown at the pre-2008 trend, national income would be ~20% higher \u2014 generating over \u00a3100bn in additional annual tax revenue without raising any rates.';
+    } else if (lower.includes('housing') || lower.includes('home') || lower.includes('planning')) {
+      reply = 'England has a 2 million+ home shortfall. The 300,000/year target has been pledged by every government since the 1950s — none has achieved it. Only 26% of 20-39 year olds now own a home. The blueprint proposes mandatory local plans, zonal allocation, and a 12-month consent fast-track.';
+    } else if (lower.includes('ai') || lower.includes('intelligent state') || lower.includes('digital')) {
+      reply = 'The Intelligent State chapter proposes AI deployment across all 17 government departments, generating £3.0bn annual savings and £8.6bn 10-year NPV. The £3.2bn investment achieves 2.7x ROI through managed attrition of 40,500 posts — no forced redundancies — and a GovAI Shared Services Centre.';
+    } else if (lower.includes('tax') || lower.includes('simplif')) {
+      reply = 'Britain\'s tax code exceeds 21,000 pages (Tolley\'s) with £33.9bn in annual compliance costs. The blueprint proposes merging Income Tax and National Insurance, replacing Business Rates with a land-value system, reforming CGT with taper relief, and a 50% code reduction target.';
+    } else if (lower.includes('energy') || lower.includes('electricity') || lower.includes('power')) {
+      reply = 'UK industrial electricity costs are 25.33p/kWh — 5.8x Finland (4.37p) and 125% above the EU-14 median. This structural disadvantage drives manufacturers overseas. The blueprint proposes CfD auction reform, SMR deployment on existing nuclear sites, community energy ownership, and a strategic reserve.';
+    } else if (lower.includes('immigration') || lower.includes('brexit') || lower.includes('migration')) {
+      reply = 'Net migration peaked at 944,000 (YE March 2023) — more than triple pre-referendum levels — despite Brexit being partly a vote for immigration control. It has since fallen to ~204,000 (YE June 2025). The gap between promise and delivery on this issue directly fuelled the trust collapse documented in Section 1.';
+    } else if (lower.includes('wolverhampton')) {
+      reply = 'The "Wolverhampton test" runs through every proposal: can a voter in Wolverhampton understand why this matters to their wages, their pension, their family\'s prospects, and their community\'s future? It is a commitment to make every reform concrete and understandable, not just analytically elegant.';
+    } else {
+      reply = 'The blueprint covers four sections: (1) The Diagnosis — what is wrong with Britain\'s economy, housing, capital markets, and democratic trust; (2) The Implementation Gap — why nothing changes and how to fix it; (3) Five Changes to Start Now — government reform, planning, energy, tax, and capital; (4) The Debate — tiered priorities from ready-to-go to long-term questions. Ask about any specific topic for more detail.';
+    }
+    addMessage(reply, false);
   }
 
-  send.addEventListener('click', sendMessage);
-  input.addEventListener('keydown', e => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      sendMessage();
-    }
+  send?.addEventListener('click', handleSend);
+  input?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') handleSend();
   });
 }
 
-function escapeHtml(str) {
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
-}
 
-function formatMarkdown(text) {
-  // Simple markdown: bold, links, line breaks
-  return text
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-    .replace(/\n/g, '<br>');
-}
-
-// ─── Scroll Animation Fallback (for browsers without scroll-driven animations) ───
-function initScrollAnimations() {
-  if (CSS.supports && CSS.supports('animation-timeline', 'scroll()')) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
+// ─── Smooth Scroll ───
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = document.getElementById('navbar')?.offsetHeight || 72;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-  document.querySelectorAll('.fade-in').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-    observer.observe(el);
   });
 }
 
-// ─── KPI Number Animation ───
-function initKPIAnimation() {
-  const kpis = document.querySelectorAll('.kpi-value');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('kpi-animated');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-  kpis.forEach(kpi => observer.observe(kpi));
-}
 
-// ─── Initialize Everything ───
+// ─── Init ───
 document.addEventListener('DOMContentLoaded', () => {
-  initNavigation();
   initCharts();
-  initChatbot();
+  initNav();
   initScrollAnimations();
-  initKPIAnimation();
+  initChatbot();
+  initSmoothScroll();
 });

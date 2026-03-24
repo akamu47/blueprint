@@ -312,8 +312,8 @@ blockquote { border-left: 3px solid var(--color-primary); padding-left: var(--sp
 .change-stat { display: flex; flex-direction: column; gap: var(--space-1); }
 .change-stat-value { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 900; color: var(--color-primary); }
 .change-stat-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
-.change-wolverhampton { font-size: var(--text-sm); color: var(--color-text-secondary); line-height: 1.6; padding: var(--space-4); background: rgba(59,130,246,0.03); border-left: 3px solid var(--color-primary); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
-.change-wolverhampton strong { color: var(--color-primary); font-weight: 600; }
+.change-impact { font-size: var(--text-sm); color: var(--color-text-secondary); line-height: 1.6; padding: var(--space-4); background: rgba(59,130,246,0.03); border-left: 3px solid var(--color-primary); border-radius: 0 var(--radius-md) var(--radius-md) 0; }
+.change-impact strong { color: var(--color-primary); font-weight: 600; }
 .interlock-section { margin-top: var(--space-10); }
 .interlock-inner { padding: var(--space-8); background: linear-gradient(135deg, rgba(59,130,246,0.06), rgba(245,158,11,0.03)); border: 1px solid rgba(59,130,246,0.18); border-radius: var(--radius-xl); text-align: center; max-width: 800px; margin-inline: auto; }
 .interlock-inner h3 { font-size: var(--text-lg); font-weight: 700; color: var(--color-primary); margin-bottom: var(--space-3); }

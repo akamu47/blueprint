@@ -88,47 +88,55 @@ function initCharts() {
     });
   }
 
-  // ═══ NET MIGRATION ═══
-  const migCtx = document.getElementById('chart-net-migration');
-  if (migCtx) {
-    new Chart(migCtx, {
+  // ═══ PROMISES VS DELIVERY ═══
+  const promCtx = document.getElementById('chart-promises');
+  if (promCtx) {
+    new Chart(promCtx, {
       type: 'bar',
       data: {
-        labels: ['2015', '2016\nRef.', '2017', '2018', '2019', '2020', '2021', '2022', '2023\nPeak', '2024', '2025'],
-        datasets: [{
-          label: 'Net Migration (thousands)',
-          data: [332, 326, 283, 261, 271, 36, 279, 745, 944, 543, 204],
-          backgroundColor: function(context) {
-            const v = context.dataset.data[context.dataIndex];
-            if (v > 700) return RED_50;
-            if (v > 400) return AMBER_50;
-            return TEAL_50;
+        labels: [
+          '300k Homes/yr',
+          'NHS 18-Week',
+          'Level Up North',
+          'Social Care Cap',
+          'Broadband 100%',
+          'Net Zero Grid'
+        ],
+        datasets: [
+          {
+            label: 'Years Promised',
+            data: [20, 10, 10, 13, 8, 6],
+            backgroundColor: TEAL_50,
+            borderColor: TEAL,
+            borderWidth: 1,
+            borderRadius: 4
           },
-          borderColor: function(context) {
-            const v = context.dataset.data[context.dataIndex];
-            if (v > 700) return RED;
-            if (v > 400) return AMBER;
-            return TEAL;
-          },
-          borderWidth: 1.5,
-          borderRadius: 4
-        }]
+          {
+            label: 'Years Delivered',
+            data: [0, 0, 0, 0, 0, 0],
+            backgroundColor: RED_50,
+            borderColor: RED,
+            borderWidth: 1,
+            borderRadius: 4
+          }
+        ]
       },
       options: {
         responsive: true,
         maintainAspectRatio: true,
         aspectRatio: 1.6,
+        indexAxis: 'y',
         plugins: {
-          legend: { display: false },
+          legend: { position: 'top' },
           tooltip: {
             callbacks: {
-              label: ctx => `Net migration: ${ctx.formattedValue}k`
+              label: ctx => `${ctx.dataset.label}: ${ctx.formattedValue} years`
             }
           }
         },
         scales: {
-          y: { beginAtZero: true, grid: { color: WHITE_10 }, ticks: { callback: v => v + 'k' } },
-          x: { grid: { display: false } }
+          x: { beginAtZero: true, max: 25, grid: { color: WHITE_10 }, ticks: { callback: v => v + ' yrs' } },
+          y: { grid: { display: false } }
         }
       }
     });
@@ -494,8 +502,8 @@ function initChatbot() {
       reply = 'Britain\'s tax code exceeds 21,000 pages (Tolley\'s) with £33.9bn in annual compliance costs. The blueprint proposes merging Income Tax and National Insurance, replacing Business Rates with a land-value system, reforming CGT with taper relief, and a 50% code reduction target.';
     } else if (lower.includes('energy') || lower.includes('electricity') || lower.includes('power')) {
       reply = 'UK industrial electricity costs are 25.33p/kWh — 5.8x Finland (4.37p) and 125% above the EU-14 median. This structural disadvantage drives manufacturers overseas. The blueprint proposes CfD auction reform, SMR deployment on existing nuclear sites, community energy ownership, and a strategic reserve.';
-    } else if (lower.includes('immigration') || lower.includes('brexit') || lower.includes('migration')) {
-      reply = 'Net migration peaked at 944,000 (YE March 2023) — more than triple pre-referendum levels — despite Brexit being partly a vote for immigration control. It has since fallen to ~204,000 (YE June 2025). The gap between promise and delivery on this issue directly fuelled the trust collapse documented in Section 1.';
+    } else if (lower.includes('promise') || lower.includes('deliver') || lower.includes('fail')) {
+      reply = 'The blueprint documents a systematic pattern of cross-party failure: the 300,000 homes/year target has been pledged for 20 years and never met. The NHS 18-week treatment target was last met in 2016. The Dilnot social care cap was legislated 13 years ago and has never had a single beneficiary. Levelling up saw the North-South wealth gap double. The pattern is bipartisan — both parties promise, neither delivers.';
     } else if (lower.includes('wolverhampton')) {
       reply = 'The "Wolverhampton test" runs through every proposal: can a voter in Wolverhampton understand why this matters to their wages, their pension, their family\'s prospects, and their community\'s future? It is a commitment to make every reform concrete and understandable, not just analytically elegant.';
     } else {

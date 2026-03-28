@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QC82MM7JZJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-QC82MM7JZJ");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Companion Papers | Blueprint for a Better Britain</title>
+<meta name="description" content="In-depth companion papers from Blueprint for a Better Britain. Evidence-based research on government delivery, policy consensus, energy costs, and AI in government.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F0F1A;
+    --surface: #161625;
+    --border: #1E1E35;
+    --blue: #2563EB;
+    --blue-light: #60A5FA;
+    --text: #E2E8F0;
+    --muted: #8090A0;
+    --green: #10B981;
+    --amber: #F59E0B;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.7; }
+  
+  .header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .header a { color: var(--blue); text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1.1rem; }
+  .header .nav-links { display: flex; gap: 1.5rem; }
+  .header .nav-links a { color: var(--muted); font-size: 0.9rem; font-weight: 400; }
+  .header .nav-links a:hover { color: var(--text); }
+  
+  .container { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+  
+  h1 { font-family: 'DM Sans', sans-serif; font-size: 2.2rem; font-weight: 900; margin-bottom: 0.5rem; }
+  .subtitle { color: var(--muted); font-size: 1rem; margin-bottom: 3rem; line-height: 1.6; }
+  
+  .paper-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .paper-card:hover { border-color: var(--blue); }
+  
+  .paper-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+  }
+  .badge-new { background: rgba(37, 99, 235, 0.15); color: var(--blue-light); }
+  .badge-companion { background: rgba(139, 92, 246, 0.15); color: #A78BFA; }
+  
+  .paper-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+  .paper-title a { color: var(--text); text-decoration: none; }
+  .paper-title a:hover { color: var(--blue-light); }
+  
+  .paper-subtitle {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+  
+  .paper-desc {
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .paper-stats {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+  }
+  .paper-stats span { display: flex; align-items: center; gap: 0.35rem; }
+  
+  .paper-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .paper-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  .link-read { background: var(--blue); color: #fff; }
+  .link-read:hover { background: #1D4ED8; }
+  .link-pdf { border: 1px solid var(--border); color: var(--muted); }
+  .link-pdf:hover { border-color: var(--blue); color: var(--text); }
+  
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2.5rem 0;
+  }
+  
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 3rem; }
+  .footer a { color: var(--blue); text-decoration: none; }
+  
+  @media (max-width: 640px) {
+    .container { padding: 2rem 1rem; }
+    h1 { font-size: 1.7rem; }
+    .paper-title { font-size: 1.25rem; }
+    .paper-stats { flex-wrap: wrap; gap: 0.75rem; }
+    .paper-links { flex-direction: column; }
+    .paper-links a { text-align: center; }
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <a href="../">Blueprint</a>
+    <div class="nav-links">
+      <a href="../">Home</a>
+      <a href="../blog/">Blog</a>
+      <a href="./" style="color: var(--text);">Papers</a>
+      <a href="../how-we-work/">How We Work</a>
+      <a href="../briefing/">Daily Briefing</a>
+    </div>
+  </div>
+  
+  <div class="container">
+    <h1>Companion Papers</h1>
+    <p class="subtitle">In-depth research papers from Blueprint for a Better Britain. Each paper uses multi-model AI research methodology with independent analysis, cross-critique, and human editorial review. Every claim is sourced. Every figure is verifiable.</p>
+    
+    <div class="section-label">New — March 2026</div>
+    
+    <div class="paper-card">
+      <span class="paper-badge badge-new">New</span>
+      <h2 class="paper-title"><a href="./gap-tracker/">The Gap Tracker: 20 Years of Broken Promises</a></h2>
+      <p class="paper-subtitle">A Systematic Record of Government Commitments vs Delivery, 2003-2026</p>
+      <p class="paper-desc">Tracks 27 specific, measurable government promises across six policy themes. Documents what was promised, who promised it, when, and what actually happened. 13 of 27 promises have been broken by both Labour and Conservative governments. Includes international benchmarks and a proposal for a permanent independent delivery tracker.</p>
+      <div class="paper-stats">
+        <span>~15,000 words</span>
+        <span>27 promises tracked</span>
+        <span>6 themes</span>
+        <span>March 2026</span>
+      </div>
+      <div class="paper-links">
+        <a href="./gap-tracker/" class="link-read">Read online</a>
+      </div>
+    </div>
+    
+    <div class="paper-card">
+      <span class="paper-badge badge-new">New</span>
+      <h2 class="paper-title"><a href="./consensus-map/">The Consensus Map: Where Left and Right Already Agree</a></h2>
+      <p class="paper-subtitle">A Survey of Cross-Ideological Policy Consensus in Britain, 2023-2026</p>
+      <p class="paper-desc">Maps 12 major policy areas where think tanks from IPPR to the Adam Smith Institute have reached substantially similar conclusions. Identifies the specific mechanisms they agree on, the cost of continued inaction, and the structural obstacles preventing consensus from becoming action. Proposes a four-mechanism Consensus Accelerator.</p>
+      <div class="paper-stats">
+        <span>~17,000 words</span>
+        <span>12 policy areas</span>
+        <span>15+ think tanks</span>
+        <span>March 2026</span>
+      </div>
+      <div class="paper-links">
+        <a href="./consensus-map/" class="link-read">Read online</a>
+      </div>
+    </div>
+    
+    <hr class="section-divider">
+    <div class="section-label">Foundation Papers</div>
+    
+    <div class="paper-card">
+      <span class="paper-badge badge-companion">Companion</span>
+      <h2 class="paper-title"><a href="../#downloads">The Growth Drag of High UK Electricity Prices</a></h2>
+      <p class="paper-subtitle">Multi-Model Policy Analysis</p>
+      <p class="paper-desc">How the UK's highest-in-IEA electricity prices are costing £14-16bn in annual GDP, and what closing the gap with France would deliver. Three AI models, cross-critiqued, reconciled into a single synthesis.</p>
+      <div class="paper-stats">
+        <span>17 pages</span>
+        <span>March 2026</span>
+      </div>
+      <div class="paper-links">
+        <a href="../assets/energy-growth-drag.pdf" class="link-pdf" target="_blank">Download PDF</a>
+      </div>
+    </div>
+    
+    <div class="paper-card">
+      <span class="paper-badge badge-companion">Companion</span>
+      <h2 class="paper-title"><a href="../#downloads">The Intelligent State: AI in UK Government</a></h2>
+      <p class="paper-subtitle">Department-by-Department Analysis</p>
+      <p class="paper-desc">AI in UK government across all 17 ministries. £8.6bn 10-year NPV, £3bn annual savings, 40,500 posts via managed attrition. Phased implementation plan with risk assessment.</p>
+      <div class="paper-stats">
+        <span>38 pages</span>
+        <span>March 2026</span>
+      </div>
+      <div class="paper-links">
+        <a href="../assets/the-intelligent-state.pdf" class="link-pdf" target="_blank">Download PDF</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <a href="../">Blueprint for a Better Britain</a> · <a href="https://x.com/BritBlueprint">@BritBlueprint</a> · Inaction has a price tag. We calculated it.
+    <br><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+  </div>
+</body>
+</html>

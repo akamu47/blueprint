@@ -1,0 +1,2113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QC82MM7JZJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-QC82MM7JZJ");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Gap Tracker: 20 Years of Broken Promises — Blueprint for a Better Britain</title>
+<meta name="description" content="A systematic record of 27 government commitments made between 2003 and 2026 — what was promised, who promised it, and what actually happened.">
+<meta property="og:title" content="The Gap Tracker: 20 Years of Broken Promises">
+<meta property="og:description" content="A Systematic Record of Government Commitments vs Delivery, 2003–2026. 13 of 27 promises broken by both Labour and Conservative governments.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://britblueprint.com/papers/gap-tracker/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F0F1A;
+    --surface: #161625;
+    --surface-alt: #12121F;
+    --border: #1E1E35;
+    --blue: #2563EB;
+    --blue-light: #60A5FA;
+    --text: #E2E8F0;
+    --muted: #8090A0;
+    --red: #EF4444;
+    --amber: #F59E0B;
+    --green: #22C55E;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; line-height: 1.8; }
+
+  /* HEADER */
+  .header { border-bottom: 1px solid var(--border); padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; font-family: 'Inter', sans-serif; position: sticky; top: 0; z-index: 100; background: var(--bg); }
+  .header a.logo { color: var(--blue); text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1.1rem; }
+  .header .nav-links { display: flex; gap: 1.5rem; }
+  .header .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; font-weight: 400; transition: color 0.2s; }
+  .header .nav-links a:hover { color: var(--text); }
+
+  /* LAYOUT */
+  .page-wrap { display: flex; gap: 2.5rem; max-width: 1100px; margin: 0 auto; padding: 3rem 2rem 4rem; align-items: flex-start; }
+  .container { max-width: 720px; width: 100%; flex: 1; min-width: 0; }
+
+  /* SIDEBAR TOC */
+  .toc-sidebar {
+    width: 230px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 5rem;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 6px;
+    padding: 1rem;
+  }
+  .toc-sidebar h4 { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.75rem; font-family: 'Inter', sans-serif; }
+  .toc-sidebar ol { list-style: none; padding: 0; }
+  .toc-sidebar li { margin-bottom: 0.35rem; }
+  .toc-sidebar a { color: var(--muted); text-decoration: none; line-height: 1.4; display: block; padding: 0.2rem 0; transition: color 0.2s; }
+  .toc-sidebar a:hover { color: var(--blue-light); }
+  .toc-sidebar .toc-section { color: var(--text); font-weight: 600; margin-top: 0.6rem; margin-bottom: 0.1rem; }
+  .toc-sidebar .toc-sub { padding-left: 0.75rem; font-size: 11px; }
+
+  /* MOBILE TOC */
+  .toc-mobile { display: none; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 2rem; font-family: 'Inter', sans-serif; font-size: 13px; }
+  .toc-mobile summary { padding: 1rem 1.25rem; cursor: pointer; font-weight: 600; color: var(--blue-light); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .toc-mobile summary::after { content: '▾'; font-size: 14px; }
+  .toc-mobile[open] summary::after { content: '▴'; }
+  .toc-mobile ol { list-style: none; padding: 0 1.25rem 1rem; }
+  .toc-mobile li { margin-bottom: 0.4rem; }
+  .toc-mobile a { color: var(--muted); text-decoration: none; }
+  .toc-mobile .toc-section { color: var(--text); font-weight: 600; margin-top: 0.5rem; }
+  .toc-mobile .toc-sub { padding-left: 0.75rem; font-size: 12px; }
+
+  /* BREADCRUMB */
+  .breadcrumb { font-family: 'Inter', sans-serif; font-size: 12px; color: var(--muted); margin-bottom: 1.5rem; display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+  .breadcrumb a { color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--blue-light); }
+  .breadcrumb .sep { opacity: 0.4; }
+
+  /* HEADER ELEMENTS */
+  .label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 8px; }
+  .label::before { content: ''; display: inline-block; width: 24px; height: 1px; background: var(--muted); }
+  h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 38px; font-weight: 700; line-height: 1.15; margin: 0 0 1.5rem; letter-spacing: -0.01em; }
+  .standfirst { font-size: 19px; font-weight: 300; font-style: italic; line-height: 1.6; color: var(--muted); margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 0.5px solid var(--border); }
+  .meta { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--muted); margin-bottom: 2.5rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+  /* BODY CONTENT */
+  .body p { margin: 0 0 1.4rem; font-weight: 300; }
+  .body h2 { font-family: 'DM Sans', sans-serif; font-size: 1.45rem; font-weight: 700; color: var(--text); margin: 3rem 0 1rem; padding-top: 0.5rem; border-top: 1px solid var(--border); }
+  .body h3 { font-family: 'DM Sans', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--blue-light); margin: 2.25rem 0 0.75rem; }
+  .body h4 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text); margin: 1.75rem 0 0.6rem; }
+  .body a { color: var(--blue-light); text-decoration: none; }
+  .body a:hover { text-decoration: underline; }
+  .body em { font-style: italic; }
+  .body strong { font-weight: 600; color: var(--text); }
+  .body ul, .body ol { margin: 0 0 1.4rem 1.5rem; font-weight: 300; }
+  .body li { margin-bottom: 0.4rem; }
+  .body blockquote { margin: 1.5rem 0; padding: 1rem 1.5rem; border-left: 3px solid var(--border); font-style: italic; color: var(--muted); font-size: 17px; }
+
+  /* INTRO NOTE */
+  .intro-note { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--muted); padding: 1.2rem 1.5rem; margin-bottom: 2rem; font-size: 16px; font-weight: 300; font-style: italic; color: var(--muted); border-radius: 0 4px 4px 0; }
+
+  /* PULL QUOTES */
+  .pull { margin: 2rem 0; padding: 1.5rem 1.75rem; border-left: 3px solid var(--blue); font-family: 'Playfair Display', Georgia, serif; font-size: 20px; font-style: italic; font-weight: 400; line-height: 1.5; color: var(--text); }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; margin: 1.5rem 0; -webkit-overflow-scrolling: touch; border: 1px solid var(--border); border-radius: 6px; }
+  .table-wrap.summary-table { border-color: var(--blue); }
+  table { width: 100%; border-collapse: collapse; font-family: 'Inter', sans-serif; font-size: 13px; }
+  th { background: #1A1A30; color: var(--blue-light); font-weight: 600; padding: 0.75rem 0.9rem; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  .summary-table th { background: #161830; border-bottom-color: var(--blue); }
+  td { padding: 0.65rem 0.9rem; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: rgba(30, 30, 53, 0.4); }
+  .badge { display: inline-block; padding: 2px 7px; border-radius: 3px; font-size: 11px; font-weight: 600; font-family: 'Inter', sans-serif; white-space: nowrap; }
+  .badge-broken { background: rgba(239, 68, 68, 0.15); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.3); }
+  .badge-partial { background: rgba(245, 158, 11, 0.15); color: #FCD34D; border: 1px solid rgba(245, 158, 11, 0.3); }
+  .badge-progress { background: rgba(34, 197, 94, 0.1); color: #86EFAC; border: 1px solid rgba(34, 197, 94, 0.2); }
+  .badge-yes { background: rgba(239, 68, 68, 0.1); color: #FCA5A5; border: 1px solid rgba(239, 68, 68, 0.25); }
+
+  /* PROMISE ENTRY */
+  .promise-entry { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin: 1.5rem 0; }
+  .promise-entry h4 { margin-top: 0; color: var(--blue-light); font-size: 1.05rem; }
+  .promise-meta { font-family: 'Inter', sans-serif; font-size: 12px; color: var(--muted); margin-bottom: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  /* THEME SECTION */
+  .theme-section { margin: 2.5rem 0; }
+
+  /* TIMELINE */
+  .timeline { margin: 1rem 0 1.4rem; padding-left: 1.2rem; border-left: 2px solid var(--border); font-weight: 300; font-size: 16px; }
+  .timeline-item { margin-bottom: 0.5rem; padding-left: 0.75rem; position: relative; }
+  .timeline-item::before { content: ''; position: absolute; left: -0.9rem; top: 0.65em; width: 6px; height: 6px; border-radius: 50%; background: var(--border); }
+
+  /* PATTERN SECTIONS */
+  .pattern-box { background: var(--surface-alt); border: 1px solid var(--border); border-radius: 6px; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+  .pattern-box h4 { margin: 0 0 0.6rem; color: var(--text); font-family: 'DM Sans', sans-serif; }
+
+  /* COUNTRY SECTIONS */
+  .country-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 1.5rem; margin: 1.5rem 0; }
+  .country-card h4 { color: var(--text); margin: 0 0 0.6rem; font-family: 'DM Sans', sans-serif; font-size: 1rem; }
+
+  /* OPTIONS */
+  .option-box { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--blue); border-radius: 0 6px 6px 0; padding: 1.5rem; margin: 1.5rem 0; }
+  .option-box h4 { color: var(--blue-light); margin: 0 0 0.8rem; font-family: 'DM Sans', sans-serif; font-size: 1rem; }
+
+  /* CHECK NOTICE */
+  .check-note { background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 4px; padding: 0.5rem 0.9rem; font-family: 'Inter', sans-serif; font-size: 12px; color: #FCD34D; display: inline-flex; gap: 0.4rem; align-items: center; margin-left: 0.25rem; vertical-align: middle; }
+
+  /* DIVIDER */
+  .divider { border: none; border-top: 0.5px solid var(--border); margin: 2.5rem 0; }
+
+  /* FOOTNOTE */
+  .footnote { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--muted); padding-top: 1.5rem; border-top: 0.5px solid var(--border); line-height: 1.6; }
+  .footnote a { color: var(--blue); text-decoration: none; }
+
+  /* SHARE BAR */
+  .share-bar { font-family: 'Inter', sans-serif; font-size: 0.85rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); display: flex; gap: 1rem; align-items: center; }
+  .share-bar span { color: var(--muted); }
+  .share-bar a { color: var(--blue); text-decoration: none; font-weight: 500; }
+
+  /* FOOTER */
+  .footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 3rem; font-family: 'Inter', sans-serif; }
+  .footer a { color: var(--blue); text-decoration: none; }
+
+  /* SOURCES SECTION */
+  .sources-list { font-family: 'Inter', sans-serif; font-size: 12.5px; line-height: 1.6; color: var(--muted); }
+  .sources-list p { margin: 0 0 0.4rem; }
+  .sources-list a { color: var(--blue-light); }
+  .sources-list h4 { color: var(--text); font-size: 13px; margin: 1.25rem 0 0.5rem; font-family: 'Inter', sans-serif; }
+
+  /* CHECK INLINE */
+  abbr[title="This figure is flagged as awaiting independent verification"] { text-decoration: dotted underline; cursor: help; color: #FCD34D; font-style: normal; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .toc-sidebar { display: none; }
+    .toc-mobile { display: block; }
+    .page-wrap { padding: 2rem 1rem; }
+  }
+  @media (max-width: 640px) {
+    .container { padding: 0; }
+    h1 { font-size: 28px; }
+    .header .nav-links { gap: 1rem; }
+    .header .nav-links a { font-size: 0.8rem; }
+    .pull { font-size: 18px; padding: 1.25rem 1.25rem; }
+    table { font-size: 12px; }
+    th, td { padding: 0.5rem 0.65rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <a href="../../" class="logo">Blueprint</a>
+  <div class="nav-links">
+    <a href="../../">Home</a>
+    <a href="../../blog/">Blog</a>
+    <a href="../">Papers</a>
+    <a href="../../how-we-work/">How We Work</a>
+    <a href="../../briefing/">Daily Briefing</a>
+  </div>
+</div>
+
+<div class="page-wrap">
+
+  <!-- SIDEBAR TABLE OF CONTENTS (desktop) -->
+  <nav class="toc-sidebar" aria-label="Table of contents">
+    <h4>Contents</h4>
+    <ol>
+      <li><a href="#exec-summary" class="toc-section">Executive Summary</a></li>
+      <li><a href="#part1" class="toc-section">Part 1: Introduction</a></li>
+      <li class="toc-sub"><a href="#why">Why This Paper Exists</a></li>
+      <li class="toc-sub"><a href="#criteria">Selection Criteria</a></li>
+      <li class="toc-sub"><a href="#sources">Source Methodology</a></li>
+      <li><a href="#part2" class="toc-section">Part 2: The Tracker</a></li>
+      <li class="toc-sub"><a href="#theme1">Theme 1: Energy</a></li>
+      <li class="toc-sub"><a href="#p1-1">1.1 Nuclear / Hinkley</a></li>
+      <li class="toc-sub"><a href="#p1-2">1.2 Industrial Electricity</a></li>
+      <li class="toc-sub"><a href="#p1-3">1.3 Grid Connections</a></li>
+      <li class="toc-sub"><a href="#p1-4">1.4 Net Zero / Carbon</a></li>
+      <li class="toc-sub"><a href="#p1-5">1.5 Household Energy Bills</a></li>
+      <li class="toc-sub"><a href="#theme2">Theme 2: Fiscal Policy</a></li>
+      <li class="toc-sub"><a href="#p2-1">2.1 Fiscal Rules</a></li>
+      <li class="toc-sub"><a href="#p2-2">2.2 Tax Simplification</a></li>
+      <li class="toc-sub"><a href="#p2-3">2.3 Business Rates</a></li>
+      <li class="toc-sub"><a href="#p2-4">2.4 Debt-to-GDP</a></li>
+      <li class="toc-sub"><a href="#theme3">Theme 3: Housing</a></li>
+      <li class="toc-sub"><a href="#p3-1">3.1 300,000 Homes/Year</a></li>
+      <li class="toc-sub"><a href="#p3-2">3.2 Planning Reform</a></li>
+      <li class="toc-sub"><a href="#p3-3">3.3 Affordable Housing</a></li>
+      <li class="toc-sub"><a href="#p3-4">3.4 Affordability</a></li>
+      <li class="toc-sub"><a href="#theme4">Theme 4: Delivery</a></li>
+      <li class="toc-sub"><a href="#p4-1">4.1 NHS 18-Week Target</a></li>
+      <li class="toc-sub"><a href="#p4-2">4.2 Social Care</a></li>
+      <li class="toc-sub"><a href="#p4-3">4.3 Major Projects</a></li>
+      <li class="toc-sub"><a href="#p4-4">4.4 Digital Government</a></li>
+      <li class="toc-sub"><a href="#theme5">Theme 5: Growth</a></li>
+      <li class="toc-sub"><a href="#p5-1">5.1 Levelling Up</a></li>
+      <li class="toc-sub"><a href="#p5-2">5.2 R&amp;D Spending</a></li>
+      <li class="toc-sub"><a href="#p5-3">5.3 Productivity Gap</a></li>
+      <li class="toc-sub"><a href="#p5-4">5.4 Real Wage Growth</a></li>
+      <li class="toc-sub"><a href="#theme6">Theme 6: Pensions</a></li>
+      <li class="toc-sub"><a href="#p6-1">6.1 Pension Adequacy</a></li>
+      <li class="toc-sub"><a href="#p6-2">6.2 Infrastructure Delivery</a></li>
+      <li class="toc-sub"><a href="#p6-3">6.3 Patient Capital</a></li>
+      <li><a href="#part3" class="toc-section">Part 3: The Patterns</a></li>
+      <li class="toc-sub"><a href="#pattern1">1. Announcement Cycle</a></li>
+      <li class="toc-sub"><a href="#pattern2">2. Ratchet Effect</a></li>
+      <li class="toc-sub"><a href="#pattern3">3. Accountability Gap</a></li>
+      <li class="toc-sub"><a href="#pattern4">4. Bipartisan Failure</a></li>
+      <li class="toc-sub"><a href="#pattern5">5. Cumulative Cost</a></li>
+      <li><a href="#part4" class="toc-section">Part 4: International</a></li>
+      <li class="toc-sub"><a href="#nz">New Zealand</a></li>
+      <li class="toc-sub"><a href="#au">Australia</a></li>
+      <li class="toc-sub"><a href="#ee">Estonia</a></li>
+      <li class="toc-sub"><a href="#sg">Singapore</a></li>
+      <li class="toc-sub"><a href="#kr">South Korea</a></li>
+      <li class="toc-sub"><a href="#uk-lacks">What the UK Lacks</a></li>
+      <li><a href="#part5" class="toc-section">Part 5: The Proposal</a></li>
+      <li class="toc-sub"><a href="#optA">Option A: NAO</a></li>
+      <li class="toc-sub"><a href="#optB">Option B: NISTA</a></li>
+      <li class="toc-sub"><a href="#optC">Option C: New Office</a></li>
+      <li><a href="#part6" class="toc-section">Part 6: Conclusion</a></li>
+      <li><a href="#appendix" class="toc-section">Appendix: Full Table</a></li>
+      <li><a href="#source-notes" class="toc-section">Sources</a></li>
+    </ol>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <!-- MOBILE TOC -->
+    <details class="toc-mobile">
+      <summary>Table of Contents</summary>
+      <ol>
+        <li><a href="#exec-summary" class="toc-section">Executive Summary</a></li>
+        <li><a href="#part1" class="toc-section">Part 1: Introduction &amp; Methodology</a></li>
+        <li><a href="#part2" class="toc-section">Part 2: The Tracker</a>
+          <ol>
+            <li class="toc-sub"><a href="#theme1">Theme 1: Energy and Industrial Costs</a></li>
+            <li class="toc-sub"><a href="#theme2">Theme 2: Tax and Fiscal Policy</a></li>
+            <li class="toc-sub"><a href="#theme3">Theme 3: Housing and Planning</a></li>
+            <li class="toc-sub"><a href="#theme4">Theme 4: Government Delivery and Reform</a></li>
+            <li class="toc-sub"><a href="#theme5">Theme 5: Growth and Productivity</a></li>
+            <li class="toc-sub"><a href="#theme6">Theme 6: Pensions and Capital</a></li>
+          </ol>
+        </li>
+        <li><a href="#part3" class="toc-section">Part 3: The Patterns</a></li>
+        <li><a href="#part4" class="toc-section">Part 4: International Benchmarks</a></li>
+        <li><a href="#part5" class="toc-section">Part 5: The Proposal</a></li>
+        <li><a href="#part6" class="toc-section">Part 6: Conclusion</a></li>
+        <li><a href="#appendix" class="toc-section">Appendix: Full Table</a></li>
+        <li><a href="#source-notes" class="toc-section">Sources</a></li>
+      </ol>
+    </details>
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../../">Blueprint</a>
+      <span class="sep">›</span>
+      <a href="../">Papers</a>
+      <span class="sep">›</span>
+      <span>The Gap Tracker</span>
+    </nav>
+
+    <div class="label">Companion Paper · Blueprint for a Better Britain</div>
+
+    <h1>The Gap Tracker: 20 Years of Broken Promises</h1>
+
+    <p class="standfirst">A Systematic Record of Government Commitments vs Delivery, 2003–2026</p>
+
+    <div class="meta">
+      <span>March 2026</span>
+      <span>~15,000 words</span>
+      <span>27 promises tracked</span>
+      <span>britblueprint.com</span>
+    </div>
+
+    <div class="body">
+
+      <div class="intro-note">
+        This paper is a companion to the Blueprint for a Better Britain policy platform. It is non-partisan. Ministers, departments, and systems are named throughout. No party is cast as the primary villain because the evidence doesn't support that framing. The failure is shared, structural, and ongoing.
+      </div>
+
+      <!-- EXECUTIVE SUMMARY -->
+      <h2 id="exec-summary">Executive Summary</h2>
+
+      <p>This paper tracks 27 specific, measurable government commitments made between 2003 and 2026. It documents what was promised, who promised it, when it was promised, and what actually happened.</p>
+
+      <p>The headline finding is blunt: <strong>13 of these 27 promises have been broken by both Labour and Conservative governments.</strong> Not by one party. Both. The other 14 were made primarily under Conservative governments that held power from 2010 to 2024, and the new Labour government has inherited most of them in an equally broken state.</p>
+
+      <div class="pull">"13 of 27 promises have been broken by both Labour and Conservative governments — not by one party. Both."</div>
+
+      <p>The total economic cost of non-delivery across these tracked promises is conservatively in the hundreds of billions. The NHS productivity slump alone costs the economy an estimated £20 billion per year <a href="https://www.thetimes.co.uk/" target="_blank" rel="noopener">[The Times, November 2025]</a>. UK infrastructure projects from 2015 to 2024 delivered only 59% of planned spending, leaving a £163 billion shortfall <a href="https://www.mckinsey.com.br/our-insights/impatient-for-infrastructure-four-changes-to-improve-uk-project-delivery" target="_blank" rel="noopener">[McKinsey, March 2026]</a>. Workers face an estimated £11,000-per-year gap in real wages compared to pre-2008 trend growth <a href="https://www.resolutionfoundation.org/press-releases/15-years-of-economic-stagnation-has-left-workers-across-britain-with-an-11000-a-year-lost-wages-gap/" target="_blank" rel="noopener">[Resolution Foundation, March 2023]</a>. Public sector net debt has risen from 28% of GDP in 2000-01 to 90% of GDP in 2024-25, despite governments including a debt-reduction target in nine of ten fiscal frameworks since 1997 <a href="https://obr.uk/box/the-rise-of-public-sector-net-debt-over-the-past-25-years/" target="_blank" rel="noopener">[OBR, July 2025]</a>.</p>
+
+      <p>These aren't separate policy failures. They're symptoms of the same structural problem.</p>
+
+      <p><strong>The pattern is consistent across every theme tracked:</strong></p>
+
+      <p>In <em>housing</em>, 300,000 new homes a year has been the target of every government since the 2003 Barker Review. No government since Harold Wilson's has delivered it. The current gap is 91,400 homes per year. England's house price-to-earnings ratio has deteriorated from 3.49 in 1997 to 8.40 in 2023.</p>
+
+      <p>In <em>fiscal policy</em>, the UK has had 10 sets of fiscal rules since 1997. None of the deficit rules that targeted a specific date were met. Public sector net debt rose 62 percentage points of GDP in 25 years, despite debt reduction featuring in nine of those ten frameworks.</p>
+
+      <p>In <em>healthcare</em>, the NHS 18-week waiting target has been broken every single month since September 2015. Ten consecutive years. Every Health Secretary since 2016 has inherited the problem, named it as a priority, and left it worse. Today, only 61.5% of patients are treated within 18 weeks against a statutory target of 92%.</p>
+
+      <p>In <em>energy</em>, Hinkley Point C was supposed to start generating power in time to cook Christmas dinners in 2017. The current base-case completion is 2030. Its cost has risen from £18 billion to an estimated £49 billion in current prices. UK industrial electricity prices are now 125% above the EU-14 median.</p>
+
+      <p>In <em>social care</em>, Sir Andrew Dilnot submitted his reform recommendations in 2011. A cap on individual care costs was legislated in 2014. It was delayed in 2015, 2017, 2022, and 2025, then scrapped entirely in July 2024. Dilnot's response: <em>"We've failed another generation of families."</em></p>
+
+      <p>In <em>growth and productivity</em>, UK multi-factor productivity fell for the third consecutive year in 2024. The productivity gap with the US, Germany, and France has widened since 2008. GDP per head is approximately £11,000 lower than it would have been if pre-crisis trends had continued <a href="https://ifs.org.uk/news/past-15-years-have-been-worst-income-growth-generations" target="_blank" rel="noopener">[IFS, June 2024]</a>.</p>
+
+      <p><strong>The non-partisan argument is simple.</strong> These aren't examples of one party's ideology producing bad outcomes that the other party would have avoided. The same commitments were made, missed, remade, and missed again across administrations from Blair to Starmer. A promise to build 300,000 homes a year was made by Blair, Brown, Cameron, May, Johnson, Sunak, and Starmer. It's been missed by all of them. A promise to run sustainable public finances has been made by every Chancellor since 1997. None kept it.</p>
+
+      <p>If every government diagnoses the same problems and proposes the same solutions, the failure is structural, not political.</p>
+
+      <p><strong>The proposal.</strong> The UK needs a permanent, independent delivery tracker, insulated from the political cycle. This paper sets out three options: a new statutory function for the National Audit Office, an expanded mandate for the National Infrastructure and Service Transformation Authority, or a new independent office modelled on the Office for Budget Responsibility. All three would cost under £15 million per year to operate. All three would monitor hundreds of billions in annual government commitments.</p>
+
+      <p>Five countries already do this systematically. New Zealand legislated measurable targets and independent audit in 1989. Australia created a Commonwealth Performance Framework in 2013. South Korea has a statutory Government Performance Evaluation Act with direct budget consequences for non-delivery. Estonia made accountability structural by digitising the entire state. Singapore ties civil service pay directly to public outcomes.</p>
+
+      <p>The UK's own track record is instructive. The Prime Minister's Delivery Unit (2001-2010) worked when it had prime-ministerial attention and was broken the moment that attention shifted. The current NISTA monitors capital projects but has no remit over policy commitments. The NAO audits financial accounts and produces retrospective value-for-money reports, but cannot compel ministers to set targets or hold them accountable when targets are missed.</p>
+
+      <p><strong>The Gap Tracker is Blueprint's answer.</strong> Not a wish list. A mechanism. The same forensic rigour applied to government promises that the OBR applies to government forecasts.</p>
+
+      <hr class="divider">
+
+      <!-- PART 1 -->
+      <h2 id="part1">Part 1: Introduction and Methodology</h2>
+
+      <h3 id="why">Why This Paper Exists</h3>
+
+      <p>Governments make promises. This is not itself a problem.</p>
+
+      <p>The problem is that no institution in the UK is charged with systematically recording those promises and tracking what happens to them. The Office for Budget Responsibility monitors fiscal forecasts. The National Audit Office examines how money is spent. The Infrastructure and Projects Authority rates whether major capital projects are on track. But no body asks the simple question: did the government do what it said it would do?</p>
+
+      <p>The consequences of this gap are not abstract. When there's no mechanism to track a promise, there's no mechanism to account for it. Ministers can revise targets downward, extend timelines, reframe the original commitment, or simply change the subject. The media cycle moves on. The electorate has no cumulative record. The same announcement gets made again in the next Parliament, to the same reception, with the same outcome.</p>
+
+      <p>This paper builds that record for the first time in consolidated form. It covers 2003 to 2026, spanning four changes of government, six Prime Ministers, and the administrations of Blair, Brown, Cameron, May, Johnson, Sunak, and Starmer. It tracks 27 specific commitments across six policy themes, using primary sources throughout.</p>
+
+      <p>The goal is not to assign blame. The goal is to document the pattern, quantify the gap, and make the case for an institution that would prevent the same cycle repeating.</p>
+
+      <h3 id="criteria">Selection Criteria</h3>
+
+      <p>A commitment was included in the tracker if it met all four of the following tests:</p>
+
+      <p><strong>1. Specific and measurable.</strong> The commitment must have been stated in terms that allow objective assessment. "We will build 300,000 homes a year" is specific. "We will improve the housing situation" is not. Where a government gave a number or date, that number or date is the target. Where a commitment was framed in directional terms ("reduce", "close the gap", "make simpler"), the tracker uses the relevant metric to assess whether the direction of travel has been achieved.</p>
+
+      <p><strong>2. Officially stated.</strong> The commitment must appear in a ministerial speech, manifesto, White Paper, legislation, Spending Review, Budget document, or Hansard record. Promises made only to journalists or via off-the-record briefings are not included.</p>
+
+      <p><strong>3. Multi-government.</strong> The commitment must span at least two governments of different political compositions, or must have been originally made by one government and inherited by its successor without resolution. Where a single promise has been repeated across four or five administrations, all iterations are documented.</p>
+
+      <p><strong>4. Traceable.</strong> The delivery status must be assessable using data from publicly available primary sources: ONS, OBR, NHS England, MHCLG, the Climate Change Committee, the Infrastructure and Projects Authority, the Institute for Government, or equivalent authoritative bodies.</p>
+
+      <p>Promises that are in flight under the current government and not yet due for delivery are noted as such. The tracker does not prejudge outcomes for commitments with future target dates where data does not yet permit assessment.</p>
+
+      <h3 id="sources">Source Methodology</h3>
+
+      <p>Every statistic in this paper includes its source in square brackets or inline. Figures marked <abbr title="This figure is flagged as awaiting independent verification">[CHECK]</abbr> were flagged as uncertain during research and have not been independently verified to the same standard as the surrounding evidence. Readers are invited to challenge any figure: the methodology is only as strong as its sources, and we've prioritised accuracy over persuasion.</p>
+
+      <p>Primary sources include: <strong>Hansard</strong> (for verbatim ministerial commitments); <strong>ONS</strong> (for economic, housing, and productivity data); <strong>OBR</strong> (for fiscal data and debt trajectory); <strong>NHS England</strong> (for waiting times and waiting list data); <strong>MHCLG</strong> (for housing supply statistics); <strong>Climate Change Committee</strong> (for emissions and net zero progress data); <strong>Institute for Government</strong> (for fiscal rules history and performance tracking); <strong>IFS</strong> (for analysis of fiscal policy, NHS performance, and wage data); <strong>McKinsey</strong> (for infrastructure delivery analysis, March 2026); <strong>National Audit Office</strong> (for major project assessment and value-for-money reviews).</p>
+
+      <h3>How to Read the Tracker</h3>
+
+      <p>Part 2 is organised into six themes. Within each theme, each promise receives its own structured entry covering: the original commitment, its timeline and repetitions, the measurable target, current delivery status, the gap between promise and delivery, the number of years the target has been broken, and the economic or social cost of non-delivery.</p>
+
+      <p>Each theme section opens with a summary table presenting all tracked promises at a glance. The full consolidated table appears in the Appendix.</p>
+
+      <p>The entries are written to describe, not to advocate. Where a minister or government has made credible progress or partly delivered, that's noted. Where a target turns out to have been met through methodology revision rather than real-world improvement, that context is provided.</p>
+
+      <hr class="divider">
+
+      <!-- PART 2 -->
+      <h2 id="part2">Part 2: The Tracker</h2>
+
+      <!-- THEME 1 -->
+      <h2 id="theme1">Theme 1: Energy and Industrial Costs</h2>
+
+      <div class="table-wrap summary-table">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Promise</th>
+              <th>First Made</th>
+              <th>Target</th>
+              <th>Current Status</th>
+              <th>Gap</th>
+              <th>Years Broken</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.1</td>
+              <td>New nuclear: Hinkley Point C</td>
+              <td>Blair, 2006</td>
+              <td>Operational by 2025</td>
+              <td>Expected 2030</td>
+              <td>5+ years; £31bn overrun (2015 prices)</td>
+              <td><span class="badge badge-broken">Confirmed miss</span></td>
+            </tr>
+            <tr>
+              <td>1.2</td>
+              <td>Competitive industrial electricity</td>
+              <td>2006 Energy Review</td>
+              <td>UK prices at EU median</td>
+              <td>125% above EU-14 median</td>
+              <td>125% gap</td>
+              <td><span class="badge badge-broken">12+ years</span></td>
+            </tr>
+            <tr>
+              <td>1.3</td>
+              <td>Grid connection timelines</td>
+              <td>Johnson, 2022</td>
+              <td>Fast, accessible connections</td>
+              <td>739GW stuck in queue; some waiting until 2037</td>
+              <td>Systemic failure</td>
+              <td><span class="badge badge-broken">Ongoing</span></td>
+            </tr>
+            <tr>
+              <td>1.4</td>
+              <td>Carbon budget / Net zero progress</td>
+              <td>Blair, 2008 (Climate Change Act)</td>
+              <td>68% reduction by 2030</td>
+              <td>50.4% reduction achieved</td>
+              <td>17.6 percentage points</td>
+              <td><span class="badge badge-partial">On current trajectory: will miss</span></td>
+            </tr>
+            <tr>
+              <td>1.5</td>
+              <td>Cheap household energy</td>
+              <td>Johnson, 2022; Starmer, 2024</td>
+              <td>Bills reduced</td>
+              <td>Avg. £1,738/year; 32.5% above EU median</td>
+              <td>No progress</td>
+              <td><span class="badge badge-broken">Ongoing</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="promise-entry" id="p1-1">
+        <h4>Promise 1.1: Nuclear New Build (Hinkley Point C)</h4>
+        <p><strong>The Promise.</strong> Tony Blair's 2006 Energy Review formally endorsed new nuclear as essential to UK energy security <a href="https://assets.publishing.service.gov.uk/media/5a7c63eb40f0b62aff6c1579/6887.pdf" target="_blank" rel="noopener">[GOV.UK 2006 Energy Review]</a>. Early EDF promotional material promised Hinkley Point C would be "cooking Christmas dinners by 2017." The 2016 contract set the completion target at 2025, at a cost of £18 billion in 2015 prices.</p>
+
+        <p><strong>Timeline.</strong></p>
+        <div class="timeline">
+          <div class="timeline-item">2006: Blair/Darling Energy Review endorses nuclear</div>
+          <div class="timeline-item">2008: Energy Act legislates framework for new build</div>
+          <div class="timeline-item">2013: Government models first new nuclear operational by 2023</div>
+          <div class="timeline-item">2016: Government approves Hinkley; completion date 2025; cost £18 billion (2015 prices)</div>
+          <div class="timeline-item">2019: EDF revises completion to 2026; cost to £22 billion</div>
+          <div class="timeline-item">2022: EDF revises to 2027; cost to £26 billion</div>
+          <div class="timeline-item">2024: EDF revises to 2029-2031; cost to £31-34 billion (2015 prices)</div>
+          <div class="timeline-item">2026 (February): EDF announces base case 2030; cost now £35 billion (2015 prices), equivalent to approximately £49 billion in current prices <a href="https://www.world-nuclear-news.org/articles/edf-announces-hinkley-point-c-delay-and-big-rise-i" target="_blank" rel="noopener">[World Nuclear News, January 2024]</a>; <a href="https://cleantechnica.com/2026/03/06/while-hinkley-nuclear-was-being-built-the-uk-grid-decarbonized/" target="_blank" rel="noopener">[CleanTechnica, March 2026]</a></div>
+        </div>
+
+        <p><strong>The Target.</strong> Hinkley Point C Unit 1 operational by 2025, as contracted.</p>
+
+        <p><strong>Current Status (March 2026).</strong> Unit 1 expected 2030 at earliest; Unit 2 around 2031. Cost approximately £49 billion in current prices. This is 172% above the 2016 contract estimate <a href="https://cleantechnica.com/2026/03/06/while-hinkley-nuclear-was-being-built-the-uk-grid-decarbonized/" target="_blank" rel="noopener">[CleanTechnica, March 2026]</a>.</p>
+
+        <p><strong>The Gap.</strong> A 5-6 year delay from the 2025 contracted completion date. A cost overrun of approximately £31 billion on a project priced at £18 billion in 2015 prices.</p>
+
+        <p><strong>Years Broken.</strong> The 2025 completion date is now a confirmed miss. The promise that new nuclear would serve as a 2020s solution to UK electricity needs has been broken across six governments: Blair, Cameron, May, Johnson, Sunak, and Starmer.</p>
+
+        <p><strong>Cost of the Gap.</strong> The Contracts for Difference strike price agreed for Hinkley stands at £127/MWh as of January 2026 <a href="https://renewableenergyindustry.org/" target="_blank" rel="noopener">[Renewable Energy Industry/IWR Online, February 2026]</a>, confirmed at approximately £130/MWh by <a href="https://cleantechnica.com/2026/03/06/while-hinkley-nuclear-was-being-built-the-uk-grid-decarbonized/" target="_blank" rel="noopener">CleanTechnica [March 2026]</a>. Against recent offshore wind auction clearing prices of £40-60/MWh, the consumer premium over the project's 35-year life could exceed £50 billion in above-market payments <abbr title="This figure is flagged as awaiting independent verification">[CHECK]</abbr>. Every year of delay extends this exposure while the UK relies on gas for baseload.</p>
+
+        <p><em>Bipartisan failure: Both Labour and Conservative governments have inherited, endorsed, and been responsible for delays to this project.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p1-2">
+        <h4>Promise 1.2: Industrial Electricity Price Competitiveness</h4>
+        <p><strong>The Promise.</strong> Every government since the 2006 Energy Review has pledged "competitive energy costs" for UK industry. The 2006 Review explicitly stated one of four long-term energy policy goals was "to promote competitive markets... helping to raise the rate of sustainable economic growth" <a href="https://assets.publishing.service.gov.uk/media/5a7c63eb40f0b62aff6c1579/6887.pdf" target="_blank" rel="noopener">[GOV.UK 2006 Energy Review]</a>.</p>
+
+        <p><strong>The Target.</strong> UK industrial electricity prices competitive with European peers.</p>
+
+        <p><strong>Current Status (H1 2025).</strong> UK large industrial electricity prices stand at 25.33p/kWh, which is 125% above the EU-14 median of 11.25p/kWh. UK very large industrial users pay 22.39p/kWh, more than five times Finland's 4.37p/kWh <a href="https://davidturver.substack.com/p/high-uk-electricity-prices-continue-into-2025" target="_blank" rel="noopener">[David Turver/Eigen Values, December 2025]</a>. UK steel producers pay 25% more for electricity than French and German competitors. In 2008, UK prices were below Germany's and only slightly above the EU-14 median.</p>
+
+        <p><strong>The Gap.</strong> UK industrial electricity now costs more than double the EU median. One analyst characterises this as "an existential threat to the economy."</p>
+
+        <p><strong>Years Broken.</strong> Continuously deteriorating since approximately 2012. Currently at the worst relative position on record.</p>
+
+        <p><em>Bipartisan failure: The deterioration began under the Coalition government and has continued through subsequent Conservative and Labour administrations.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p1-3">
+        <h4>Promise 1.3: Grid Connection Delays</h4>
+        <p><strong>The Promise.</strong> The 2022 British Energy Security Strategy (Johnson government) pledged to "accelerate grid connection." Subsequent reviews under Conservative and Labour governments continued the commitment to accessible grid infrastructure.</p>
+
+        <p><strong>Current Status (2025-2026).</strong> 739 GW of projects are stuck in the grid connection queue <a href="https://www.gtlaw.com/en/insights/2025/4/uk-grid-connection-reforms-breaking-the-bottleneck" target="_blank" rel="noopener">[Greenberg Traurig, April 2025]</a>. Projects connecting in 2026-27 only received formal connection offers in early 2026, years after application. Some projects are waiting until 2037 for connections. The National Energy System Operator had to pause new grid connection applications pending reform. The Climate Change Committee identifies grid connections as one of the key delivery risks to the 2030 net zero pathway <a href="https://www.theccc.org.uk/publication/progress-in-reducing-emissions-2025-report-to-parliament/" target="_blank" rel="noopener">[CCC Progress Report 2025]</a>.</p>
+
+        <p><strong>The Gap.</strong> Average grid connection wait times have stretched from months to years to, in some cases, more than a decade. This directly constrains renewable deployment and industrial electrification.</p>
+      </div>
+
+      <div class="promise-entry" id="p1-4">
+        <h4>Promise 1.4: Net Zero Interim Carbon Budgets</h4>
+        <p><strong>The Promise.</strong> The Climate Change Act 2008 (Labour) created legally binding carbon budgets. The UK's 2030 Nationally Determined Contribution commits to a 68% reduction in emissions on 1990 levels. Every subsequent government has reaffirmed the commitment: Cameron ("greenest government ever"), May (Net Zero 2050 legislated), Johnson (COP26 host, pledged 68% by 2030), Sunak (reaffirmed then retreated on interim policies in 2023), Starmer (Clean Power 2030 mission).</p>
+
+        <p><strong>The Target.</strong> 68% emissions reduction from 1990 levels by 2030.</p>
+
+        <p><strong>Current Status (2025).</strong> UK emissions in 2024 were 50.4% below 1990 levels. The CCC's 2025 Progress Report rates 39% of the policies and plans needed to hit the 2030 NDC as having "significant risks, or insufficient or unquantified plans" <a href="https://www.theccc.org.uk/publication/progress-in-reducing-emissions-2025-report-to-parliament/" target="_blank" rel="noopener">[CCC Progress Report to Parliament, June 2025]</a>.</p>
+
+        <p><strong>The Gap.</strong> 50.4% reduction achieved; 68% required by 2030. An additional 17.6 percentage points of reduction is needed in five years, at a pace that must nearly double recent annual rates.</p>
+
+        <p><strong>The Ratchet in Reverse.</strong> The Sunak government rolled back multiple net zero policies in 2023, including delaying the heat pump transition and weakening planning requirements for onshore wind. The CCC's first recommendation in its 2024 report was to "make electricity cheaper." Its 2025 report confirmed no progress had been made on that recommendation.</p>
+      </div>
+
+      <div class="promise-entry" id="p1-5">
+        <h4>Promise 1.5: Cheap Household Energy</h4>
+        <p><strong>The Promise.</strong> Every government since the early 2000s has pledged to reduce household energy costs. Johnson's 2022 British Energy Security Strategy promised "cheap, clean, homegrown" power. Starmer's Clean Energy mission is explicitly described as "the best way to cut bills for good."</p>
+
+        <p><strong>Current Status (2025).</strong> UK domestic electricity for medium users stands at 29.74p/kWh, which is 32.5% above the EU-14 median. The average household on a standard variable tariff pays £1,738 per year (Q1 2026, per Ofgem price cap) <a href="https://www.ofgem.gov.uk/news/changes-energy-price-cap-between-1-january-and-31-march-2026" target="_blank" rel="noopener">[Ofgem, November 2025]</a>. The CCC's 2025 report noted "no progress" on making electricity cheaper — its stated top priority.</p>
+      </div>
+
+      <!-- THEME 2 -->
+      <h2 id="theme2">Theme 2: Tax and Fiscal Policy</h2>
+
+      <div class="table-wrap summary-table">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Promise</th>
+              <th>First Made</th>
+              <th>Target</th>
+              <th>Current Status</th>
+              <th>Gap</th>
+              <th>Years Broken</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2.1</td>
+              <td>Fiscal rules / balanced budget</td>
+              <td>Brown, 1997</td>
+              <td>Rules kept; debt controlled</td>
+              <td>10 frameworks; only 11 of 26 rules met; debt at 90% of GDP</td>
+              <td>Debt at 90% of GDP vs 40% target</td>
+              <td><span class="badge badge-broken">17+ years</span></td>
+            </tr>
+            <tr>
+              <td>2.2</td>
+              <td>Tax simplification</td>
+              <td>Major/Lawson era; Osborne 2010</td>
+              <td>Shorter, simpler tax code</td>
+              <td>Tax code now 20,000+ pages vs 5,000 in 1995</td>
+              <td>4× growth despite promises</td>
+              <td><span class="badge badge-broken">30+ years</span></td>
+            </tr>
+            <tr>
+              <td>2.3</td>
+              <td>Business rates reform</td>
+              <td>Promised since late 1990s</td>
+              <td>Replace the system</td>
+              <td>Core structure unchanged; five-band multiplier from April 2026 is incremental</td>
+              <td>Structural reform not delivered</td>
+              <td><span class="badge badge-broken">Ongoing 25+ years</span></td>
+            </tr>
+            <tr>
+              <td>2.4</td>
+              <td>Debt-to-GDP reduction</td>
+              <td>Brown, 1997 (40% rule)</td>
+              <td>Debt below 40% of GDP</td>
+              <td>90% of GDP in 2024-25</td>
+              <td>50 percentage points</td>
+              <td><span class="badge badge-broken">17+ years</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="promise-entry" id="p2-1">
+        <h4>Promise 2.1: Fiscal Rules</h4>
+        <p><strong>The Promise and Its Repetitions.</strong> The UK has had 10 sets of fiscal rules since 1997, comprising 28 individual rules. The Institute for Government's definitive 2024 study covers every rule, Chancellor by Chancellor <a href="https://www.instituteforgovernment.org.uk/explainer/fiscal-rules-history" target="_blank" rel="noopener">[IFG, November 2024]</a>:</p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Period</th>
+                <th>Chancellor</th>
+                <th>Key Rule</th>
+                <th>Outcome</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1997–2009</td>
+                <td>Gordon Brown (Labour)</td>
+                <td>Golden Rule: revenues cover day-to-day spending over cycle</td>
+                <td><span class="badge badge-broken">Broken</span> — IFG concluded Brown manipulated the dating of the economic cycle to avoid a formal breach.</td>
+              </tr>
+              <tr>
+                <td>1997–2009</td>
+                <td>Gordon Brown (Labour)</td>
+                <td>Sustainable Investment Rule: debt below 40% of GDP</td>
+                <td><span class="badge badge-broken">Broken</span> — Debt exceeded 40% by 2008-09.</td>
+              </tr>
+              <tr>
+                <td>2009–2010</td>
+                <td>Alistair Darling (Labour)</td>
+                <td>Halve the deficit by 2013-14</td>
+                <td><span class="badge badge-broken">Broken</span> — Never achieved.</td>
+              </tr>
+              <tr>
+                <td>2010–2014</td>
+                <td>George Osborne (Conservative)</td>
+                <td>Cyclically-adjusted current budget in surplus at 5-year horizon</td>
+                <td><span class="badge badge-progress">Met</span> (rolling target — easier to claim).</td>
+              </tr>
+              <tr>
+                <td>2010–2014</td>
+                <td>George Osborne (Conservative)</td>
+                <td>Debt falling by 2015-16</td>
+                <td><span class="badge badge-progress">Met</span></td>
+              </tr>
+              <tr>
+                <td>2014–2015</td>
+                <td>George Osborne (Conservative)</td>
+                <td>Debt falling by 2016-17</td>
+                <td><span class="badge badge-broken">Broken</span> — Abandoned after election.</td>
+              </tr>
+              <tr>
+                <td>2015–2016</td>
+                <td>George Osborne (Conservative)</td>
+                <td>Surplus in 2019-20 and every year after (Charter for Budget Responsibility)</td>
+                <td><span class="badge badge-broken">Broken</span> — Abandoned in 2016 after Brexit.</td>
+              </tr>
+              <tr>
+                <td>2016–2019</td>
+                <td>Philip Hammond (Conservative)</td>
+                <td>Deficit below 2% by 2020-21; debt falling by 2020-21</td>
+                <td><span class="badge badge-broken">Broken</span> — Both missed.</td>
+              </tr>
+              <tr>
+                <td>2019–2020</td>
+                <td>Sajid Javid/Rishi Sunak (Conservative)</td>
+                <td>Current budget surplus in rolling 3-year window</td>
+                <td><span class="badge badge-broken">Broken</span> — Covid suspension; current budget rule missed.</td>
+              </tr>
+              <tr>
+                <td>2021–2022</td>
+                <td>Rishi Sunak (Conservative)</td>
+                <td>Net debt (ex-BoE) falling; current budget surplus in 3rd year</td>
+                <td><span class="badge badge-broken">Broken</span> — Energy/inflation crisis.</td>
+              </tr>
+              <tr>
+                <td>2022–2024</td>
+                <td>Jeremy Hunt (Conservative)</td>
+                <td>Debt falling in 5th year; PSNB below 3% GDP</td>
+                <td><span class="badge badge-progress">Met</span> — Survived to election.</td>
+              </tr>
+              <tr>
+                <td>2024–</td>
+                <td>Rachel Reeves (Labour)</td>
+                <td>PSNFL falling by 2029-30; current budget balance by 2029-30</td>
+                <td><span class="badge badge-partial">In play</span> — Headroom was £9.9 billion at October 2024 forecast — razor thin.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pull">"None of the deficit rules that directly targeted a particular date were met. All the sets of rules that have existed since 2008 have been abandoned because at least one could not be met." — <a href="https://www.instituteforgovernment.org.uk/explainer/fiscal-rules-history" target="_blank" rel="noopener">Institute for Government, 2024</a></div>
+
+        <p><strong>Current Status.</strong> Public sector net debt rose from 28% of GDP in 2000-01 to 90% of GDP in 2024-25 — a 62 percentage point rise — despite governments including a debt-reduction target in nine of ten fiscal frameworks since 1997 <a href="https://obr.uk/box/the-rise-of-public-sector-net-debt-over-the-past-25-years/" target="_blank" rel="noopener">[OBR, July 2025]</a>. The pattern: "Governments aimed to get debt on a falling path at some rolling year in the future. This allowed plans to be generally accommodative of rising debt in the near term while promising fiscal tightening in the future."</p>
+
+        <p><strong>The Gap.</strong> From a stated target of keeping debt below 40% of GDP to actual 90% of GDP: a 50 percentage point gap.</p>
+
+        <p><strong>Years Broken.</strong> 17 consecutive years of fiscal rule abandonment or failure since 2008. Every Chancellor in that period either broke the rules they inherited or broke the rules they set.</p>
+
+        <p><em>Bipartisan failure: Brown, Darling, Osborne, Hammond, Javid, Sunak, Hunt, and Reeves. Labour and Conservative Chancellors alike.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p2-2">
+        <h4>Promise 2.2: Tax Simplification</h4>
+        <p><strong>The Promise.</strong> Every Chancellor from Nigel Lawson onward has pledged a simpler tax code. George Osborne's 2010 manifesto promised: "We will restore the tax system's reputation for simplicity, stability and predictability... We will create an independent Office of Tax Simplification." The OTS was duly established. In September 2022, Kwasi Kwarteng abolished it, promising Treasury and HMRC would "focus on simplifying the tax code" instead <a href="https://www.instituteforgovernment.org.uk/sites/default/files/2023-04/office-tax-simplification_0.pdf" target="_blank" rel="noopener">[IFG OTS paper, 2023]</a>.</p>
+
+        <p><strong>The Target.</strong> A shorter, more comprehensible tax code.</p>
+
+        <p><strong>Current Status.</strong> The UK tax code grew from 5,000 pages in 1995 to 10,000 pages in 2010 to over 20,000 pages in 2022 <a href="https://www.pwc.co.uk/services/tax/insights/tax-simplification-after-the-ots.html" target="_blank" rel="noopener">[PwC, October 2022]</a>. During the 12-year life of the OTS, "few of its major policy recommendations were adopted." The IFG concluded the OTS was "a category error by ministers" — simplification was used as a political signal, not a genuine commitment.</p>
+
+        <p><strong>The Gap.</strong> The tax code is now four times longer than when simplification was first formally promised in 1995.</p>
+
+        <p><strong>The Ratchet.</strong> When the OTS published bold proposals on capital gains tax and inheritance tax in 2020-21, they were rejected. The Treasury's 2021 review slowed the OTS's work. Within 18 months, the OTS was abolished.</p>
+
+        <p><strong>Years Broken.</strong> 30 years since the 1995 Inland Revenue report formally flagged the complexity problem.</p>
+
+        <p><em>Bipartisan failure: Both parties have promised simplification; both have presided over code expansion.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p2-3">
+        <h4>Promise 2.3: Business Rates Reform</h4>
+        <p><strong>The Promise.</strong> Every government since the late 1990s has promised fundamental reform of business rates. The 2019 Conservative manifesto called for a "fundamental review." The 2024 Labour manifesto promised "replacing the business rates system" with something that does not put "an undue burden on our high streets."</p>
+
+        <p><strong>Current Status.</strong> Labour's 2024 Budget introduced a new five-band multiplier system from April 2026. The core structure — rateable value times multiplier — remains. Enterprise Nation (December 2025): "On the broader political promise to 'replace the business rates system', this is at best a first step, not a fulfilment: the core model of tax based on rateable value times multiplier remains intact."</p>
+
+        <p><strong>The Gap.</strong> A system widely condemned as structurally biased against physical retail and poorly calibrated to the digital economy has survived every promise to replace it, receiving only incremental tweaks across 25+ years.</p>
+
+        <p><em>Bipartisan failure: Both parties have promised structural reform; neither has delivered it.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p2-4">
+        <h4>Promise 2.4: Debt-to-GDP Reduction</h4>
+        <p><em>(Covered in detail above in Promise 2.1. Key additional data below.)</em></p>
+
+        <p>The <a href="https://obr.uk/box/the-rise-of-public-sector-net-debt-over-the-past-25-years/" target="_blank" rel="noopener">OBR's July 2025 analysis</a> documents the consistent pattern: each fiscal framework promises debt stabilisation in years 3-5; actual debt continues to rise. The debt-stabilising primary surplus now required is +1.3% of GDP, one of the highest since OBR forecasting began. The UK government is currently running a primary deficit, meaning debt continues to grow before any planned tightening takes effect.</p>
+      </div>
+
+      <!-- THEME 3 -->
+      <h2 id="theme3">Theme 3: Housing and Planning</h2>
+
+      <div class="table-wrap summary-table">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Promise</th>
+              <th>First Made</th>
+              <th>Target</th>
+              <th>Current Status</th>
+              <th>Gap</th>
+              <th>Years Broken</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>3.1</td>
+              <td>300,000 homes per year</td>
+              <td>Blair, 2003 (Barker Review)</td>
+              <td>300,000 net additions per year</td>
+              <td>208,600 in 2024-25</td>
+              <td>91,400 homes/year; 30% below target</td>
+              <td><span class="badge badge-broken">Every year since 1970</span></td>
+            </tr>
+            <tr>
+              <td>3.2</td>
+              <td>Planning system reform</td>
+              <td>Cameron 2012 (NPPF)</td>
+              <td>Faster, simpler planning</td>
+              <td>In transition; low local plan adoption</td>
+              <td>Multiple reforms diluted before implementation</td>
+              <td><span class="badge badge-broken">25+ years</span></td>
+            </tr>
+            <tr>
+              <td>3.3</td>
+              <td>Affordable and social housing targets</td>
+              <td>Brown 2008</td>
+              <td>145,000 affordable homes per year</td>
+              <td>63,605 affordable homes/year; 6,355 social rent</td>
+              <td>Shortfall of 81,000/year</td>
+              <td><span class="badge badge-broken">Continuous</span></td>
+            </tr>
+            <tr>
+              <td>3.4</td>
+              <td>Housing affordability</td>
+              <td>Blair, 2003 Barker Review</td>
+              <td>Reduce house price growth; improve price/earnings ratio</td>
+              <td>Price-to-earnings ratio 8.40 in 2023 vs 3.49 in 1997</td>
+              <td>Doubled; worst in 57 years of data</td>
+              <td><span class="badge badge-broken">Continuous deterioration since 1997</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="promise-entry" id="p3-1">
+        <h4>Promise 3.1: 300,000 Homes Per Year</h4>
+        <p><strong>The Promise.</strong> Harold Macmillan first hit 300,000 homes a year as a 1951 manifesto promise, delivering by 1953. The target has been repeated by every government since the 2003 Barker Review response: Blair, Brown, Cameron, May, Johnson, Sunak, and Starmer. No government since Harold Wilson's has delivered it. The last time England built 300,000 homes in a year was 1969-70.</p>
+
+        <p>The <strong>2019 Conservative manifesto</strong> promised 300,000 homes by the mid-2020s. In December 2022, Rishi Sunak's government weakened mandatory housing targets following a backbench rebellion, effectively undermining delivery of that commitment.</p>
+
+        <p>The <strong>2024 Labour manifesto</strong> promised 1.5 million homes over the Parliament — equivalent to 300,000 per year.</p>
+
+        <p><strong>Current Status.</strong> Net additional dwellings in England:</p>
+        <ul>
+          <li>2019-20 (pre-Covid peak): 248,590</li>
+          <li>2022-23: 234,290</li>
+          <li>2023-24: 221,410</li>
+          <li>2024-25: 208,600 — a 6% decrease year-on-year, and 30% below the 300,000 target <a href="https://www.gov.uk/government/statistics/housing-supply-net-additional-dwellings-england-2024-to-2025/" target="_blank" rel="noopener">[MHCLG Housing Supply Statistics, November 2025]</a></li>
+        </ul>
+
+        <p>The Chartered Institute of Housing estimates Labour may fall short of its 1.5 million target by around 25%.</p>
+
+        <p><strong>The Gap.</strong> In 2024-25: 91,400 homes short of the target. Cumulative shortfall since the 2019 manifesto pledge: approximately 350,000 homes unbuilt.</p>
+
+        <p><strong>Cost of the Gap.</strong> England's house price-to-earnings ratio reached 8.40 in 2023, up from 3.49 in 1997 — a 141% deterioration <a href="https://www.bestbrokers.com/2024/06/20/what-nearly-six-decades-of-housing-data-reveal-about-home-affordability-in-the-united-kingdom/" target="_blank" rel="noopener">[BestBrokers, 2024]</a>. London median home costs 11 times annual earnings in 2024. The undersupply has contributed directly to an affordability crisis that costs first-time buyers typically £100,000-£200,000 more than equivalent international comparators.</p>
+
+        <p><em>Bipartisan failure: Seven Prime Ministers. The same target. None delivered it.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p3-2">
+        <h4>Promise 3.2: Planning System Reform</h4>
+        <p><strong>The Promise.</strong> Every government since 2004 has announced a significant planning reform:</p>
+        <ul>
+          <li>2012 (Cameron/Clegg): NPPF — "radical simplification"</li>
+          <li>2015-16 (Cameron): Housing and Planning Act</li>
+          <li>2020-21 (Johnson): Planning for the Future White Paper — "wholesale reform", then substantially diluted after Chesham and Amersham by-election loss in 2021</li>
+          <li>2022 (Sunak): Levelling Up and Regeneration Bill</li>
+          <li>2024-25 (Starmer): NPPF revised February 2025; Planning and Infrastructure Bill introduced December 2025</li>
+        </ul>
+
+        <p><strong>Current Status.</strong> As of early 2026, "the planning system is in transition. Some reforms exist in law but are not yet live." Only 40% of local authorities had adopted local plans in the previous five years. Local plan adoption is a prerequisite for effective housing delivery.</p>
+
+        <p><strong>The Pattern.</strong> The Town and Country Planning Association identifies that planning authorities have consistently granted planning permission for more than 300,000 homes per year, exceeding the national target. The delivery failure lies primarily in build-out, not in planning consent <a href="https://www.tcpa.org.uk/the-seven-deadly-mistakes-of-planning-reform/" target="_blank" rel="noopener">[TCPA, April 2024]</a>. Planning reform has been repeatedly announced as the solution to a problem it does not primarily cause.</p>
+      </div>
+
+      <div class="promise-entry" id="p3-3">
+        <h4>Promise 3.3: Affordable and Social Housing</h4>
+        <p><strong>The Promise.</strong> Brown (2008) promised 3 million new homes by 2020 with a significant social housing component. Cameron's Affordable Homes Programme set targets for affordable delivery. Sunak's AHP 2021-26 initially targeted up to 180,000 homes. Starmer's £39 billion, 10-year Social and Affordable Homes Programme was announced at the 2025 Spending Review.</p>
+
+        <p><strong>Current Status.</strong> The AHP 2021-26 target was "renegotiated" to 110,000-130,000 homes after construction cost inflation in 2023. By March 2025, the programme had delivered 33,072 completions — against the reduced target range. Of those completions, only 6,355 (19%) are social rent, the tenure most needed <a href="https://www.gov.uk/government/publications/the-affordable-homes-programme-annual-report-2024-to-2025/" target="_blank" rel="noopener">[GOV.UK Affordable Homes Programme Annual Report 2024-25]</a>.</p>
+
+        <p>Research identifies a need for 145,000 new affordable homes per year. In 2022-23, only 63,605 were delivered.</p>
+
+        <p><strong>The Gap.</strong> Approximately 81,000 affordable homes short of annual need, every year. Cumulative since 2010: well over 1 million affordable homes unbuilt.</p>
+      </div>
+
+      <div class="promise-entry" id="p3-4">
+        <h4>Promise 3.4: Housing Affordability</h4>
+        <p><strong>The Promise.</strong> Blair's 2003 Barker Review and subsequent 2004 government response committed to increasing housing supply to reduce house price inflation. Every Housing Secretary since has pledged to make homes more affordable.</p>
+
+        <p><strong>Current Status.</strong> England's price-to-earnings ratio was 8.40 in 2023, up from 3.49 in 1997. The peak was 8.84 in 2022 — the worst in 57 years of comparable data. London sits at 11 times earnings. The UK ranks among the least affordable housing markets of any advanced economy.</p>
+
+        <p><strong>The Gap.</strong> Housing affordability has deteriorated continuously since 1997 despite being a stated priority of every government. The ratio has more than doubled. The promise has been broken not just by failing to improve, but by presiding over a sustained and documented worsening.</p>
+
+        <p><em>Bipartisan failure: Seven Prime Ministers and the affordability ratio has doubled.</em></p>
+      </div>
+
+      <!-- THEME 4 -->
+      <h2 id="theme4">Theme 4: Government Delivery and Reform</h2>
+
+      <div class="table-wrap summary-table">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Promise</th>
+              <th>First Made</th>
+              <th>Target</th>
+              <th>Current Status</th>
+              <th>Gap</th>
+              <th>Years Broken</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4.1</td>
+              <td>NHS 18-week waiting target</td>
+              <td>Blair government, 2006</td>
+              <td>92% treated within 18 weeks</td>
+              <td>61.5% (January 2026)</td>
+              <td>30.5 percentage point gap</td>
+              <td><span class="badge badge-broken">124 consecutive months</span></td>
+            </tr>
+            <tr>
+              <td>4.2</td>
+              <td>Social care reform / Dilnot cap</td>
+              <td>Blair, 1997 (Royal Commission)</td>
+              <td>Cap on individual care costs</td>
+              <td>Cap scrapped July 2024, never implemented</td>
+              <td>13 years since Dilnot; cap never implemented</td>
+              <td><span class="badge badge-broken">Continuous since 2011</span></td>
+            </tr>
+            <tr>
+              <td>4.3</td>
+              <td>Major project delivery on time/budget</td>
+              <td>Every government since 2012</td>
+              <td>Projects on time, on budget</td>
+              <td>11% of projects on track; top 10 avg. 161% cost overrun, 57mo late</td>
+              <td>£163bn 2015-24 shortfall</td>
+              <td><span class="badge badge-broken">Continuous</span></td>
+            </tr>
+            <tr>
+              <td>4.4</td>
+              <td>Digital government transformation</td>
+              <td>Cameron/Maude 2012 (GDS)</td>
+              <td>50 of 75 services at 'great' by 2025</td>
+              <td>15 of 75 as of mid-2023 (30% of target)</td>
+              <td>70% of target unmet with 2 years remaining</td>
+              <td><span class="badge badge-broken">Continuous</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="promise-entry" id="p4-1">
+        <h4>Promise 4.1: The NHS 18-Week Waiting Target</h4>
+        <p><strong>The Promise.</strong> "By 2008, there will be a maximum wait of only 18 weeks from any referral of a patient by a general practitioner to treatment in hospital if required." This was the Blair government's formal commitment, confirmed in the Journal of the Royal Society of Medicine [2006]. The NHS Constitution enshrines the 92% standard in law.</p>
+
+        <p><strong>Timeline of commitments and performance:</strong></p>
+        <div class="timeline">
+          <div class="timeline-item">2008 (Labour): Target formally operational</div>
+          <div class="timeline-item">September 2015: Last month the 92% standard was achieved</div>
+          <div class="timeline-item">2016 onward (Cameron, then May, Johnson, Sunak): Progressively missed every month</div>
+          <div class="timeline-item">May 2024 (Wes Streeting, Labour): "Labour promises to hit 18-week NHS waiting target within five years"</div>
+          <div class="timeline-item">January 2025: Elective Reform Plan sets interim target of 65% by March 2026, rising to 92% by March 2029</div>
+        </div>
+
+        <p><strong>Current Status (January 2026).</strong> NHS waiting list: 7.2 million patients (down from the September 2023 peak of 7.8 million but approximately 3 million above pre-pandemic levels). Percentage seen within 18 weeks: 61.5%, against a target of 92%. 135,657 patients waiting more than a year; 1,616 waiting more than 18 months.</p>
+
+        <p><strong>The Gap.</strong> A 30.5 percentage point gap. Approximately 3.2 million additional patients would need to be treated promptly to reach the standard.</p>
+
+        <p><strong>Years Broken.</strong> Every single month since September 2015. That's 124 consecutive months as of March 2026.</p>
+
+        <p><strong>Can it be fixed by 2029?</strong> The <a href="https://ifs.org.uk/publications/can-government-achieve-its-18-week-elective-waiting-time-target" target="_blank" rel="noopener">IFS assessed (March 2025)</a> that "even with 4.9% annual treatment growth — double the historical average — the 92% target is unlikely to be met by 2029." The <a href="https://www.rcp.ac.uk/news-and-media/news-and-opinion/nhs-must-halve-waiting-lists-to-meet-government-18-week-target-new-study-warns/" target="_blank" rel="noopener">Royal College of Physicians study (November 2025)</a> found "the total elective waiting list must fall by 54.1% to reach the 92% standard — equivalent to more than 4 million removals from the waiting list by 2029."</p>
+
+        <p><strong>Cost of the Gap.</strong> The Health Foundation found that NHS productivity waste and inefficiency since the pandemic costs the economy £20 billion per year [The Times, November 2025]. NHS England data shows 28,908 patients died in 2024-25 after waiting more than 18 weeks for treatment, of 79,130 total removed from waiting lists due to death. NHS England notes that in many cases the cause of death will not relate to the condition awaiting treatment.</p>
+
+        <p><em>Bipartisan failure: The target was missed under Cameron from 2016 onward and has been missed every month since by May, Johnson, Sunak, and now Starmer.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p4-2">
+        <h4>Promise 4.2: Social Care Reform</h4>
+        <p><strong>The Promise and Its Repetitions.</strong> This is the longest-running broken promise in the tracker:</p>
+        <div class="timeline">
+          <div class="timeline-item"><strong>1997 (Blair):</strong> Royal Commission on Long-Term Care established. Its recommendations for free personal care were adopted in Scotland and rejected in England as "too expensive."</div>
+          <div class="timeline-item"><strong>2010 (Brown):</strong> National Care Service proposed. Never delivered before the election.</div>
+          <div class="timeline-item"><strong>2011 (Cameron):</strong> Sir Andrew Dilnot recommends a cap on individual social care costs (approximately £35,000). Cameron government welcomes the report.</div>
+          <div class="timeline-item"><strong>2014 (Cameron):</strong> Care Act 2014 legislates a £72,000 cap, to take effect October 2016.</div>
+          <div class="timeline-item"><strong>2015 (Cameron/Osborne):</strong> Implementation delayed to 2020.</div>
+          <div class="timeline-item"><strong>2017:</strong> Implementation delayed again, indefinitely.</div>
+          <div class="timeline-item"><strong>2021 (Johnson):</strong> Cap announced at £86,000, to start October 2023, funded by Health and Social Care Levy.</div>
+          <div class="timeline-item"><strong>2022 (Sunak Autumn Statement):</strong> Implementation delayed again to October 2025; NICs levy abolished.</div>
+          <div class="timeline-item"><strong>July 2024 (Reeves/Starmer):</strong> Cap scrapped entirely. Reason given: "It was not possible to implement reforms that were not funded."</div>
+        </div>
+
+        <div class="pull">"We've failed another generation of families. For 25 years, various governments have abandoned plans to reform social care." — Sir Andrew Dilnot, July 2024</div>
+
+        <p><strong>The Target.</strong> A cap on individual social care costs. Originally £35,000 (Dilnot 2011). Revised to £72,000 (Care Act 2014). Revised again to £86,000 (Johnson 2021). Never implemented.</p>
+
+        <p><strong>Current Status.</strong> No cap exists. The means-test threshold for state support remains at £23,250 in assets — unchanged since 1996 in nominal terms, and therefore drastically lower in real terms. Individuals face unlimited catastrophic care costs with no ceiling.</p>
+
+        <p><strong>The Gap.</strong> 13 years since Dilnot's 2011 recommendation. 10 years since the Care Act legislated a cap. The cap has never, at any point, been implemented.</p>
+
+        <p><strong>Cost of the Gap.</strong> IFS warned that scrapping the cap exposes individuals to "extremely high social care costs potentially amounting to hundreds of thousands of pounds." IFS calculated that £4 billion would need to be found by October 2028 to fund the cap — money that no longer exists <a href="https://www.nuffieldtrust.org.uk/resource/what-has-happened-to-the-funding-earmarked-for-social-care-reform" target="_blank" rel="noopener">[Nuffield Trust, July 2024]</a>.</p>
+
+        <p><em>Bipartisan failure: Blair, Brown, Cameron, May, Johnson, Sunak, Starmer. Every Prime Minister for 25 years.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p4-3">
+        <h4>Promise 4.3: Major Project Delivery</h4>
+        <p><strong>The Promise.</strong> Every government since the 2012 Civil Service Reform Plan has committed to improved value for money and on-time delivery of major projects. The 2025 launch of NISTA (National Infrastructure and Service Transformation Authority) is the latest iteration of this recurring institutional commitment.</p>
+
+        <p><strong>Current Status (2024-2026).</strong></p>
+        <ul>
+          <li>2015-2024: only 59% of planned infrastructure spending materialised, a £163 billion shortfall <a href="https://www.mckinsey.com.br/our-insights/impatient-for-infrastructure-four-changes-to-improve-uk-project-delivery" target="_blank" rel="noopener">[McKinsey, March 2026]</a></li>
+          <li>The ten biggest Government Major Projects Portfolio projects average 161% above baseline whole-life costs and 57 months behind their initial estimated delivery date</li>
+          <li>In the five years to 2024, most major UK government projects experienced at least one change in Senior Responsible Owner, with 20% seeing two or more SRO changes</li>
+          <li>NISTA's 2024-25 Annual Report covers 213 projects with total whole-life costs of £996 billion. £198 billion of that whole-life cost sits in Red-rated projects <a href="https://ar25.nista.grid.civilservice.gov.uk/report" target="_blank" rel="noopener">[NISTA Annual Report 2024-25]</a></li>
+        </ul>
+
+        <p><strong>HS2 in focus.</strong> The original budget was £37.5 billion in 2009 prices <a href="https://www.instituteforgovernment.org.uk/explainer/hs2-costs" target="_blank" rel="noopener">[IFG, October 2023]</a>. By 2021 the expected cost had risen to £72-98 billion (2019 prices). The northern sections were cancelled in 2023 under Sunak, removing the central rationale for the project's "levelling up" justification.</p>
+
+        <p><strong>McKinsey projects £254 billion of infrastructure will remain undelivered</strong> over the next decade if current delivery rates continue.</p>
+
+        <p><em>Bipartisan failure: Every government since 2010 has overseen major project delivery failures.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p4-4">
+        <h4>Promise 4.4: Digital Government Transformation</h4>
+        <p><strong>The Promise.</strong> Cameron and Francis Maude created the Government Digital Service in 2011, promising "digital by default" and significant efficiency savings. The 2022-25 Roadmap (under Conservative government) set a target for 50 of the top 75 government services to reach "great" standard by 2025, with £8 billion committed to digital transformation.</p>
+
+        <p><strong>Current Status.</strong> As of mid-2023, only 15 of 75 services had reached "great" standard — 30% of the target — with less than two years to the deadline. The 2022 roadmap itself acknowledged: "Previous strategies have lacked specificity, cross-government endorsement, clear lines of accountability and business ownership. Subsequently, former flagship programmes have slowly shut down and failed to deliver results." Making Tax Digital, heralded as a simplification tool, has been delayed multiple times and now appears set to add complexity <a href="https://www.pwc.co.uk/services/tax/insights/tax-simplification-after-the-ots.html" target="_blank" rel="noopener">[PwC, October 2022]</a>.</p>
+
+        <p><strong>The Gap.</strong> After 13 years and billions invested in digital government transformation since GDS's founding in 2011, fundamental legacy IT persists, cross-government data sharing remains immature, and most services have not reached "great" standard.</p>
+
+        <p><em>Bipartisan failure: Multiple failed digital programmes across Blair, Brown, Cameron, May, Johnson, and Sunak governments.</em></p>
+      </div>
+
+      <!-- THEME 5 -->
+      <h2 id="theme5">Theme 5: Growth and Productivity</h2>
+
+      <div class="table-wrap summary-table">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Promise</th>
+              <th>First Made</th>
+              <th>Target</th>
+              <th>Current Status</th>
+              <th>Gap</th>
+              <th>Years Broken</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>5.1</td>
+              <td>Levelling up / regional inequality</td>
+              <td>Blair, 1997</td>
+              <td>Close north-south gap; productivity rising in every region</td>
+              <td>Programme "failed to deliver meaningful change"</td>
+              <td>Regional productivity gap ~60%</td>
+              <td><span class="badge badge-broken">25+ years</span></td>
+            </tr>
+            <tr>
+              <td>5.2</td>
+              <td>R&amp;D spending at 2.4% of GDP</td>
+              <td>Osborne 2014; May 2017</td>
+              <td>2.4% of GDP by 2027</td>
+              <td>2.64% in 2023 — apparently met, but via methodology revision</td>
+              <td>UK still ranks 18th in OECD for government R&amp;D</td>
+              <td><span class="badge badge-partial">Partially met (caveats apply)</span></td>
+            </tr>
+            <tr>
+              <td>5.3</td>
+              <td>Productivity gap closure</td>
+              <td>Blair 2001; May 2017</td>
+              <td>Close gap with G7 peers</td>
+              <td>MFP down 0.6% in 2024; 0.58%/year vs 1.9%/year pre-2008</td>
+              <td>Gap with US: ~20%; gap with France/Germany: 14-16%</td>
+              <td><span class="badge badge-broken">17+ years</span></td>
+            </tr>
+            <tr>
+              <td>5.4</td>
+              <td>Real wage growth</td>
+              <td>Every PM and Chancellor since 2000s</td>
+              <td>Rising living standards</td>
+              <td>Real wages 2023-24 just 3.5% above 2009-10 levels</td>
+              <td>£11,000/year gap vs pre-crisis trend</td>
+              <td><span class="badge badge-broken">15+ years</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="promise-entry" id="p5-1">
+        <h4>Promise 5.1: Levelling Up and Regional Inequality</h4>
+        <p><strong>The Promise and Its Incarnations.</strong> Blair's 1997 "New Deal for Communities" began the sequence. Osborne's "Northern Powerhouse" (2014-16) was "a rebalancing of our economy." May's Industrial Strategy pledged to spread prosperity. Johnson made "Levelling Up" the core domestic project of the 2019 Parliament, with the 2022 Levelling Up White Paper setting 12 measurable missions with 2030 targets, including: "By 2030, pay, employment and productivity will have risen in every area of the UK... and the gap between the top performing and other areas closing."</p>
+
+        <p><strong>Current Status (2025).</strong> The final legally-required <a href="https://www.gov.uk/government/publications/levelling-up-missions/levelling-up-missions-annual-report-2024-to-2025-accessible-version" target="_blank" rel="noopener">Levelling Up Missions Annual Report (May 2025)</a> acknowledged the programme had "failed to deliver meaningful change for our regions." GVA per hour increased in only 7 of 12 regions and decreased in 5 (2022 vs 2021). The regional productivity gap between London and Northern Ireland stands at approximately 60%.</p>
+
+        <p>University of Liverpool research (June 2024): "Despite a decade of Northern Powerhouse, levelling up, and post-Brexit funding, the rhetoric has not delivered. The UK remains thoroughly divided" <a href="https://news.liverpool.ac.uk/2024/06/11/levelling-up-has-been-a-total-failure-heres-the-evidence/" target="_blank" rel="noopener">[Liverpool University, June 2024]</a>.</p>
+
+        <p><strong>The Gap.</strong> The north-south productivity divide has persisted or worsened across 25 years of promises. The HS2 northern cancellation in 2023 removed the infrastructure investment that was central to the levelling up rationale.</p>
+
+        <p><em>Bipartisan failure: Blair's New Deal, Cameron's LEPs, Osborne's Northern Powerhouse, Johnson's Levelling Up — all fell short.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p5-2">
+        <h4>Promise 5.2: R&D Spending at 2.4% of GDP</h4>
+        <p><strong>The Promise.</strong> Osborne set a target of 2.5% of GDP in R&D by 2014. That was missed by 90%. May's 2017 Industrial Strategy set a revised target of 2.4% of GDP by 2027. Johnson reaffirmed the 2.4% target and announced a £22 billion R&D budget by 2026-27.</p>
+
+        <p><strong>Current Status.</strong> UK total R&D expenditure was £72.6 billion in 2023, equal to 2.64% of GDP — apparently exceeding the 2.4% target <a href="https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/bulletins/ukgrossdomesticexpenditureonresearchanddevelopment/2023" target="_blank" rel="noopener">[ONS, August 2025]</a>.</p>
+
+        <p><strong>The critical caveat.</strong> ONS explicitly states: "The methodological improvements to our GERD statistics from 2018 onwards mean that comparing the new estimates in this release with those for periods prior to 2018 is not possible. We would advise users not to compare any of the 2022 or 2023 GERD estimates in this release with the lower-level values for previous years." The 2.64% (2023) figure uses a revised methodology that inflates the headline versus the 1.66% (2017) baseline used when the target was set.</p>
+
+        <p><strong>Net assessment.</strong> The 2.4% headline appears to have been met, but the methodology shift makes the comparison unreliable. The UK continues to lag global leaders: UK government provides less direct R&D funding as a percentage of GDP than the OECD average, ranking 18th. The UK is roughly half of South Korea at over 4%, and below Switzerland by 16%.</p>
+      </div>
+
+      <div class="promise-entry" id="p5-3">
+        <h4>Promise 5.3: Productivity Gap Closure</h4>
+        <p><strong>The Promise.</strong> Blair's 2001 Productivity Report committed to closing the UK's gap with international peers. May's 2017 Industrial Strategy committed to "helping the UK to close the productivity gap with other major economies." The current government's own growth mission page acknowledges: "Our GDP per hour worked has grown by only 0.6% since 2010, while in France, Germany and the US it has grown by around 1% a year."</p>
+
+        <p><strong>Current Status.</strong></p>
+        <ul>
+          <li>Productivity growth 2010-2024: 0.58% per year (output per job) vs 1.9% per year in 1997-2007 <a href="https://www.bcg.com/united-kingdom/centre-for-growth/the-productivity-frontier-uk-leaders-laggards-and-the-growing-gap" target="_blank" rel="noopener">[BCG, February 2026]</a></li>
+          <li>UK multi-factor productivity decreased by 0.6% in 2024 and 0.7% compared to 2019 — the third consecutive year of decline <a href="https://www.ons.gov.uk/economy/economicoutputandproductivity/productivitymeasures/bulletins/growthaccountingmultifactorproductivityestimatesuk/octobertodecember2024" target="_blank" rel="noopener">[ONS, May 2025]</a></li>
+          <li>UK productivity sits approximately 20% below the US and 14-16% below France and Germany</li>
+          <li>Resolution Foundation (April 2025): "UK productivity fell 0.5% between 2019 and 2024 — second worst five-year performance since the 1970s"</li>
+        </ul>
+
+        <p><strong>The Gap.</strong> UK productivity growth since 2010 is "just over a quarter of what it was in the 1990s and early 2000s." The promise to close the productivity gap has not been met: the gap with the US, Germany, and France has widened since 2008.</p>
+
+        <p><strong>Cost of the Gap.</strong> GDP per head is today approximately £11,000 lower than it would have been if pre-crisis trends had continued <a href="https://ifs.org.uk/news/past-15-years-have-been-worst-income-growth-generations" target="_blank" rel="noopener">[IFS, June 2024]</a>. Workers face an £11,000 per year lost wages gap vs pre-crisis trend <a href="https://www.resolutionfoundation.org/press-releases/15-years-of-economic-stagnation-has-left-workers-across-britain-with-an-11000-a-year-lost-wages-gap/" target="_blank" rel="noopener">[Resolution Foundation, March 2023]</a>.</p>
+
+        <p><em>Bipartisan failure: 17 consecutive years of underperformance against commitment and comparators, across three governments.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p5-4">
+        <h4>Promise 5.4: Real Wage Growth</h4>
+        <p><strong>The Promise.</strong> Every Prime Minister and Chancellor since the late 1990s has pledged rising living standards. Brown's 2008 Budget forecast real wage growth resuming after the financial crisis. Osborne's "long-term economic plan" promised rising wages. Every subsequent Budget and Autumn Statement has included some version of this commitment.</p>
+
+        <p><strong>Current Status.</strong> Real wages in 2023-24 were just 3.5% above 2009-10 levels — 13 years of near-stagnation. Real wage growth for the UK between 2007 and 2019 was +6%, versus +12% for the USA and +16% for Germany. The past 15 years represent "the worst 15-year income growth in living memory" for UK workers <a href="https://ifs.org.uk/news/past-15-years-have-been-worst-income-growth-generations" target="_blank" rel="noopener">[IFS, 2024]</a>.</p>
+
+        <p><strong>The Gap.</strong> At pre-crisis growth rates, the average worker would earn £11,000 more per year today.</p>
+
+        <p><em>Bipartisan failure: The wage stagnation problem began in 2008 and has deepened across Labour and Conservative administrations alike.</em></p>
+      </div>
+
+      <!-- THEME 6 -->
+      <h2 id="theme6">Theme 6: Pensions and Capital</h2>
+
+      <div class="table-wrap summary-table">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Promise</th>
+              <th>First Made</th>
+              <th>Target</th>
+              <th>Current Status</th>
+              <th>Gap</th>
+              <th>Years Broken</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>6.1</td>
+              <td>Pension adequacy (auto-enrolment)</td>
+              <td>Labour 2008 (Pensions Act)</td>
+              <td>Adequate retirement income</td>
+              <td>Minimum 8%; adequate requires 16%; median household at 73% of required pension wealth</td>
+              <td>50% shortfall in required contributions</td>
+              <td><span class="badge badge-broken">9+ years</span></td>
+            </tr>
+            <tr>
+              <td>6.2</td>
+              <td>Infrastructure investment promised vs delivered</td>
+              <td>Osborne 2010; Johnson 2020; Starmer 2025</td>
+              <td>Deliver planned infrastructure</td>
+              <td>Only 59% of planned spending 2015-2024 materialised; £163bn shortfall</td>
+              <td>£163bn gap 2015-24; projected £254bn gap next decade</td>
+              <td><span class="badge badge-broken">Continuous</span></td>
+            </tr>
+            <tr>
+              <td>6.3</td>
+              <td>Patient capital / SME scale-up finance</td>
+              <td>Hammond/May 2017</td>
+              <td>£20bn new patient capital over 10 years</td>
+              <td>British Patient Capital operational with £3bn+ AUM; broader £20bn target unverified</td>
+              <td>Partial delivery; scale-up gap persists</td>
+              <td><span class="badge badge-partial">Partial — see note</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="promise-entry" id="p6-1">
+        <h4>Promise 6.1: Pension Adequacy</h4>
+        <p><strong>The Promise.</strong> Labour's 2008 Pensions Act legislated auto-enrolment with minimum total contributions rising to 8% of band earnings (3% employer, 5% employee) by 2018. Multiple reviews from 2012 onward warned 8% was insufficient. The 2017 Automatic Enrolment Review promised to "address the issue of adequacy" without setting a date. The 2023 Auto-Enrolment Act extended eligibility but set no implementation timetable.</p>
+
+        <p><strong>Current Status.</strong> Minimum combined contribution remains 8%. The Pensions Policy Institute finds that a median earner requires combined contributions of approximately 16% to replicate working-life living standards <a href="https://www.pensions-expert.com/defined-contribution/outlook-2025-pensions-adequacy-has-no-easy-solutions/68463.article" target="_blank" rel="noopener">[Pensions Expert, November 2024]</a>. Around 14 million people (half of all defined contribution pension savers) are not on track for their expected retirement income; two thirds of that group face a savings gap of more than £100,000.</p>
+
+        <p>Royal London modelling (March 2026) finds that "the median household reaches around 73% of the required pension wealth, indicating a substantial shortfall." Under Retirement Living Standards the median household achieves only 52% of the benchmark <a href="https://www.actuarialpost.co.uk/downloads/cat_1/Royal%20London-higher-auto-enrolment-contributions-2026.pdf" target="_blank" rel="noopener">[Royal London/Actuarial Post, March 2026]</a>.</p>
+
+        <p>For context: public sector defined benefit schemes average 28.5% combined contributions, which indicates that those who design the system know 8% is insufficient.</p>
+
+        <p><strong>The Gap.</strong> Current minimum (8%) versus adequate (16%): a 50% shortfall in required contributions. The gap means a median earner saving at the minimum will retire with approximately half the pension wealth needed.</p>
+
+        <p><em>Bipartisan failure: Labour designed the system at 8%; the Coalition implemented it; subsequent Conservative governments failed to raise the rate; Labour has now inherited the adequacy problem.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p6-2">
+        <h4>Promise 6.2: Infrastructure Investment</h4>
+        <p><strong>The Promise.</strong> Osborne's 2010 National Infrastructure Plan listed £200 billion of planned infrastructure. Johnson's 2020 "Build Build Build" announced "the most ambitious infrastructure plan in history" at £600 billion. Starmer's 2025 10-Year Infrastructure Strategy commits to £725 billion over 10 years.</p>
+
+        <p><strong>Current Status.</strong> Between 2015 and 2024, only 59% of planned infrastructure spending materialised, a shortfall of £163 billion <a href="https://www.mckinsey.com.br/our-insights/impatient-for-infrastructure-four-changes-to-improve-uk-project-delivery" target="_blank" rel="noopener">[McKinsey, March 2026]</a>. The UK has had the lowest public investment of any G7 country for 24 of the last 30 years. McKinsey projects that £254 billion of infrastructure will remain undelivered over the next decade if current delivery rates continue.</p>
+
+        <p><strong>The Pattern.</strong> Every national infrastructure plan since 2010 has been announced with ambitious targets and delivered at approximately 60% of commitment. The gap between what is announced and what is built is not an anomaly — it's the norm.</p>
+
+        <p><em>Bipartisan failure: Labour's PFI programme underdelivered; Conservative NIP, Build Build Build, and subsequent plans all delivered at roughly 60%.</em></p>
+      </div>
+
+      <div class="promise-entry" id="p6-3">
+        <h4>Promise 6.3: Patient Capital and SME Scale-Up Finance</h4>
+        <p><strong>The Promise.</strong> Hammond and May's 2017 Patient Capital Review identified a UK "scale-up gap" and announced "action to unlock £20 billion of investment over the next ten years." British Patient Capital was established as a subsidiary of the British Business Bank with £2.5 billion to invest.</p>
+
+        <p><strong>Current Status.</strong> British Patient Capital has grown to £3 billion-plus of assets under management and is operational. However, independent assessment of whether the broader £20 billion market target has been achieved is not available from public sources reviewed <abbr title="This figure is flagged as awaiting independent verification">[CHECK]</abbr>. The UK continues to lack domestic sovereign wealth capacity comparable to France's BpiFrance, Germany's KfW, or the US Small Business Investment Company programme.</p>
+
+        <p><strong>Assessment.</strong> This is partial delivery. The BPC itself is operational but the broader market target has not been independently verified. The scale-up finance gap persists for many UK companies.</p>
+      </div>
+
+      <hr class="divider">
+
+      <!-- PART 3 -->
+      <h2 id="part3">Part 3: The Patterns</h2>
+
+      <p>Six themes. Twenty-seven promises. The data doesn't just document individual failures — it reveals a repeating structure. Here are the five patterns the tracker consistently exposes.</p>
+
+      <h3 id="pattern1">Pattern 1: The Announcement Cycle</h3>
+
+      <p>Promises in the UK political system cluster around three triggers: general elections, Spending Reviews, and crises.</p>
+
+      <p>The evidence is systematic. The NHS 18-week target was pledged ahead of the 2005 election. A fiscal surplus by 2020 was pledged at the 2015 election. "Levelling Up" was the core 2019 election commitment. 1.5 million homes was the 2024 election pledge. None was delivered.</p>
+
+      <p>Spending Reviews in 2010, 2013, 2015, 2019, 2021, and 2025 each produced fresh infrastructure commitments. Each was announced as transformative. Each was delivered at approximately 60% of the stated ambition.</p>
+
+      <p>Crises produce the most expansive promises. The 2008 financial crisis generated "once-in-a-generation" pledges on fiscal consolidation. The 2020 Covid pandemic produced "Build Build Build." The 2022 energy crisis produced British Energy Security Strategy commitments. Crisis-era commitments have the worst delivery record of all: they're made under pressure, with unrealistic timelines, and superseded by the next crisis before they can be assessed.</p>
+
+      <p>The IFG's analysis of fiscal rules illustrates the cycle most clearly: since 2008, fiscal rules have lasted an average of 2-3 years before abandonment. Each new set arrives with declarations of "iron-clad" commitment. Each is quietly replaced when it becomes inconvenient <a href="https://www.instituteforgovernment.org.uk/explainer/fiscal-rules-history" target="_blank" rel="noopener">[IFG, 2024]</a>.</p>
+
+      <p>The announcement cycle isn't accidental. Political incentives reward the announcement, not the delivery. The press release is the product. The implementation is someone else's problem.</p>
+
+      <h3 id="pattern2">Pattern 2: The Ratchet Effect</h3>
+
+      <p>When a target becomes politically inconvenient, it doesn't get formally abandoned. It gets quietly revised.</p>
+
+      <p>The evidence from this tracker:</p>
+
+      <div class="pattern-box">
+        <h4>Hinkley Point C</h4>
+        <p>The completion date moved from 2017 to 2023 to 2025 to 2026 to 2027 to 2029-2031 to 2030 (current base case). Each revision was presented as the new definitive date. At no point was there a formal government statement acknowledging a target had been missed.</p>
+      </div>
+
+      <div class="pattern-box">
+        <h4>NHS 18-week target</h4>
+        <p>When the 92% standard became unachievable, the NHS introduced interim targets: 65% by March 2026, rising to 92% by March 2029. The nature of "meeting the target" was redefined without formally abandoning the original legal standard.</p>
+      </div>
+
+      <div class="pattern-box">
+        <h4>Brown's Golden Rule</h4>
+        <p>The IFG notes the rule was never formally broken because "the way the Golden Rule was assessed was changed when it appeared on course to be missed." The defined start of the economic cycle was retrospectively adjusted, allowing borrowing that would otherwise have breached the rule.</p>
+      </div>
+
+      <div class="pattern-box">
+        <h4>Levelling Up Missions</h4>
+        <p>The 2022 White Paper set 12 specific 2030 missions with measurable targets. By 2024 the programme was being wound down. The missions were not missed; they were dissolved.</p>
+      </div>
+
+      <div class="pattern-box">
+        <h4>Affordable Homes Programme 2021-26</h4>
+        <p>Original target: up to 180,000 homes. After construction cost inflation in 2023, "renegotiated" to 110,000-130,000. Each reduction was presented as a management response to changed circumstances, not a delivery failure.</p>
+      </div>
+
+      <div class="pattern-box">
+        <h4>Social care cap</h4>
+        <p>Dilnot's 2011 recommended cap of £35,000 became £72,000 when legislated in 2014, then £86,000 when relaunched in 2021. The cap amount was revised upward, making it less protective, at each iteration before eventual abandonment. The promise was technically "maintained" throughout, even as its substance was eroded.</p>
+      </div>
+
+      <p>The ratchet runs in one direction. Targets are never revised upward in light of better-than-expected performance. They're revised downward, or dissolved entirely, when delivery falls short.</p>
+
+      <h3 id="pattern3">Pattern 3: The Accountability Gap</h3>
+
+      <p>When a minister leaves, their commitments leave with them. The UK system has no mechanism for a new minister to inherit the delivery obligation of their predecessor.</p>
+
+      <p>The evidence:</p>
+
+      <p><strong>Social care.</strong> Between Dilnot's 2011 report and Labour scrapping the cap in 2024, the UK had more than 10 Health Secretaries and 7 Prime Ministers. Each incoming minister announced their commitment to reform. None was held accountable for their predecessor's promises.</p>
+
+      <p><strong>NHS waiting times.</strong> "Cutting waiting times" has been on every Health Secretary's agenda since Alan Milburn in the early 2000s. Andrew Lansley (2010-12), Jeremy Hunt (2012-18), Matt Hancock (2018-21), Sajid Javid (2021-22), Steve Barclay (2022-24), and Wes Streeting (2024-) each inherited the 18-week problem, named it a priority, and failed to resolve it. No secretary of state has ever had to account for a predecessor's specific numerical commitment.</p>
+
+      <p><strong>Hinkley nuclear.</strong> The project has been sponsored by at least seven Secretaries of State for Energy or Business across 20 years — Darling, Huhne, Davey, Rudd, Clark, Kwarteng, Shapps, and Miliband. Each has reaffirmed commitment. The project slips further behind with each change.</p>
+
+      <p><strong>Infrastructure SRO churn.</strong> McKinsey's March 2026 analysis found that in the five years to 2024, most major UK government projects experienced at least one change in Senior Responsible Owner, with 20% seeing two or more changes. SRO churn "slowed delivery, injected volatility into the market, and made it harder to realise value and benefits" <a href="https://www.mckinsey.com.br/our-insights/impatient-for-infrastructure-four-changes-to-improve-uk-project-delivery" target="_blank" rel="noopener">[McKinsey, March 2026]</a>.</p>
+
+      <p>The accountability gap is not a personal or partisan failure. It's a structural one. The system doesn't require ministers to inherit their predecessors' commitments. There's no mechanism to enforce continuity. So continuity doesn't happen.</p>
+
+      <h3 id="pattern4">Pattern 4: The Bipartisan Failure</h3>
+
+      <p>This is the tracker's most important finding for the purposes of the non-partisan argument.</p>
+
+      <p>Of the 27 promises documented, 13 have been broken by both Labour and Conservative governments:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Promise</th>
+              <th>Labour failure</th>
+              <th>Conservative failure</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>300,000 homes per year</td>
+              <td>Blair/Brown: never hit target</td>
+              <td>Cameron/May/Johnson/Sunak: never hit target</td>
+            </tr>
+            <tr>
+              <td>Planning reform</td>
+              <td>Blair: Barker Review response never implemented</td>
+              <td>Cameron/May/Johnson/Sunak: NPPF series, all partial</td>
+            </tr>
+            <tr>
+              <td>Social care cap</td>
+              <td>Blair: Royal Commission rejected; Brown: abortive National Care Service</td>
+              <td>Cameron: legislated then delayed; May: delayed; Johnson: delayed; Sunak: delayed; Reeves: scrapped</td>
+            </tr>
+            <tr>
+              <td>NHS 18-week target</td>
+              <td>Blair: set target, achieved it by 2012</td>
+              <td>Cameron: let it deteriorate from 2016 onward</td>
+            </tr>
+            <tr>
+              <td>Fiscal rules</td>
+              <td>Brown: manipulated/broke golden rule; Darling: missed deficit target</td>
+              <td>Every Conservative Chancellor 2010-2024 broke or abandoned primary rules</td>
+            </tr>
+            <tr>
+              <td>Debt-to-GDP reduction</td>
+              <td>Brown: debt above 40% target by 2008</td>
+              <td>Osborne through Hunt: debt rose from 65% to 90% of GDP</td>
+            </tr>
+            <tr>
+              <td>Tax simplification</td>
+              <td>No OTS equivalent under Labour; complexity continued rising</td>
+              <td>Created OTS 2010, then abolished it 2022; code more than doubled under Conservatives</td>
+            </tr>
+            <tr>
+              <td>Industrial electricity prices</td>
+              <td>No competitiveness target met under Labour</td>
+              <td>Prices increasingly uncompetitive 2010-2024</td>
+            </tr>
+            <tr>
+              <td>Productivity gap</td>
+              <td>Blair closed gap somewhat 1997-2007</td>
+              <td>Gap widened significantly 2010-2024</td>
+            </tr>
+            <tr>
+              <td>Infrastructure delivery</td>
+              <td>PFI deals underdelivered</td>
+              <td>NIP, Build Build Build: all at roughly 60% delivery</td>
+            </tr>
+            <tr>
+              <td>Levelling up / regional inequality</td>
+              <td>New Deal for Communities: limited impact</td>
+              <td>Northern Powerhouse, Levelling Up: documented failures</td>
+            </tr>
+            <tr>
+              <td>Pension adequacy</td>
+              <td>Designed auto-enrolment at 8% — acknowledged as insufficient from 2012</td>
+              <td>Failed to raise contribution rates 2012-2024</td>
+            </tr>
+            <tr>
+              <td>Real wage growth</td>
+              <td>Stagnation began under Brown 2008-2010</td>
+              <td>Continued and deepened under Osborne through Hunt</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The failure isn't ideological. Housebuilding was not blocked by conservatism or socialism. The same planning system constrains both. The fiscal rules problem isn't about tax-and-spend politics. Both low-tax Chancellors and high-spending Chancellors have broken their own rules. The productivity gap isn't attributable to any one approach to industrial policy — it has widened under every approach since 2008.</p>
+
+      <p>If the diagnosis is the same every Parliament, and the prescription is the same every Parliament, and the outcome is the same every Parliament, the problem is in the system, not the politics.</p>
+
+      <h3 id="pattern5">Pattern 5: The Cumulative Cost</h3>
+
+      <p>Adding up the cost of non-delivery across all 27 promises is an exercise in approximation rather than precision. But the scale is not in dispute.</p>
+
+      <p><strong>Fiscal cost.</strong> Public sector net debt rose 62 percentage points of GDP between 2000-01 and 2024-25. In money terms, UK public debt stands at approximately £2.8 trillion in 2025 <a href="https://obr.uk/" target="_blank" rel="noopener">[OBR]</a>.</p>
+
+      <p><strong>NHS cost.</strong> The Health Foundation estimates the NHS productivity slump since the pandemic costs the economy £20 billion per year. The direct waiting time cost in economic output — people unable to work due to untreated conditions — is estimated separately at £7-15 billion per year by various analyses.</p>
+
+      <p><strong>Housing cost.</strong> The Resolution Foundation estimates the UK's housing undersupply has contributed to house price-to-earnings ratios that now exceed 8:1 nationally and 11:1 in London. First-time buyers typically pay £100,000-£200,000 more for a home than equivalent international comparators. The aggregate wealth transfer from young renters to existing owners is one of the largest redistributive effects of any policy failure in the tracker.</p>
+
+      <p><strong>Productivity cost.</strong> IFS estimates GDP per head is £11,000 lower today than if pre-crisis trends had continued. Applied to a working population of approximately 33 million, the aggregate lost income runs to hundreds of billions annually.</p>
+
+      <p><strong>Infrastructure cost.</strong> £163 billion of planned infrastructure spending didn't materialise between 2015 and 2024 <a href="https://www.mckinsey.com.br/our-insights/impatient-for-infrastructure-four-changes-to-improve-uk-project-delivery" target="_blank" rel="noopener">[McKinsey, March 2026]</a>. That gap compounds over time: infrastructure not built today costs more to build tomorrow, and the services it would have provided are absent in the interim.</p>
+
+      <p><strong>Energy cost.</strong> The Hinkley Point C consumer premium, compared to offshore wind prices, is estimated to exceed £50 billion over the project's life <abbr title="This figure is flagged as awaiting independent verification">[CHECK]</abbr>. UK households pay approximately 32% more per unit of electricity than the EU-14 median. UK industry pays 125% more.</p>
+
+      <p>The aggregate cost of non-delivery across these 27 promises, measured conservatively and including only documented figures from primary sources, runs well into the hundreds of billions. The immeasurable cost — in trust, in institutional credibility, in the opportunity cost of not building things, not reforming things, not simplifying things — is larger still.</p>
+
+      <hr class="divider">
+
+      <!-- PART 4 -->
+      <h2 id="part4">Part 4: International Benchmarks</h2>
+
+      <h3>What Other Countries Do</h3>
+
+      <p>The UK treats delivery accountability as a political choice. Five countries treat it as a structural requirement.</p>
+
+      <p>Their systems differ in design and emphasis. What they share is this: government commitment to a measurable target carries consequences. Commitments can't simply be made and forgotten, because an independent institution records them, audits delivery against them, and reports to parliament.</p>
+
+      <p>The UK has none of that.</p>
+
+      <div class="country-card" id="nz">
+        <h4>New Zealand: The Most Complete System</h4>
+        <p>New Zealand is widely regarded as the most advanced English-speaking democracy in systematic delivery tracking. Its approach combines statute, independent audit, and a whole-of-government outcomes framework in a coherent system that has survived multiple changes of government.</p>
+
+        <p><strong>The Public Finance Act 1989 (as amended).</strong> The PFA is the legislative backbone. All departments and Crown entities must publish Strategic Intentions setting out what outcomes they are working toward and how performance will be assessed. Each agency must publish a Statement of Performance Expectations before each financial year, setting measurable targets using accounting standards analogous to GAAP. Annual reports must compare actual results against those targets, and those reports are audited by the Auditor-General, an Officer of Parliament who can — and does — qualify annual reports where the performance information is inadequate <a href="https://www.treasury.govt.nz/publications/guide/guide-public-finance-act" target="_blank" rel="noopener">[Treasury NZ]</a>; <a href="https://oag.parliament.nz/good-practice/performance-reporting" target="_blank" rel="noopener">[OAG NZ]</a>.</p>
+
+        <p>This is not a ministerial discretion. It's a statutory obligation.</p>
+
+        <p><strong>The Living Standards Framework.</strong> Treasury's LSF maps wellbeing across three levels: individual and collective wellbeing, institutional quality, and the wealth of New Zealand (natural, human, social, and financial capital). Ministers are required to nominate budget priorities against LSF domains.</p>
+
+        <p><strong>The Results Programme (2012-2017).</strong> Ministers selected 10 cross-cutting societal problems and set explicit five-year targets for each. Senior officials across all relevant agencies were held collectively responsible for achieving them. Progress was reported publicly every six months. The programme was formally evaluated as "remarkably successful" with "dramatic improvements in all 10 areas" by its conclusion <a href="https://www.businessofgovernment.org/sites/default/files/Interagency%20Performance%20Targets.pdf" target="_blank" rel="noopener">[IBM Center for the Business of Government]</a>.</p>
+
+        <p><strong>The Auditor-General's mandate.</strong> The AG is an Officer of Parliament with full statutory authority to issue qualified audit opinions where performance reporting is inadequate. Those opinions are public, reported to select committees, and create direct reputational pressure on agency chief executives.</p>
+      </div>
+
+      <div class="country-card" id="au">
+        <h4>Australia: The Commonwealth Performance Framework</h4>
+        <p>Australia's Commonwealth Performance Framework, established under the Public Governance, Performance and Accountability Act 2013, creates a statutory "plan-act-report" cycle across all Commonwealth entities.</p>
+
+        <p>Each May, Portfolio Budget Statements are laid before Parliament. They set out prospective performance measures and targets for every entity receiving appropriations. Annual Performance Statements must compare actual results against PBS targets. These are a legal requirement <a href="https://www.finance.gov.au/government/managing-commonwealth-resources/planning-and-reporting/commonwealth-performance-framework" target="_blank" rel="noopener">[Department of Finance Australia]</a>.</p>
+
+        <p>The Australian National Audit Office audits these Annual Performance Statements. In 2024-25, 14 major entities were assessed. Nine received unmodified opinions; five received modified opinions. More than 96% of ANAO recommendations were agreed to by audited entities, and more than 80% were implemented within 24 months.</p>
+
+        <p>The system's strength is its statutory basis. Its weakness is the PGPA Act's principles-based approach, which allows entities to choose easy-to-meet measures. The ANAO has repeatedly found that some measures are "not meaningful proxies for actual public outcomes." But the direction of travel is clear: since the performance statements audits began in 2021-22, the ANAO has "observed stronger compliance with legal requirements and greater reliability of measures."</p>
+      </div>
+
+      <div class="country-card" id="ee">
+        <h4>Estonia: Making Accountability Structural</h4>
+        <p>Estonia's approach is different in kind. Rather than a performance evaluation framework imposed on top of a traditional bureaucracy, Estonia made accountability structural by digitising the entire state.</p>
+
+        <p>Between 1997 and 2025, Estonia moved from Soviet-legacy bureaucracy to 100% digital public services <a href="https://e-estonia.com/solutions/interoperability-services/x-road/" target="_blank" rel="noopener">[e-Estonia]</a>. The backbone is X-Road, an open-source decentralised data exchange layer connecting all government and private sector databases. Over 1.3 billion X-Road queries are made annually. Citizens can log into a government portal and see who accessed their data, when, and why. Every government action that touches citizen data is recorded and legally auditable.</p>
+
+        <p>The "Once-Only Principle" means citizens provide information to government once. No duplicate databases. No bureaucratic friction that enables accountability evasion. When government processes are inherently transparent, the conditions for concealing delivery failure are removed.</p>
+
+        <p>The cost was low. ICT budget approximately 1% of national budget from 1995 to 2003. Annual savings to the economy are estimated at approximately 2% of GDP — equivalent to 820 years of working time saved per year. The e-Governance Academy has since exported Estonia's methodology to 308 organisations in 147 countries.</p>
+      </div>
+
+      <div class="country-card" id="sg">
+        <h4>Singapore: Accountability Through Performance Management</h4>
+        <p>Singapore's delivery accountability rests on a tightly integrated performance management system within the civil service, underpinned by meritocracy and strong central coordination.</p>
+
+        <p>The Singapore Public Sector Outcomes Review (SPOR) is a biennial whole-of-government public report published by the Ministry of Finance. The eighth edition was published in November 2024. Key metrics from SPOR 2024: employment rate of residents aged 25-64 at 82.6%; 92% of residents able to walk/cycle/ride to a neighbourhood centre within 20 minutes; 98% of SkillsFuture trainees reporting improved work performance <a href="https://www.mof.gov.sg/news-resources/newsroom/singapore-public-sector-outcomes-review-2024/" target="_blank" rel="noopener">[Singapore MoF — SPOR 2024]</a>.</p>
+
+        <p>The Public Service Division links pay and promotion directly to quantitative performance agreements for senior civil servants. The government bonus is calibrated to national GDP growth, creating a direct line between national delivery and individual civil service reward. Singapore ranked first globally in the Civil Servants Performance Index 2024.</p>
+
+        <p>Singapore's infrastructure delivery record is exceptional. The first MRT Phase I was completed two years ahead of schedule and below budget.</p>
+      </div>
+
+      <div class="country-card" id="kr">
+        <h4>South Korea: Statutory Delivery Tracking With Consequences</h4>
+        <p>South Korea uses the most explicitly statutory delivery-tracking framework of the five countries. The Framework Act on Government Performance Evaluation mandates systematic evaluation of all central administrative agencies, local governments, and public institutions, with results reported to the National Assembly and directly linked to budget consequences.</p>
+
+        <p>The Act requires that evaluations be used by the Ministry of Strategy and Finance to inform budget allocation — a direct financial consequence for under-delivery. The Prime Minister's Office coordinates cross-agency evaluation. Under-performing agencies face budget scrutiny; high-performing agencies receive preferential budget treatment. This is not advisory. It's statutory <a href="https://www.opm.go.kr/opm/info/policies.do?mode=download&articleNo=125189&attachNo=96689" target="_blank" rel="noopener">[Korean Law Research Institute — Framework Act]</a>.</p>
+
+        <p>South Korea's R&D investment exceeds 4% of GDP. Its infrastructure delivery and export performance metrics have substantially improved since the Act's implementation.</p>
+      </div>
+
+      <h3 id="uk-lacks">What the UK Lacks</h3>
+
+      <p>The cross-cutting analysis produces a clear picture. The UK is the only one of these five countries that lacks all of the following:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>NZ</th>
+              <th>Australia</th>
+              <th>Estonia</th>
+              <th>Singapore</th>
+              <th>South Korea</th>
+              <th>UK</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Statutory obligation to publish measurable targets</td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>Yes (digital)</td>
+              <td>Partial</td>
+              <td>Yes</td>
+              <td><span class="badge badge-broken">No</span></td>
+            </tr>
+            <tr>
+              <td>Independent audit of performance information</td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>Partial</td>
+              <td>Yes</td>
+              <td><span class="badge badge-partial">Partial</span></td>
+            </tr>
+            <tr>
+              <td>Legal link between performance results and budget</td>
+              <td>Partial</td>
+              <td>Partial</td>
+              <td>N/A</td>
+              <td>Yes (implicit)</td>
+              <td>Yes (explicit)</td>
+              <td><span class="badge badge-broken">No</span></td>
+            </tr>
+            <tr>
+              <td>Cross-agency outcome targets with collective accountability</td>
+              <td>Yes</td>
+              <td>Partial</td>
+              <td>N/A</td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td><span class="badge badge-broken">No</span></td>
+            </tr>
+            <tr>
+              <td>Public real-time or biennial outcomes dashboard</td>
+              <td>Yes</td>
+              <td>Partial</td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td><span class="badge badge-broken">No</span></td>
+            </tr>
+            <tr>
+              <td>Whole-of-government outcomes framework</td>
+              <td>Yes</td>
+              <td>Partial</td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td>Yes</td>
+              <td><span class="badge badge-broken">No</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>The UK's Own Failed Experiments</h3>
+
+      <p>The UK has tried to solve this problem before. Understanding why those attempts failed matters.</p>
+
+      <p><strong>The Prime Minister's Delivery Unit (2001-2010).</strong> The PMDU was established by Michael Barber days after Blair's 2001 re-election. 40 staff, approximately £1.7 million per year in operational cost, focused on 17 Public Service Agreement targets across Health, Education, Home Office, and Transport <a href="https://centreforpublicimpact.org/public-impact-fundamentals/the-prime-ministers-delivery-unit-pmdu-in-the-uk/" target="_blank" rel="noopener">[Centre for Public Impact]</a>.</p>
+
+      <p>It worked. By 2005, patients waiting more than a year for surgery had fallen from 40,000 to under 10,000. Most health, crime, and railway targets were met or progressed. Rail punctuality was hit. Road congestion was missed. Literacy and numeracy were partially improved.</p>
+
+      <p>Then it stopped working. From 2003-04, Blair's attention shifted to Iraq. The PMDU's authority derived entirely from prime-ministerial interest — once Blair routinely cancelled stocktakes, departments had no reason to prioritise PMDU requests. When Brown succeeded Blair in 2007, the PMDU was absorbed into a broader Cabinet Office structure and lost its distinctive identity and authority. Oliver Letwin later described its abolition as "a terrible mistake."</p>
+
+      <p>The structural weakness exposed: the PMDU's entire authority was personal, not institutional. It was dependent on the Prime Minister's attention, not embedded in statute or independent structures.</p>
+
+      <p><strong>Cameron's Implementation Unit (2012-2015+).</strong> Cameron reinstated a delivery function in 2012. Oliver Letwin was appointed with full Cabinet status to oversee implementation. The unit continued in various forms under subsequent Conservative governments but never regained the focus, authority, or prime-ministerial attention of the original PMDU.</p>
+
+      <p><strong>The Infrastructure and Projects Authority (IPA) and NISTA.</strong> The IPA, created in 2016, publishes an annual assessment of the Government Major Projects Portfolio. Its 2023-24 snapshot: of 227 projects worth £834 billion in whole-life costs, only 11% (holding £19.5 billion of the portfolio) were rated Green (on track). 72% were Amber (significant issues). 12% were Red (delivery appears unachievable) <a href="https://www.gov.uk/government/publications/infrastructure-and-projects-authority-annual-report-2023-24/" target="_blank" rel="noopener">[IPA Annual Report 2023-24]</a>.</p>
+
+      <p>NISTA, which succeeded the IPA in October 2024, covers 213 projects worth £996 billion in whole-life costs. £198 billion sits in Red-rated projects.</p>
+
+      <p>The fundamental limitations of both: the portfolio covers only major capital projects, not the vast majority of government spending and policy commitments. The IPA/NISTA has no power to compel action — it can advise and flag, not enforce.</p>
+
+      <p><strong>The NAO.</strong> The National Audit Office has approximately £120 million annual budget and audits over £1 trillion of government spending. Its VfM reports are thorough, authoritative, and read by select committees and SpAds. But the NAO has no mandate to assess whether ministers have delivered on manifesto commitments or stated targets. It cannot compel the government to set targets. Its reports are retrospective — published after the money has been spent. Recommendations have no binding force.</p>
+
+      <hr class="divider">
+
+      <!-- PART 5 -->
+      <h2 id="part5">Part 5: The Proposal</h2>
+
+      <h3>The Case for a Permanent Gap Tracker</h3>
+
+      <p>The evidence in this paper points to a specific institutional gap in UK governance.</p>
+
+      <p>The UK has the Office for Budget Responsibility, which independently scrutinises fiscal forecasts and prevents chancellors from simply asserting that their numbers add up. Before the OBR existed, chancellors produced their own forecasts, which turned out to be systematically optimistic. After 2010, independent forecasting introduced a constraint that changed behaviour.</p>
+
+      <p>The UK needs the same constraint applied to delivery, not just forecasting.</p>
+
+      <p>The institution we propose would answer a simple question, annually and publicly: did the government do what it said it would do?</p>
+
+      <p>It wouldn't require ministers to succeed at difficult things. It would require them to be honest about whether they've succeeded, and to face independent assessment rather than self-assessment.</p>
+
+      <p>The IFG recommended in September 2024 that a mission delivery unit be established in the Cabinet Office, with Mission Delivery Boards chaired by lead secretaries of state and a Mission Strategy Board chaired by the Prime Minister <a href="https://www.instituteforgovernment.org.uk/sites/default/files/2024-09/Five-steps-labour-government-missions_2.pdf" target="_blank" rel="noopener">[IFG, September 2024]</a>. The Gap Tracker proposal goes further: it needs statutory footing, independent of the executive, not merely advisory.</p>
+
+      <h3 id="three-options">Three Options</h3>
+
+      <div class="option-box" id="optA">
+        <h4>Option A: A New Statutory Function of the National Audit Office</h4>
+        <p>The least institutional resistance. The NAO is already an Officer of Parliament. Its independence from the executive is protected by requiring parliamentary approval for the Comptroller and Auditor General's dismissal. It has audit methodology, credibility with select committees, and access to departmental data.</p>
+
+        <p>The change required: a new statutory mandate in the National Audit Act 1983 (or a successor Act) to:</p>
+        <ol>
+          <li>Maintain a public register of material government delivery commitments (drawn from manifestos, Spending Reviews, White Papers, and Hansard)</li>
+          <li>Publish an annual Delivery Assessment Report grading progress against each commitment</li>
+          <li>Issue qualified opinions where a government claims delivery that data doesn't support</li>
+          <li>Report to the Public Accounts Committee, which is required to respond formally within 30 days</li>
+        </ol>
+
+        <p><strong>Advantages.</strong> Builds on existing credibility. Low institutional cost. Parliamentary precedent exists. The NAO already has a working relationship with all government departments.</p>
+
+        <p><strong>Disadvantages.</strong> Expanding the NAO's mandate into territory that currently belongs to ministers may face executive resistance. The NAO's culture is audit-focused, not delivery-monitoring-focused. A new statutory mandate risks being buried within a large audit institution unless it has its own dedicated team.</p>
+
+        <p><strong>Estimated cost.</strong> £5-10 million per year in additional budget for a dedicated 30-40 person delivery assessment team within the NAO.</p>
+      </div>
+
+      <div class="option-box" id="optB">
+        <h4>Option B: An Expanded Mandate for NISTA</h4>
+        <p>The National Infrastructure and Service Transformation Authority already tracks 213 major projects against delivery commitments. Expanding this mandate to cover policy delivery commitments — not just capital projects — would extend an existing model.</p>
+
+        <p>The change required:</p>
+        <ol>
+          <li>Primary legislation to give NISTA an expanded remit covering defined policy delivery commitments alongside its existing project portfolio</li>
+          <li>A delivery commitment register, maintained by NISTA, covering manifesto pledges, Spending Review targets, and statutory targets</li>
+          <li>Annual public reporting against that register</li>
+          <li>Direct accountability to the Cabinet Office Minister, with quarterly briefings to the relevant select committees</li>
+        </ol>
+
+        <p><strong>Advantages.</strong> NISTA already has relationships with departments, analytical capability, and a published track record. The institution exists and doesn't need to be created.</p>
+
+        <p><strong>Disadvantages.</strong> NISTA reports to the executive (Cabinet Office), not directly to Parliament. Its current mandate is delivery monitoring, not independent audit. Making this option work requires genuine independence — either through statutory protection or a new reporting line to Parliament.</p>
+
+        <p><strong>Estimated cost.</strong> £8-12 million per year in expanded operational budget.</p>
+      </div>
+
+      <div class="option-box" id="optC">
+        <h4>Option C: A New Independent Office for Delivery</h4>
+        <p>The cleanest institutional model. Modelled on the OBR: established by statute, reporting to Parliament (not to ministers), with a fixed-term appointment for a chief executive confirmed by a parliamentary committee, and a small permanent staff.</p>
+
+        <p>The change required: primary legislation creating an Office for Government Delivery (OGD) with:</p>
+        <ol>
+          <li>A statutory commitment register covering all material government delivery obligations</li>
+          <li>An annual Delivery Audit published to Parliament</li>
+          <li>Power to request information from departments (equivalent to the OBR's right to request Treasury data)</li>
+          <li>A formal response requirement: government must publish its response to each annual Delivery Audit within 90 days</li>
+          <li>A chair appointed for a fixed 5-year term on the recommendation of the Public Accounts Committee</li>
+        </ol>
+
+        <p><strong>Advantages.</strong> The cleanest model. Structural independence protects against political pressure. Parliamentary appointment protects the chair from removal by a government whose delivery record is poor. The OBR precedent shows this model works.</p>
+
+        <p><strong>Disadvantages.</strong> Creating a new institution has a higher legislative cost. There will be resistance from executives who prefer self-assessment. The OBR took time to bed in and earn credibility. A new OGD would face the same period of institutional establishment.</p>
+
+        <p><strong>Estimated cost.</strong> £10-15 million per year. For context, the OBR costs approximately £9 million per year and monitors approximately £1.2 trillion in government spending. An OGD at £15 million would monitor delivery commitments covering a similarly large portion of public expenditure.</p>
+      </div>
+
+      <h3>Legislative Vehicle and Precedent</h3>
+
+      <p><strong>Precedent.</strong> The OBR was created by the Budget Responsibility and National Audit Act 2011. The Climate Change Committee was created by the Climate Change Act 2008. The National Infrastructure Commission was given statutory footing by the Infrastructure Act 2015 amendments. The pattern is clear: independent advisory and audit functions for government are created by primary legislation with fixed-term appointments and parliamentary reporting lines.</p>
+
+      <p><strong>Legislative vehicle.</strong> The most direct route for Option A would be an amendment to the National Audit Act 1983 via a Finance Bill or standalone accountability legislation. Options B and C would require a Government Reform Bill or Public Sector Accountability Bill, introduced as either government or private members' business. A cross-party bill would have the strongest prospects of survival across future governments — insulating the institution from the political cycle in the same way the OBR has proven relatively resilient.</p>
+
+      <p><strong>International precedent.</strong> New Zealand's Public Finance Act 1989 has survived every change of government since its introduction. Australia's PGPA Act 2013 has survived two changes of government. South Korea's Government Performance Evaluation Act has survived multiple administrations. The design feature that explains this survival: each Act embeds the accountability function in statute and locates it in an institution with parliamentary standing, not executive control.</p>
+
+      <p><strong>Timeline.</strong> A realistic legislative timeline for Option C from bill introduction to operational institution: 18-24 months. That's faster than many of the delivery failures documented in this paper — which have run for 25 years without resolution.</p>
+
+      <hr class="divider">
+
+      <!-- PART 6 -->
+      <h2 id="part6">Part 6: Conclusion</h2>
+
+      <h3>The Pattern Behind the Pattern</h3>
+
+      <p>This paper documents 27 specific government promises. It quantifies the gaps between commitment and delivery. It traces the patterns of announcement, revision, and abandonment. It sets out what other countries do and what the UK could do differently.</p>
+
+      <p>But the paper's single most important observation isn't in the tracker tables. It's this:</p>
+
+      <p>The same diagnosis has been made, by every government, for 25 years. The UK is underbuilding homes. The NHS waiting list is too long. The tax code is too complex. Regional inequality is too wide. Productivity growth is too slow. Infrastructure delivery is too expensive and too late. Every incoming administration has recognised these problems, named them as priorities, and set targets to address them. Every administration has subsequently failed to meet those targets, revised them downward, or dissolved them entirely.</p>
+
+      <p>This isn't evidence that governments are incompetent or that politicians are dishonest. It's evidence that the system doesn't require delivery to continue. Ministers can make promises without recording them in a form that survives them. Targets can be revised without accountability. Departments can change leadership and restart from zero without inheriting the obligations of their predecessors.</p>
+
+      <div class="pull">"The failure is structural. And structural failures require structural solutions."</div>
+
+      <p>An OBR for delivery wouldn't build a single house or cut a single waiting list. What it would do is force honesty. It would require governments to set commitments in forms that can be assessed, to face independent evaluation of whether those commitments have been met, and to publicly explain why they haven't been met when they haven't. That constraint on self-assessment is precisely what has changed fiscal forecasting for the better since 2010.</p>
+
+      <p>The political cost of failing your own targets remains. But you can no longer simply redefine the target, extend the timeline, or change the subject. The record is independent. The assessment is independent. The report goes to Parliament, not to your SpAd.</p>
+
+      <p>Every government since 2003 has diagnosed the same problems and proposed the same solutions. The Gap Tracker's proposal is not another solution to the same problems. It's a mechanism to ensure that the next government to propose a solution can be held to account for whether it delivers one.</p>
+
+      <p>The gap between what governments promise and what they deliver is not inevitable. It's structural. And it can be fixed.</p>
+
+      <hr class="divider">
+
+      <!-- APPENDIX -->
+      <h2 id="appendix">Appendix: Full Promise Tracker Data Table</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Theme</th>
+              <th>Promise</th>
+              <th>First Made</th>
+              <th>First Govt</th>
+              <th>Last Repeated By</th>
+              <th>Target</th>
+              <th>Current Status</th>
+              <th>Gap</th>
+              <th>Years Broken</th>
+              <th>Bipartisan?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1.1</td>
+              <td>Energy</td>
+              <td>Hinkley Point C operational</td>
+              <td>Blair, 2006</td>
+              <td>Labour</td>
+              <td>Starmer (inherited)</td>
+              <td>2025 completion</td>
+              <td>2030 expected; £49bn current cost</td>
+              <td>5+ years; £31bn overrun</td>
+              <td>Confirmed miss</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>1.2</td>
+              <td>Energy</td>
+              <td>Industrial electricity competitive</td>
+              <td>Blair, 2006</td>
+              <td>Labour</td>
+              <td>Starmer 2024</td>
+              <td>UK at EU-14 median</td>
+              <td>125% above EU-14 median</td>
+              <td>125% gap</td>
+              <td>12+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>1.3</td>
+              <td>Energy</td>
+              <td>Grid connections</td>
+              <td>Johnson, 2022</td>
+              <td>Conservative</td>
+              <td>Starmer 2024</td>
+              <td>Fast, accessible</td>
+              <td>739GW stuck; some wait until 2037</td>
+              <td>Systemic failure</td>
+              <td>Ongoing</td>
+              <td><span class="badge badge-yes">Yes (inherited)</span></td>
+            </tr>
+            <tr>
+              <td>1.4</td>
+              <td>Energy</td>
+              <td>68% emissions by 2030 (NDC)</td>
+              <td>Blair, 2008 (Climate Change Act)</td>
+              <td>Labour</td>
+              <td>Starmer 2024</td>
+              <td>68% by 2030</td>
+              <td>50.4% achieved</td>
+              <td>17.6pp gap</td>
+              <td>On current track: yes</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>1.5</td>
+              <td>Energy</td>
+              <td>Cheap household energy</td>
+              <td>Johnson 2022; Starmer 2024</td>
+              <td>Conservative</td>
+              <td>Starmer 2024</td>
+              <td>Bills reduced</td>
+              <td>32.5% above EU median; avg. £1,738/yr</td>
+              <td>No progress</td>
+              <td>Ongoing</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>2.1</td>
+              <td>Fiscal</td>
+              <td>Fiscal rules kept</td>
+              <td>Brown, 1997</td>
+              <td>Labour</td>
+              <td>Reeves 2024</td>
+              <td>Rules met</td>
+              <td>10 sets; 11 of 26 met; debt at 90% GDP</td>
+              <td>50pp debt gap</td>
+              <td>17+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>2.2</td>
+              <td>Fiscal</td>
+              <td>Tax simplification</td>
+              <td>Lawson/Major 1990s</td>
+              <td>Conservative</td>
+              <td>Hunt 2022 (OTS abolished)</td>
+              <td>Simpler tax code</td>
+              <td>20,000+ pages vs 5,000 in 1995</td>
+              <td>4× longer</td>
+              <td>30+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>2.3</td>
+              <td>Fiscal</td>
+              <td>Business rates reform</td>
+              <td>Late 1990s</td>
+              <td>Conservative</td>
+              <td>Reeves 2024</td>
+              <td>Replace system</td>
+              <td>Core structure unchanged</td>
+              <td>Structural reform missing</td>
+              <td>25+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>2.4</td>
+              <td>Fiscal</td>
+              <td>Debt-to-GDP reduction</td>
+              <td>Brown, 1997</td>
+              <td>Labour</td>
+              <td>Reeves 2024</td>
+              <td>Below 40% GDP</td>
+              <td>90% GDP (2024-25)</td>
+              <td>50pp</td>
+              <td>17+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>3.1</td>
+              <td>Housing</td>
+              <td>300,000 homes per year</td>
+              <td>Blair 2003 (Barker)</td>
+              <td>Labour</td>
+              <td>Starmer 2024 (1.5m/Parliament)</td>
+              <td>300,000/yr</td>
+              <td>208,600 in 2024-25</td>
+              <td>91,400/yr</td>
+              <td>Every year since 1970</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>3.2</td>
+              <td>Housing</td>
+              <td>Planning reform</td>
+              <td>Blair 2003</td>
+              <td>Labour</td>
+              <td>Starmer 2024 (Planning &amp; Infrastructure Bill)</td>
+              <td>Faster, simpler</td>
+              <td>In transition; 40% LPAs have current plans</td>
+              <td>Multiple reforms diluted</td>
+              <td>25+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>3.3</td>
+              <td>Housing</td>
+              <td>Affordable/social housing</td>
+              <td>Brown 2008</td>
+              <td>Labour</td>
+              <td>Starmer 2025</td>
+              <td>145,000/yr affordable</td>
+              <td>63,605 delivered 2022-23; 6,355 social rent</td>
+              <td>81,000/yr shortfall</td>
+              <td>Continuous</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>3.4</td>
+              <td>Housing</td>
+              <td>Housing affordability</td>
+              <td>Blair 2003 (Barker)</td>
+              <td>Labour</td>
+              <td>Every PM since</td>
+              <td>Reduce price/earnings ratio</td>
+              <td>8.40× (2023) vs 3.49× (1997)</td>
+              <td>141% deterioration</td>
+              <td>Since 1997</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>4.1</td>
+              <td>Delivery</td>
+              <td>NHS 18-week target</td>
+              <td>Blair govt, 2006</td>
+              <td>Labour</td>
+              <td>Streeting 2024</td>
+              <td>92% in 18 weeks</td>
+              <td>61.5%</td>
+              <td>30.5pp gap; 7.2m waiting</td>
+              <td>124 months</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>4.2</td>
+              <td>Delivery</td>
+              <td>Social care cap (Dilnot)</td>
+              <td>Blair 1997 (Royal Commission)</td>
+              <td>Labour</td>
+              <td>Reeves 2024 (scrapped)</td>
+              <td>Cap on care costs</td>
+              <td>No cap; means test at 1996 levels</td>
+              <td>Never implemented</td>
+              <td>13+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>4.3</td>
+              <td>Delivery</td>
+              <td>Major projects on time/budget</td>
+              <td>Every govt from 2012</td>
+              <td>Coalition</td>
+              <td>Starmer 2024 (NISTA)</td>
+              <td>Delivery to cost/time</td>
+              <td>11% Green; top 10 avg. 161% overrun, 57mo late</td>
+              <td>£163bn 2015-24 shortfall</td>
+              <td>Continuous</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>4.4</td>
+              <td>Delivery</td>
+              <td>Digital government</td>
+              <td>Cameron 2012 (GDS)</td>
+              <td>Conservative</td>
+              <td>Starmer 2025</td>
+              <td>50/75 services 'great' by 2025</td>
+              <td>15/75 as of mid-2023</td>
+              <td>35 services short</td>
+              <td>Continuous</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>5.1</td>
+              <td>Growth</td>
+              <td>Levelling up / regional equality</td>
+              <td>Blair 1997</td>
+              <td>Labour</td>
+              <td>Starmer 2024</td>
+              <td>Close north-south gap</td>
+              <td>60% productivity gap persists; programme acknowledged failed</td>
+              <td>No measurable closure</td>
+              <td>25+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>5.2</td>
+              <td>Growth</td>
+              <td>R&amp;D at 2.4% GDP</td>
+              <td>Osborne 2014</td>
+              <td>Conservative</td>
+              <td>Starmer 2025</td>
+              <td>2.4% by 2027</td>
+              <td>2.64% (2023) via methodology change</td>
+              <td>Apparently met; context critical</td>
+              <td>Original 2014 target missed</td>
+              <td><span class="badge badge-partial">Partial</span></td>
+            </tr>
+            <tr>
+              <td>5.3</td>
+              <td>Growth</td>
+              <td>Productivity gap closure</td>
+              <td>Blair 2001</td>
+              <td>Labour</td>
+              <td>Starmer 2024</td>
+              <td>Close G7 gap</td>
+              <td>MFP −0.6% 2024; gap with US ~20%</td>
+              <td>Gap has widened</td>
+              <td>17+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>5.4</td>
+              <td>Growth</td>
+              <td>Real wage growth</td>
+              <td>Brown 2000s</td>
+              <td>Labour</td>
+              <td>Every Chancellor</td>
+              <td>Rising real wages</td>
+              <td>Real wages 3.5% above 2009-10; £11,000/yr gap vs trend</td>
+              <td>15+ years of stagnation</td>
+              <td>15+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>6.1</td>
+              <td>Pensions</td>
+              <td>Pension adequacy (AE)</td>
+              <td>Labour 2008</td>
+              <td>Labour</td>
+              <td>Conservative 2023 Act (no impl. date)</td>
+              <td>Adequate retirement</td>
+              <td>8% vs 16% needed; median at 73% of required wealth</td>
+              <td>50% contribution shortfall</td>
+              <td>9+ years</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>6.2</td>
+              <td>Capital</td>
+              <td>Infrastructure delivered</td>
+              <td>Osborne 2010</td>
+              <td>Conservative</td>
+              <td>Starmer 2025 (£725bn strategy)</td>
+              <td>Deliver planned spend</td>
+              <td>59% delivered 2015-24; £163bn shortfall</td>
+              <td>£163bn gap; projected £254bn next decade</td>
+              <td>Continuous</td>
+              <td><span class="badge badge-yes">Yes</span></td>
+            </tr>
+            <tr>
+              <td>6.3</td>
+              <td>Capital</td>
+              <td>Patient capital / SME finance</td>
+              <td>Hammond 2017</td>
+              <td>Conservative</td>
+              <td>Inherited by Labour</td>
+              <td>£20bn market mobilised</td>
+              <td>BPC operational; £20bn target unverified</td>
+              <td>Partial delivery</td>
+              <td>Partial</td>
+              <td><span class="badge badge-partial">Partial</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="divider">
+
+      <!-- SOURCES -->
+      <h2 id="source-notes">Sources and Methodology Notes</h2>
+
+      <div class="sources-list">
+        <p>All statistics in this paper are sourced to primary or authoritative secondary sources, cited inline throughout. Key primary sources used:</p>
+
+        <h4>Fiscal and Economic Data</h4>
+        <p><a href="https://obr.uk/box/the-rise-of-public-sector-net-debt-over-the-past-25-years/" target="_blank" rel="noopener">OBR Fiscal Risks and Sustainability, July 2025</a></p>
+        <p><a href="https://www.instituteforgovernment.org.uk/explainer/fiscal-rules-history" target="_blank" rel="noopener">IFG Fiscal Rules History, November 2024</a></p>
+        <p><a href="https://ifs.org.uk/news/past-15-years-have-been-worst-income-growth-generations" target="_blank" rel="noopener">IFS on 15 years of income stagnation, May 2024</a></p>
+        <p><a href="https://www.resolutionfoundation.org/press-releases/15-years-of-economic-stagnation-has-left-workers-across-britain-with-an-11000-a-year-lost-wages-gap/" target="_blank" rel="noopener">Resolution Foundation on £11,000 wages gap</a></p>
+        <p><a href="https://www.bcg.com/united-kingdom/centre-for-growth/the-productivity-frontier-uk-leaders-laggards-and-the-growing-gap" target="_blank" rel="noopener">BCG UK Productivity Frontier, February 2026</a></p>
+        <p><a href="https://www.ons.gov.uk/economy/economicoutputandproductivity/productivitymeasures/bulletins/growthaccountingmultifactorproductivityestimatesuk/octobertodecember2024" target="_blank" rel="noopener">ONS Multi-factor productivity, May 2025</a></p>
+        <p><a href="https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/researchanddevelopmentexpenditure/bulletins/ukgrossdomesticexpenditureonresearchanddevelopment/2023" target="_blank" rel="noopener">ONS UK R&D Expenditure 2023</a></p>
+
+        <h4>Housing Data</h4>
+        <p><a href="https://www.gov.uk/government/statistics/housing-supply-net-additional-dwellings-england-2024-to-2025/" target="_blank" rel="noopener">MHCLG Housing Supply Statistics, November 2025</a></p>
+        <p><a href="https://www.gov.uk/government/publications/the-affordable-homes-programme-annual-report-2024-to-2025/" target="_blank" rel="noopener">GOV.UK Affordable Homes Programme Annual Report 2024-25</a></p>
+        <p><a href="https://www.bestbrokers.com/2024/06/20/what-nearly-six-decades-of-housing-data-reveal-about-home-affordability-in-the-united-kingdom/" target="_blank" rel="noopener">BestBrokers Housing Affordability 57 years</a></p>
+        <p><a href="https://www.tcpa.org.uk/the-seven-deadly-mistakes-of-planning-reform/" target="_blank" rel="noopener">TCPA Planning reform analysis, April 2024</a></p>
+
+        <h4>NHS and Social Care Data</h4>
+        <p><a href="https://ifs.org.uk/publications/can-government-achieve-its-18-week-elective-waiting-time-target" target="_blank" rel="noopener">IFS on NHS 18-week target, March 2025</a></p>
+        <p><a href="https://www.rcp.ac.uk/news-and-media/news-and-opinion/nhs-must-halve-waiting-lists-to-meet-government-18-week-target-new-study-warns/" target="_blank" rel="noopener">RCP 18-week study, November 2025</a></p>
+        <p><a href="https://www.instituteforgovernment.org.uk/publication/performance-tracker-2025/local-services/adult-social-care" target="_blank" rel="noopener">IFG Social Care Performance Tracker 2025</a></p>
+        <p><a href="https://www.kingsfund.org.uk/insight-and-analysis/data-and-charts/short-history-social-care-funding" target="_blank" rel="noopener">King's Fund Social Care history</a></p>
+        <p><a href="https://www.bbc.com/news/articles/c3g9m7p199no" target="_blank" rel="noopener">BBC Social Care/Dilnot scrapped, July 2024</a></p>
+        <p><a href="https://www.nuffieldtrust.org.uk/resource/what-has-happened-to-the-funding-earmarked-for-social-care-reform" target="_blank" rel="noopener">Nuffield Trust on social care reform funds, July 2024</a></p>
+
+        <h4>Energy Data</h4>
+        <p><a href="https://davidturver.substack.com/p/high-uk-electricity-prices-continue-into-2025" target="_blank" rel="noopener">David Turver/Eigen Values UK electricity prices, December 2025</a></p>
+        <p><a href="https://assets.publishing.service.gov.uk/media/5a7c63eb40f0b62aff6c1579/6887.pdf" target="_blank" rel="noopener">GOV.UK 2006 Energy Review</a></p>
+        <p><a href="https://www.world-nuclear-news.org/articles/edf-announces-hinkley-point-c-delay-and-big-rise-i" target="_blank" rel="noopener">World Nuclear News, January 2024</a></p>
+        <p><a href="https://cleantechnica.com/2026/03/06/while-hinkley-nuclear-was-being-built-the-uk-grid-decarbonized/" target="_blank" rel="noopener">CleanTechnica, March 2026</a></p>
+        <p><a href="https://www.theccc.org.uk/publication/progress-in-reducing-emissions-2025-report-to-parliament/" target="_blank" rel="noopener">CCC Progress Report to Parliament, June 2025</a></p>
+        <p><a href="https://www.ofgem.gov.uk/news/changes-energy-price-cap-between-1-january-and-31-march-2026" target="_blank" rel="noopener">Ofgem price cap Q1 2026</a></p>
+        <p><a href="https://www.gtlaw.com/en/insights/2025/4/uk-grid-connection-reforms-breaking-the-bottleneck" target="_blank" rel="noopener">Greenberg Traurig on grid connections, April 2025</a></p>
+
+        <h4>Infrastructure and Delivery</h4>
+        <p><a href="https://www.mckinsey.com.br/our-insights/impatient-for-infrastructure-four-changes-to-improve-uk-project-delivery" target="_blank" rel="noopener">McKinsey UK Infrastructure Delivery, March 2026</a></p>
+        <p><a href="https://www.gov.uk/government/publications/infrastructure-and-projects-authority-annual-report-2023-24/" target="_blank" rel="noopener">IPA Annual Report 2023-24</a></p>
+        <p><a href="https://www.instituteforgovernment.org.uk/explainer/hs2-costs" target="_blank" rel="noopener">IFG on HS2 costs</a></p>
+        <p><a href="https://ar25.nista.grid.civilservice.gov.uk/report" target="_blank" rel="noopener">NISTA Annual Report 2024-25</a></p>
+
+        <h4>Levelling Up and Regional Inequality</h4>
+        <p><a href="https://www.gov.uk/government/publications/levelling-up-missions/levelling-up-missions-annual-report-2024-to-2025-accessible-version" target="_blank" rel="noopener">GOV.UK Levelling Up Missions Annual Report 2024-25</a></p>
+        <p><a href="https://news.liverpool.ac.uk/2024/06/11/levelling-up-has-been-a-total-failure-heres-the-evidence/" target="_blank" rel="noopener">Liverpool University levelling up analysis, June 2024</a></p>
+
+        <h4>Pensions</h4>
+        <p><a href="https://www.actuarialpost.co.uk/downloads/cat_1/Royal%20London-higher-auto-enrolment-contributions-2026.pdf" target="_blank" rel="noopener">Royal London/Actuarial Post pension adequacy modelling, March 2026</a></p>
+        <p><a href="https://www.pensions-expert.com/defined-contribution/outlook-2025-pensions-adequacy-has-no-easy-solutions/68463.article" target="_blank" rel="noopener">Pensions Expert on adequacy, November 2024</a></p>
+
+        <h4>Tax</h4>
+        <p><a href="https://www.pwc.co.uk/services/tax/insights/tax-simplification-after-the-ots.html" target="_blank" rel="noopener">PwC on OTS abolition, October 2022</a></p>
+        <p><a href="https://www.instituteforgovernment.org.uk/sites/default/files/2023-04/office-tax-simplification_0.pdf" target="_blank" rel="noopener">IFG on Office of Tax Simplification, 2023</a></p>
+
+        <h4>International Comparators</h4>
+        <p><a href="https://www.treasury.govt.nz/publications/guide/guide-public-finance-act" target="_blank" rel="noopener">Treasury NZ Guide to Public Finance Act</a></p>
+        <p><a href="https://oag.parliament.nz/good-practice/performance-reporting" target="_blank" rel="noopener">OAG NZ Performance Reporting</a></p>
+        <p><a href="https://www.businessofgovernment.org/sites/default/files/Interagency%20Performance%20Targets.pdf" target="_blank" rel="noopener">IBM Center for Government — NZ Results Programme</a></p>
+        <p><a href="https://www.finance.gov.au/government/managing-commonwealth-resources/planning-and-reporting/commonwealth-performance-framework" target="_blank" rel="noopener">Department of Finance Australia — Commonwealth Performance Framework</a></p>
+        <p><a href="https://e-estonia.com/solutions/interoperability-services/x-road/" target="_blank" rel="noopener">e-Estonia — X-Road</a></p>
+        <p><a href="https://centreforpublicimpact.org/public-impact-fundamentals/e-estonia-the-information-society-since-1997/" target="_blank" rel="noopener">Centre for Public Impact — e-Estonia</a></p>
+        <p><a href="https://www.oecd.org/en/publications/government-at-a-glance-2025-country-notes_da3361e1-en/estonia_89797d03-en.html" target="_blank" rel="noopener">OECD Government at a Glance 2025, Estonia</a></p>
+        <p><a href="https://www.mof.gov.sg/news-resources/newsroom/singapore-public-sector-outcomes-review-2024/" target="_blank" rel="noopener">Singapore MoF — SPOR 2024</a></p>
+        <p><a href="https://centreforpublicimpact.org/public-impact-fundamentals/the-prime-ministers-delivery-unit-pmdu-in-the-uk/" target="_blank" rel="noopener">Centre for Public Impact — PMDU</a></p>
+        <p><a href="https://www.instituteforgovernment.org.uk/sites/default/files/publications/Global%20Delivery%20report.pdf" target="_blank" rel="noopener">IFG Global Delivery Report</a></p>
+        <p><a href="https://www.instituteforgovernment.org.uk/sites/default/files/2024-09/Five-steps-labour-government-missions_2.pdf" target="_blank" rel="noopener">IFG — Five Steps for Labour's Missions, September 2024</a></p>
+
+        <p style="margin-top:1.2rem;"><strong>Items flagged [CHECK] throughout this paper — awaiting independent verification before publication:</strong></p>
+        <ol>
+          <li>The £50 billion consumer premium estimate for Hinkley Point C (based on £127/MWh strike price vs offshore wind clearing prices). A reasonable estimate but no independent published figure has been located.</li>
+          <li>Patient Capital Review £20 billion market target delivery. British Patient Capital is operational but the broader market figure is unverified.</li>
+          <li>Gordon Brown's Hansard quote directly defending golden rule re-dating. The IFS confirmed the Treasury re-dated the economic cycle; no verbatim Hansard quote from Brown defending this has been located. The factual substance is confirmed; the verbatim characterisation is attributed to IFS analysis, not Brown directly.</li>
+        </ol>
+      </div>
+
+      <hr class="divider">
+
+      <div class="footnote">
+        The Gap Tracker is a companion paper to the Blueprint for a Better Britain. It is updated periodically as delivery data becomes available. Challenges to any figure or assessment are welcome. <a href="https://britblueprint.com">britblueprint.com</a>
+      </div>
+
+      <div class="share-bar">
+        <span>Share:</span>
+        <a href="https://x.com/intent/tweet?text=The%20Gap%20Tracker%3A%2020%20Years%20of%20Broken%20Promises%20%E2%80%94%2013%20of%2027%20promises%20broken%20by%20both%20Labour%20and%20Conservative%20governments&url=https://britblueprint.com/papers/gap-tracker/" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://britblueprint.com/papers/gap-tracker/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://britblueprint.com/papers/gap-tracker/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+
+    </div><!-- end .body -->
+  </div><!-- end .container -->
+</div><!-- end .page-wrap -->
+
+<div class="footer">
+  <a href="../../">Blueprint for a Better Britain</a> · <a href="https://x.com/BritBlueprint">@BritBlueprint</a> · Inaction has a price tag. We calculated it.
+  <br><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+</div>
+
+</body>
+</html>

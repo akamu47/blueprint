@@ -131,11 +131,23 @@ small { font-size: var(--text-xs); color: var(--color-text-muted); }
 .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .nav-scrolled { background: rgba(15, 15, 26, 0.95) !important; box-shadow: 0 2px 12px rgba(0,0,0,0.4); }
 
+/* Dropdown */
+.nav-dropdown { position: relative; }
+.nav-dropdown-trigger { cursor: pointer; }
+.nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: rgba(22, 22, 37, 0.98); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--color-divider); border-radius: 8px; padding: 8px 0; min-width: 180px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); z-index: 60; }
+.nav-dropdown-menu a { display: block; padding: 8px 20px; font-size: 0.8rem; font-weight: 500; text-transform: none; letter-spacing: 0.02em; color: var(--color-text-secondary); text-decoration: none; white-space: nowrap; transition: color 0.15s, background 0.15s; }
+.nav-dropdown-menu a::after { display: none; }
+.nav-dropdown-menu a:hover { color: var(--color-text); background: rgba(37, 99, 235, 0.1); }
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+
 @media (max-width: 768px) {
   .nav-toggle { display: flex; }
   .nav-links { position: fixed; top: 0; right: 0; width: min(300px, 80vw); height: 100dvh; flex-direction: column; justify-content: flex-start; padding: var(--space-20) var(--space-8) var(--space-8); background: var(--color-surface-offset); border-left: 1px solid var(--color-divider); transform: translateX(100%); transition: transform 0.3s var(--ease-out); z-index: 100; }
   .nav-links.open { transform: translateX(0); }
   .nav-links a { font-size: var(--text-base); padding: var(--space-3) 0; }
+  .nav-dropdown-menu { position: static; transform: none; background: transparent; backdrop-filter: none; border: none; box-shadow: none; padding: 0 0 0 16px; display: block; min-width: auto; }
+  .nav-dropdown-menu a { padding: 6px 0; font-size: 0.9rem; }
+  .nav-dropdown-menu a:hover { background: transparent; }
 }
 
 /* ─── Hero ─── */

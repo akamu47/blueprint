@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QC82MM7JZJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-QC82MM7JZJ");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Britain's Eight Numbers — Blueprint</title>
+<meta name="description" content="£2.87tn debt. £111bn interest. 14 years of flat wages. 99.8% of projects over budget. 4x electricity costs. 21,000 tax pages. The data behind Britain's decline.">
+<meta property="og:title" content="Britain's Eight Numbers">
+<meta property="og:description" content="£2.87tn debt. £111bn interest. 14 years of flat wages. 99.8% of projects over budget. 4x electricity costs. 21,000 tax pages. The data behind Britain's decline.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://britblueprint.com/blog/eight-numbers/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#0F0F1A; --surface:#161625; --border:#1E1E35; --blue:#2563EB; --blue-light:#60A5FA; --text:#E2E8F0; --muted:#8090A0; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--text); font-family:'Source Serif 4',Georgia,serif; font-size:18px; line-height:1.8; }
+  .header { border-bottom:1px solid var(--border); padding:1.25rem 2rem; display:flex; align-items:center; justify-content:space-between; font-family:'Inter',sans-serif; }
+  .header a { color:var(--blue); text-decoration:none; font-family:'DM Sans',sans-serif; font-weight:700; font-size:1.1rem; }
+  .header .nav-links { display:flex; gap:1.5rem; }
+  .header .nav-links a { color:var(--muted); font-size:0.9rem; font-weight:400; }
+  .header .nav-links a:hover { color:var(--text); }
+  .container { max-width:720px; margin:0 auto; padding:3rem 2rem 4rem; }
+  .label { font-family:'Inter',sans-serif; font-size:11px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-bottom:1.2rem; display:flex; align-items:center; gap:8px; }
+  .label::before { content:''; display:inline-block; width:24px; height:1px; background:var(--muted); }
+  h1 { font-family:'Playfair Display',Georgia,serif; font-size:36px; font-weight:700; line-height:1.2; margin:0 0 1.5rem; letter-spacing:-0.01em; }
+  .standfirst { font-size:19px; font-weight:300; font-style:italic; line-height:1.6; color:var(--muted); margin-bottom:2rem; padding-bottom:2rem; border-bottom:0.5px solid var(--border); }
+  .meta { font-family:'Inter',sans-serif; font-size:13px; color:var(--muted); margin-bottom:2.5rem; display:flex; gap:1.5rem; }
+  .body p { margin:0 0 1.4rem; font-weight:300; }
+  .body strong { font-weight:600; color:var(--text); }
+  .body h2 { font-family:'DM Sans',sans-serif; font-size:1.3rem; font-weight:700; color:var(--text); margin:2.5rem 0 1rem; }
+  .body a { color:var(--blue-light); text-decoration:none; }
+  .body a:hover { text-decoration:underline; }
+  .body em { font-style:italic; }
+
+  /* Number section treatment */
+  .number-section { margin:2.5rem 0 0; padding-top:0.5rem; }
+  .number-heading { display:flex; align-items:baseline; gap:0.75rem; flex-wrap:wrap; margin-bottom:1.25rem; }
+  .number-index { font-family:'DM Sans',sans-serif; font-size:13px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); line-height:1; padding-top:0.2rem; flex-shrink:0; }
+  .number-value { font-family:'DM Sans',sans-serif; font-size:30px; font-weight:900; color:var(--blue-light); line-height:1; letter-spacing:-0.02em; }
+  .number-divider { border:none; border-top:0.5px solid var(--border); margin:2.5rem 0 0; }
+
+  /* Conclusion heading */
+  .body h2.conclusion-heading { margin:3rem 0 1rem; }
+
+  /* Pull quote */
+  .pull { margin:2rem 0; padding:1.5rem 1.75rem; border-left:3px solid var(--blue); font-family:'Playfair Display',Georgia,serif; font-size:20px; font-style:italic; font-weight:400; line-height:1.5; color:var(--text); }
+
+  .divider { border:none; border-top:0.5px solid var(--border); margin:2.5rem 0; }
+  .footnote { font-family:'Inter',sans-serif; font-size:13px; color:var(--muted); padding-top:1.5rem; border-top:0.5px solid var(--border); line-height:1.6; }
+  .footnote a { color:var(--blue); text-decoration:none; }
+  .share-bar { font-family:'Inter',sans-serif; font-size:0.85rem; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border); display:flex; gap:1rem; align-items:center; }
+  .share-bar span { color:var(--muted); }
+  .share-bar a { color:var(--blue); text-decoration:none; font-weight:500; }
+  .share-bar a:hover { text-decoration:underline; }
+  .footer { border-top:1px solid var(--border); padding:1.5rem 2rem; text-align:center; color:var(--muted); font-size:0.8rem; margin-top:3rem; font-family:'Inter',sans-serif; }
+  .footer a { color:var(--blue); text-decoration:none; }
+
+  @media (max-width:640px) {
+    .container { padding:2rem 1rem; }
+    h1 { font-size:28px; }
+    .header { padding:1rem; }
+    .header .nav-links { gap:1rem; }
+    .number-value { font-size:26px; }
+    .pull { font-size:18px; padding:1.25rem 1.25rem; }
+  }
+  @media (max-width:480px) {
+    .header .nav-links { display:none; }
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <a href="../../">Blueprint</a>
+    <div class="nav-links">
+      <a href="../../">Home</a>
+      <a href="../">Blog</a>
+      <a href="../../papers/">Papers</a>
+      <a href="../../how-we-work/">How We Work</a>
+      <a href="../../briefing/">Briefing</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="label">Series · Blueprint for a Better Britain</div>
+
+    <h1>Britain's Eight Numbers</h1>
+
+    <p class="standfirst">Eight numbers that tell you what has actually happened to Britain — and what it's costing every one of us.</p>
+
+    <div class="meta">
+      <span>March 2026</span>
+      <span>Adam Knight</span>
+    </div>
+
+    <div class="body">
+      <p>Every country has a story it tells itself. Britain's story — for most of my lifetime — has been that we're a fundamentally strong economy going through a rough patch. The financial crisis was a shock. Austerity was necessary. Brexit was a disruption. Covid was unprecedented. The energy crisis was Putin's fault.</p>
+
+      <p>Each of these is partially true. None of them explains why, after all of it, we're still here: stuck, stagnant, and falling behind countries with fewer advantages than ours.</p>
+
+      <p>I want to cut through the narrative with eight numbers. No spin, no political framing, just the data. These are the numbers that, taken together, tell you what has actually happened to Britain — and what it's costing every one of us.</p>
+
+      <!-- NUMBER 1 -->
+      <hr class="number-divider">
+      <div class="number-section">
+        <div class="number-heading">
+          <span class="number-index">1.</span>
+          <span class="number-value">£2.87 trillion</span>
+        </div>
+        <p>That's the national debt as of January 2026. The number is so large it's almost meaningless, so here's a way to feel it: it works out to roughly <strong>£102,000 per household</strong>. Every household in Britain — whether you're a retired couple in Sunderland or a young family renting in Bristol — is carrying that share of the national balance sheet.</p>
+        <p>In 2008, before the financial crisis, the figure was £0.5 trillion. It has grown nearly six-fold in less than two decades. Not because of a war. Not because of a natural catastrophe. Because the economy stopped growing fast enough to pay its way, and successive governments borrowed the difference.</p>
+      </div>
+
+      <!-- NUMBER 2 -->
+      <hr class="number-divider">
+      <div class="number-section">
+        <div class="number-heading">
+          <span class="number-index">2.</span>
+          <span class="number-value">£111 billion</span>
+        </div>
+        <p>That's what the government spends each year just on interest payments on that debt. The OBR's forecast for 2025–26. Not repaying the debt — just servicing it. Paying the interest.</p>
+        <p>To put that in context: Britain spends nearly twice as much on debt interest as it spends on defence (£61.7 billion). It's approaching the combined schools and defence budgets (£127 billion). Every pound that goes to bondholders is a pound that doesn't go to hospitals, schools, roads, or investment in the future.</p>
+        <p>And here's the thing that should make you angry: this isn't an act of God. It's a compound interest charge on two decades of low growth. If the economy had grown at its pre-2008 trend, the debt-to-GDP ratio would be dramatically lower and the interest bill with it.</p>
+
+        <div class="pull">"We're paying for the growth we didn't have."</div>
+      </div>
+
+      <!-- NUMBER 3 -->
+      <hr class="number-divider">
+      <div class="number-section">
+        <div class="number-heading">
+          <span class="number-index">3.</span>
+          <span class="number-value">£11,000</span>
+        </div>
+        <p>This is the Resolution Foundation's estimate of how much less the average British worker earns per year compared to where they would be if pre-2008 wage growth had continued. Eleven thousand pounds. Per worker. Per year.</p>
+        <p>For a household with two earners, that's £22,000 a year. Not money that was taken away — money that was never earned, because the economy stopped generating the productivity growth that drives wages.</p>
+        <p>I spent eleven years at Goldman Sachs. The thing about trading floors is that everyone knows exactly what they're worth, because the P&amp;L is right there. The national equivalent of P&amp;L is productivity — output per hour worked. Ours has barely moved. Six years after 2019, it was up just 2.4%. That's the flatline beneath everything else.</p>
+      </div>
+
+      <!-- NUMBER 4 -->
+      <hr class="number-divider">
+      <div class="number-section">
+        <div class="number-heading">
+          <span class="number-index">4.</span>
+          <span class="number-value">14 years</span>
+        </div>
+        <p>Fourteen years of near-zero real wage growth. The IFS calculates that average pre-tax pay in 2023–24 was just 3.5% above 2009–10 levels in real terms. That's not a typo. Fourteen years of work, across Conservative governments, a coalition, a Labour government, a pandemic, an energy crisis — and wages essentially stood still.</p>
+
+        <div class="pull">"This is not a story about one party or one policy. It spans the lot."</div>
+
+        <p>It is structural, not political. And it is the single most important fact about the British economy that almost nobody talks about honestly, because admitting it means admitting that the system itself has failed, not just the people running it.</p>
+      </div>
+
+      <!-- NUMBER 5 -->
+      <hr class="number-divider">
+      <div class="number-section">
+        <div class="number-heading">
+          <span class="number-index">5.</span>
+          <span class="number-value">99.8%</span>
+        </div>
+        <p>Of major UK infrastructure projects are delivered over budget, late, or without the expected benefits. The figure comes from research by Oxford's Saïd Business School examining 3,022 projects. Only 0.2% — one in five hundred — came in on time, within budget, and with expected benefits fully realised.</p>
+        <p>When those projects do overrun, the average cost overrun on UK road projects is 66% of the original budget. HS2 was budgeted at £37.5 billion; the eventual cost exceeded £66 billion before the northern leg was cancelled entirely. Hinkley Point C nuclear power station was contracted at £18 billion; the latest estimate exceeds £46 billion.</p>
+        <p>This is not normal. Other countries manage to build things. France built 56 nuclear reactors in seventeen years. Britain hasn't completed one since 1995. The planning system, the procurement system, and the institutional culture have combined to make it structurally impossible to deliver large projects at reasonable cost and speed. And the economic consequences ripple through everything — from energy prices to housing supply to business investment decisions.</p>
+      </div>
+
+      <!-- NUMBER 6 -->
+      <hr class="number-divider">
+      <div class="number-section">
+        <div class="number-heading">
+          <span class="number-index">6.</span>
+          <span class="number-value">4×</span>
+        </div>
+        <p>UK industrial electricity prices are roughly four times those in the United States and nearly four times those in France. At 26.63 pence per kilowatt-hour, Britain has the highest industrial electricity costs of any country in the IEA — higher than Germany, higher than Japan, higher than every EU member state.</p>
+        <p>This isn't because we lack resources. UK industrial gas prices are actually below the IEA median. The problem is specifically with electricity, and it traces to three fixable failures: a marginal pricing system where gas sets the electricity price 97% of the time (versus 7% in France), a nuclear deficit that France avoided by building 56 reactors while we decommissioned ours, and billions in policy costs loaded onto electricity bills rather than general taxation.</p>
+        <p>The damage is not abstract. Energy-intensive manufacturing output has fallen 33.6% since 2021 — a 35-year low. Factories are closing or moving abroad. Our multi-model research panel estimates the annual GDP drag at £14–16 billion. That's not a projection — it's what we're losing right now, every year, because of policy choices that could be changed.</p>
+        <p>I'll go deep on this in a dedicated post. The full 17-page analysis — produced by three AI models, cross-critiqued, and reconciled — is available at <a href="https://britblueprint.com">britblueprint.com</a>.</p>
+      </div>
+
+      <!-- NUMBER 7 -->
+      <hr class="number-divider">
+      <div class="number-section">
+        <div class="number-heading">
+          <span class="number-index">7.</span>
+          <span class="number-value">45%</span>
+        </div>
+        <p>The percentage of the British public who say they "almost never" trust governments of any party to place the needs of the nation above the interests of their own political party. This is from the British Social Attitudes survey — the most rigorous longitudinal study of public opinion in the UK — and it's the highest figure ever recorded. Up 22 percentage points from 2020 alone.</p>
+        <p>Separately, just 9% of the public trust politicians to tell the truth, according to the Ipsos Veracity Index. That's the lowest in the survey's forty-year history. Politicians are trusted less than estate agents, less than advertising executives, less than journalists.</p>
+        <p>This isn't cynicism. It's earned scepticism. It's the rational response of a population that has watched governments of every colour promise the same things — 300,000 homes, shorter NHS waits, a levelled-up North — and deliver none of them, with impressive bipartisan consistency.</p>
+      </div>
+
+      <!-- NUMBER 8 -->
+      <hr class="number-divider">
+      <div class="number-section">
+        <div class="number-heading">
+          <span class="number-index">8.</span>
+          <span class="number-value">21,000</span>
+        </div>
+        <p>The number of pages in Tolley's Tax Handbook — the practitioner's guide to the UK tax code. It has more than doubled since the turn of the millennium. The UK now has one of the longest and most complex tax codes in the world. Hong Kong's fits in about 400 pages.</p>
+        <p>The compliance cost is £33.9 billion a year for the largest financial services firms alone. For small businesses, it means hours spent on paperwork that could be spent on customers, on hiring, on growth. It means an army of accountants and tax advisers whose entire industry exists because the system is too complex for ordinary people to navigate.</p>
+        <p>When I back startups — I've invested in over fifty — the single most common complaint is not about finding customers or building products. It's about the sheer weight of regulatory and tax complexity. The system is designed for large corporations with compliance departments. Everyone else just suffers through it.</p>
+      </div>
+
+      <hr class="divider">
+
+      <h2 class="conclusion-heading">What the Eight Numbers Add Up To</h2>
+
+      <div class="pull">"These aren't eight separate problems. They're one problem expressed eight ways."</div>
+
+      <p>Low growth leads to low wages, which leads to a smaller tax base, which leads to higher borrowing, which leads to higher debt interest, which squeezes out investment, which leads to even lower growth. The tax code adds friction. The planning system blocks projects. Energy costs drive out manufacturing. And the population, watching all of this, rationally concludes that nobody in charge can be trusted to fix it.</p>
+
+      <p>It's a vicious cycle, and it has been spinning for fifteen years.</p>
+
+      <p>The good news — and I do think there's good news — is that the cycle can be broken. Not easily, and not overnight. But the levers exist, the data is clear, and the international comparisons show it's possible. France has cheaper electricity because it built nuclear. Estonia has 99% of government services online. Australia has a pension system that actually works. These aren't utopian fantasies. They're things other countries have actually done.</p>
+
+      <p>The question isn't whether Britain can do better. It's whether it will.</p>
+
+      <p>Next: I'm launching a ten-part series on what I believe is the central problem underneath all eight of these numbers — the broken operating system that turns every good idea into an undelivered promise. Starting next week.</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="footnote">Blueprint for a Better Britain is an independent, non-partisan platform focused on the implementation gap in British policy. We don't produce ideology. We produce pressure. <a href="https://britblueprint.com">britblueprint.com</a></div>
+
+    <div class="share-bar">
+      <span>Share:</span>
+      <a href="https://x.com/intent/tweet?text=Britain%27s%20Eight%20Numbers&url=https://britblueprint.com/blog/eight-numbers/" target="_blank" rel="noopener">X</a>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://britblueprint.com/blog/eight-numbers/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://britblueprint.com/blog/eight-numbers/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="../../">Blueprint for a Better Britain</a> · <a href="https://x.com/BritBlueprint">@BritBlueprint</a> · Inaction has a price tag. We calculated it.
+    <br><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "date": "2026-03-28",
+  "posts": [
+    {
+      "account": "@BritBlueprint",
+      "text": "Ofgem just cut the energy price cap to £1,641 — a 6.6% fall. The headline sounds like progress.\n\nLook closer: wholesale costs fell £38, but network costs rose £66. The grid upgrade bill is growing faster than the wholesale savings. £112 billion of transmission investment in the pipeline, recovered through your standing charge.\n\nMeanwhile, electricity unit rates at 24.67p/kWh remain roughly double where they were in 2020. The structural problem — gas setting the marginal price, no cheap baseload, policy charges stacked on every unit — hasn't changed.\n\nA 6.6% cut on a bill that doubled isn't recovery. It's a smaller loss.\n\n6knights.com",
+      "theme": "energy",
+      "buffer_id": "pending"
+    },
+    {
+      "account": "@BritBlueprint",
+      "text": "February borrowing: £14.3 billion. National debt: 93.1% of GDP.\n\nThe OBR projects this rising to 96.5% by 2028-29. The tax burden is forecast to hit 38.5% of GDP by 2030-31 — a level never previously sustained in peacetime.\n\nEvery percentage point of debt-to-GDP above trend costs roughly £3 billion a year in additional interest payments. At current trajectory, debt servicing alone will consume more than the entire schools budget within three years.\n\nThe arithmetic is simple: either growth accelerates or the fiscal position deteriorates further. There is no third option.\n\n6knights.com",
+      "theme": "fiscal",
+      "buffer_id": "pending"
+    },
+    {
+      "account": "@Adam8Knight",
+      "text": "The Ofgem price cap fell 6.6% today. The headlines will say bills are falling.\n\nIn commodity markets, we'd call this anchoring bias — comparing to a recent high and calling the reversion 'good news.' Electricity at 24.67p/kWh is still roughly double the 2020 price and nearly 4x what US consumers pay.\n\nThe interesting number in the Ofgem breakdown isn't wholesale costs (down £38). It's network costs (up £66). The grid is being rebuilt to accommodate intermittent renewables, and that cost is growing faster than wholesale savings.\n\nThe structural problem hasn't been touched. We've documented it in detail at @BritBlueprint.\n\n6knights.com",
+      "theme": "energy",
+      "buffer_id": "pending"
+    }
+  ]
+}

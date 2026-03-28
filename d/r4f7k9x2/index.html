@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Draft Review | Blueprint</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F0F1A;
+    --surface: #161625;
+    --border: #1E1E35;
+    --blue: #2563EB;
+    --blue-light: #60A5FA;
+    --text: #E2E8F0;
+    --muted: #8090A0;
+    --green: #22C55E;
+    --red: #EF4444;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.7; }
+  
+  .header { border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .header a { color: var(--blue); text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; }
+  .private-badge { background: rgba(239,68,68,0.15); color: var(--red); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 4px; letter-spacing: 0.05em; }
+  
+  .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+  
+  h1 { font-family: 'DM Sans', sans-serif; font-size: 1.8rem; font-weight: 900; margin-bottom: 0.25rem; }
+  .date { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
+  .buffer-link { display: inline-block; background: var(--blue); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600; margin-bottom: 2rem; }
+  .buffer-link:hover { opacity: 0.9; }
+  
+  h2 { font-family: 'DM Sans', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--blue); margin: 2rem 0 1rem; }
+  
+  .draft { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; margin-bottom: 1.25rem; position: relative; }
+  .draft-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+  .account-tag { font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 4px; }
+  .account-bb { background: rgba(37,99,235,0.15); color: var(--blue-light); }
+  .account-ak { background: rgba(34,197,94,0.15); color: var(--green); }
+  .account-li { background: rgba(10,102,194,0.15); color: #0A66C2; }
+  .theme-label { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  
+  .draft-text { white-space: pre-wrap; font-size: 0.9rem; line-height: 1.8; color: var(--text); }
+  
+  .char-count { position: absolute; top: 1rem; right: 1rem; font-size: 0.7rem; color: var(--muted); }
+  
+  .copy-btn { background: transparent; border: 1px solid var(--border); color: var(--muted); padding: 0.3rem 0.75rem; border-radius: 4px; font-size: 0.75rem; cursor: pointer; margin-top: 0.75rem; }
+  .copy-btn:hover { border-color: var(--blue); color: var(--blue); }
+  
+  .empty-state { text-align: center; padding: 4rem 2rem; color: var(--muted); }
+  
+  .footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 3rem; }
+  
+  @media (max-width: 640px) {
+    .container { padding: 1rem; }
+    h1 { font-size: 1.4rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <a href="../../">Blueprint</a>
+    <span class="private-badge">Private — Do not share</span>
+  </div>
+  
+  <div class="container">
+    <h1>Draft Posts for Review</h1>
+    <div class="date" id="drafts-date">Loading...</div>
+    <a class="buffer-link" href="https://publish.buffer.com" target="_blank">Open Buffer to schedule →</a>
+    
+    <div id="drafts-content">
+      <div class="empty-state">
+        <p>Draft posts will appear here each morning at 7am UK time.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    This page is not indexed by search engines. Bookmark: 6knights.com/d/r4f7k9x2
+  </div>
+
+  <script>
+    async function loadDrafts() {
+      try {
+        const resp = await fetch('../../briefing/drafts-latest.json?' + Date.now());
+        if (!resp.ok) throw new Error('No drafts yet');
+        const data = await resp.json();
+        
+        document.getElementById('drafts-date').textContent = new Date(data.date + 'T00:00:00').toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+        
+        const el = document.getElementById('drafts-content');
+        let html = '';
+        
+        // Group by account
+        const bbPosts = data.posts.filter(p => p.account === '@BritBlueprint');
+        const akPosts = data.posts.filter(p => p.account === '@Adam8Knight');
+        const liPosts = data.posts.filter(p => p.account && p.account.includes('LinkedIn'));
+        
+        if (bbPosts.length > 0) {
+          html += '<h2>@BritBlueprint</h2>';
+          bbPosts.forEach((post, i) => {
+            html += renderDraft(post, 'bb', i);
+          });
+        }
+        
+        if (akPosts.length > 0) {
+          html += '<h2>@Adam8Knight</h2>';
+          akPosts.forEach((post, i) => {
+            html += renderDraft(post, 'ak', i);
+          });
+        }
+        
+        if (liPosts.length > 0) {
+          html += '<h2>LinkedIn</h2>';
+          liPosts.forEach((post, i) => {
+            html += renderDraft(post, 'li', i);
+          });
+        }
+        
+        if (html) el.innerHTML = html;
+      } catch (e) {
+        console.log('No drafts yet:', e.message);
+      }
+    }
+    
+    function renderDraft(post, type, idx) {
+      const tagClass = type === 'bb' ? 'account-bb' : type === 'ak' ? 'account-ak' : 'account-li';
+      const chars = post.text.length;
+      return `
+        <div class="draft">
+          <span class="char-count">${chars} chars</span>
+          <div class="draft-header">
+            <span class="account-tag ${tagClass}">${post.account}</span>
+            ${post.theme ? `<span class="theme-label">${post.theme}</span>` : ''}
+          </div>
+          <div class="draft-text">${post.text}</div>
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(this.parentElement.querySelector('.draft-text').textContent).then(()=>this.textContent='Copied!')">Copy text</button>
+        </div>`;
+    }
+    
+    loadDrafts();
+  </script>
+</body>
+</html>

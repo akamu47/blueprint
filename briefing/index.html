@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Briefing | Blueprint for a Better Britain</title>
+<meta name="description" content="Daily UK policy and economics briefing from Blueprint for a Better Britain. Energy, fiscal, housing, delivery, growth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F0F1A;
+    --surface: #161625;
+    --border: #1E1E35;
+    --blue: #2563EB;
+    --blue-light: #60A5FA;
+    --text: #E2E8F0;
+    --muted: #8090A0;
+    --energy: #F59E0B;
+    --fiscal: #EF4444;
+    --housing: #22C55E;
+    --delivery: #A855F7;
+    --growth: #06B6D4;
+    --capital: #EC4899;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.7; }
+  
+  .header { border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+  .header a { color: var(--blue); text-decoration: none; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 1.1rem; }
+  .header .tagline { color: var(--muted); font-size: 0.85rem; }
+  
+  .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+  
+  h1 { font-family: 'DM Sans', sans-serif; font-size: 2rem; font-weight: 900; margin-bottom: 0.25rem; }
+  .date { color: var(--muted); font-size: 0.9rem; margin-bottom: 2rem; }
+  
+  h2 { font-family: 'DM Sans', sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--blue); margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--border); }
+  
+  .item { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem; }
+  .item-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+  .theme-tag { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.2rem 0.5rem; border-radius: 4px; }
+  .theme-energy { background: rgba(245,158,11,0.15); color: var(--energy); }
+  .theme-fiscal { background: rgba(239,68,68,0.15); color: var(--fiscal); }
+  .theme-housing { background: rgba(34,197,94,0.15); color: var(--housing); }
+  .theme-delivery { background: rgba(168,85,247,0.15); color: var(--delivery); }
+  .theme-growth { background: rgba(6,182,212,0.15); color: var(--growth); }
+  .theme-capital { background: rgba(236,72,153,0.15); color: var(--capital); }
+  .item h3 { font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 600; }
+  .item p { color: var(--muted); font-size: 0.9rem; margin-top: 0.4rem; }
+  .item a { color: var(--blue-light); font-size: 0.8rem; text-decoration: none; }
+  .item a:hover { text-decoration: underline; }
+  
+  .kpi-alert { background: rgba(37,99,235,0.1); border: 1px solid var(--blue); border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1rem; }
+  .kpi-alert strong { color: var(--blue-light); }
+  
+  .empty-state { text-align: center; padding: 4rem 2rem; color: var(--muted); }
+  .empty-state h2 { color: var(--text); border: none; }
+  
+  .footer { border-top: 1px solid var(--border); padding: 1.5rem 2rem; text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 3rem; }
+  .footer a { color: var(--blue); text-decoration: none; }
+  
+  @media (max-width: 640px) {
+    .container { padding: 1rem; }
+    h1 { font-size: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <a href="../">Blueprint | 6knights.com</a>
+    <span class="tagline">Inaction has a price tag. We calculated it.</span>
+  </div>
+  
+  <div class="container">
+    <h1>Daily Briefing</h1>
+    <div class="date" id="briefing-date">Loading...</div>
+    
+    <div id="briefing-content">
+      <div class="empty-state">
+        <h2>Briefing loading...</h2>
+        <p>The daily briefing updates each morning at 7am UK time.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer">
+    <a href="../">Blueprint for a Better Britain</a> · <a href="https://x.com/BritBlueprint">@BritBlueprint</a> · Evidence-based. Non-partisan.
+    <br><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+  </div>
+
+  <script>
+    async function loadBriefing() {
+      try {
+        const resp = await fetch('./latest.json?' + Date.now());
+        if (!resp.ok) throw new Error('No briefing yet');
+        const data = await resp.json();
+        
+        const dateEl = document.getElementById('briefing-date');
+        const contentEl = document.getElementById('briefing-content');
+        
+        const d = new Date(data.date + 'T00:00:00');
+        dateEl.textContent = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+        
+        let html = '';
+        
+        // KPI updates
+        if (data.kpi_updates && data.kpi_updates.length > 0) {
+          html += '<h2>KPI Updates</h2>';
+          data.kpi_updates.forEach(kpi => {
+            html += `<div class="kpi-alert"><strong>${kpi.kpi}</strong>: ${kpi.old_value || ''} → ${kpi.new_value} <span style="color:var(--muted);font-size:0.8rem">(${kpi.source})</span></div>`;
+          });
+        }
+        
+        // News items
+        if (data.items && data.items.length > 0) {
+          html += '<h2>Today\'s Developments</h2>';
+          data.items.forEach(item => {
+            const themeClass = 'theme-' + (item.theme || 'growth');
+            html += `
+              <div class="item">
+                <div class="item-header">
+                  <span class="theme-tag ${themeClass}">${item.theme || 'policy'}</span>
+                  <h3>${item.title}</h3>
+                </div>
+                <p>${item.summary}</p>
+                ${item.source_url ? `<a href="${item.source_url}" target="_blank">Source →</a>` : ''}
+              </div>`;
+          });
+        }
+        
+        if (html) {
+          contentEl.innerHTML = html;
+        }
+      } catch (e) {
+        // Keep empty state
+        console.log('No briefing data yet:', e.message);
+      }
+    }
+    
+    loadBriefing();
+  </script>
+</body>
+</html>

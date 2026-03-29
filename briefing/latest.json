@@ -1,38 +1,41 @@
 {
-  "date": "2026-03-28",
-  "headline": "Ofgem cuts energy price cap to £1,641; ONS reports £14.3bn February borrowing",
+  "date": "2026-03-29",
+  "generated_at_utc": "2026-03-29T06:04:24Z",
+  "headline": "Debt stays at 93% of GDP as Ofgem cap falls and Lords blocks pension investment mandation",
   "items": [
     {
-      "title": "Ofgem energy price cap falls to £1,641 for Q2 2026",
-      "summary": "The energy regulator announced a 6.6% cut to the default tariff cap from April, driven by lower wholesale costs and the government's decision to shift some policy costs to general taxation. Electricity unit rates fall from 27.69p to 24.67p/kWh. However, network costs rose £66, partly offsetting the wholesale savings.",
+      "title": "Ofgem cuts April to June energy price cap to \u00a31,641",
+      "summary": "Ofgem set the typical dual-fuel Direct Debit cap at \u00a31,641 for 1 Apr-30 Jun 2026, down 6.6% from \u00a31,758 in the previous quarter.",
       "source_url": "https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-explained",
-      "theme": "energy"
+      "theme": "Energy & Industrial Costs"
     },
     {
-      "title": "Public sector net borrowing hit £14.3bn in February 2026",
-      "summary": "ONS public finances data shows borrowing of £14.3bn in February, with national debt at 93.1% of GDP. Debt interest costs continue to track above £111bn annually. The fiscal position remains constrained by low growth and high servicing costs.",
-      "source_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance",
-      "theme": "fiscal"
+      "title": "ONS: UK borrowed \u00a314.3bn in Feb 2026; debt 93.1% of GDP",
+      "summary": "ONS reported borrowing of \u00a314.3bn in Feb 2026, \u00a32.2bn higher than Feb 2025 and \u00a36.9bn above the OBR forecast; net debt was 93.1% of GDP.",
+      "source_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/february2026",
+      "theme": "Tax & Fiscal"
     },
     {
-      "title": "Government announces £50m+ heating oil support package",
-      "summary": "New support for off-grid households using heating oil, alongside signals of further energy regulation changes. The move addresses rural energy poverty but doesn't tackle the structural electricity pricing issues.",
-      "source_url": "https://www.gov.uk",
-      "theme": "energy"
+      "title": "Lords vote to remove ministers\u2019 pension investment mandation power",
+      "summary": "House of Lords backed an amendment (217-113) to remove the government\u2019s reserve power to direct DC pension investments tied to Mansion House Accord commitments.",
+      "source_url": "https://www.international-adviser.com/house-of-lords-votes-to-scrap-government-power-to-mandate-where-pension-schemes-invest/",
+      "theme": "Pensions & Capital"
     },
     {
-      "title": "ONS reports retail sales and inflation data",
-      "summary": "Latest ONS releases show continued pressure on consumer spending amid persistent inflation in services. Real wage growth remains minimal despite headline employment figures.",
-      "source_url": "https://www.ons.gov.uk",
-      "theme": "growth"
+      "title": "GOV.UK experimental indicator: 191,300 net additional homes delivered since 1 Apr 2025",
+      "summary": "Experimental housing supply indicators estimate 191,300 net additional homes delivered in England between 1 Apr 2025 and 15 Mar 2026, and 342,100 since 9 Jul 2024.",
+      "source_url": "https://www.gov.uk/government/statistics/housing-supply-indicators-of-new-supply-england-october-to-december-2025/housing-supply-indicators-of-new-supply-england-october-to-december-2025",
+      "theme": "Housing & Planning"
     }
   ],
-  "kpi_updates": [
-    {
-      "kpi": "National debt as % of GDP",
-      "old_value": "93.1%",
-      "new_value": "93.1% (confirmed Feb 2026)",
-      "source": "ONS Public Sector Finances"
+  "kpi_updates": {
+    "debt": {
+      "value": "93.1% of GDP (ONS end-Feb 2026)",
+      "source_url": "https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/february2026"
+    },
+    "energy_price_cap": {
+      "value": "\u00a31,641 typical dual-fuel Direct Debit (Apr-Jun 2026)",
+      "source_url": "https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-explained"
     }
-  ]
+  }
 }

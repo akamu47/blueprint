@@ -1,23 +1,116 @@
 {
-  "date": "2026-03-28",
-  "posts": [
+  "date": "2026-03-29",
+  "generated_at_utc": "2026-03-29T06:04:24Z",
+  "drafts": [
     {
       "account": "@BritBlueprint",
-      "text": "Ofgem just cut the energy price cap to £1,641 — a 6.6% fall. The headline sounds like progress.\n\nLook closer: wholesale costs fell £38, but network costs rose £66. The grid upgrade bill is growing faster than the wholesale savings. £112 billion of transmission investment in the pipeline, recovered through your standing charge.\n\nMeanwhile, electricity unit rates at 24.67p/kWh remain roughly double where they were in 2020. The structural problem — gas setting the marginal price, no cheap baseload, policy charges stacked on every unit — hasn't changed.\n\nA 6.6% cut on a bill that doubled isn't recovery. It's a smaller loss.\n\nbritblueprint.com",
-      "theme": "energy",
-      "buffer_id": "pending"
+      "channel": "X",
+      "type": "punchy",
+      "series_tag": "",
+      "theme": "Energy & Industrial Costs",
+      "text": "Ofgem\u2019s price cap drops to \u00a31,641 for Apr to Jun 2026. (https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-explained)\n\nThat\u2019s down 6.6% from \u00a31,758 in Jan to Mar. (https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-explained)\n\nDESNZ should now publish a plain plan for cutting standing charges, not just unit rates.\n\nBlueprint is tracking this. https://britblueprint.com",
+      "buffer_id": "69c8c0e8a194ba150380804b",
+      "buffer_dueAt": null,
+      "buffer_raw": null
     },
     {
       "account": "@BritBlueprint",
-      "text": "February borrowing: £14.3 billion. National debt: 93.1% of GDP.\n\nThe OBR projects this rising to 96.5% by 2028-29. The tax burden is forecast to hit 38.5% of GDP by 2030-31 — a level never previously sustained in peacetime.\n\nEvery percentage point of debt-to-GDP above trend costs roughly £3 billion a year in additional interest payments. At current trajectory, debt servicing alone will consume more than the entire schools budget within three years.\n\nThe arithmetic is simple: either growth accelerates or the fiscal position deteriorates further. There is no third option.\n\nbritblueprint.com",
-      "theme": "fiscal",
-      "buffer_id": "pending"
+      "channel": "X",
+      "type": "reveman",
+      "series_tag": "#PromiseVsDelivery",
+      "theme": "Tax & Fiscal",
+      "text": "CONTEXT: The UK borrowed \u00a314.3bn in February 2026. That\u2019s the second highest February on record. (https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/february2026)\n\nRESULT: Borrowing was \u00a32.2bn higher than February 2025, and \u00a36.9bn above the OBR forecast. (https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/february2026)\n\nCONSEQUENCES: Debt is 93.1% of GDP. That\u2019s a 1960s-level burden sitting on every future Budget. (https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/february2026)\n\nQUESTION: If debt is stuck near wartime-era highs, where is the delivery plan that makes the state cheaper to run? https://britblueprint.com",
+      "buffer_id": "69c8c0ecfeab37410714aa71",
+      "buffer_dueAt": null,
+      "buffer_raw": null
+    },
+    {
+      "account": "@BritBlueprint",
+      "channel": "X",
+      "type": "punchy",
+      "series_tag": "",
+      "theme": "Housing & Planning",
+      "text": "England has delivered an estimated 191,300 net additional homes since 1 April 2025. (https://www.gov.uk/government/statistics/housing-supply-indicators-of-new-supply-england-october-to-december-2025/housing-supply-indicators-of-new-supply-england-october-to-december-2025)\n\nSince the start of Parliament (9 July 2024), the estimate is 342,100. (https://www.gov.uk/government/statistics/housing-supply-indicators-of-new-supply-england-october-to-december-2025/housing-supply-indicators-of-new-supply-england-october-to-december-2025)\n\nThe Housing Secretary should publish a monthly pipeline for sites blocked in planning, with named local accountability.\n\nBlueprint is tracking this. https://britblueprint.com",
+      "buffer_id": "69c8c0f0feab37410714aa8b",
+      "buffer_dueAt": null,
+      "buffer_raw": null
+    },
+    {
+      "account": "@BritBlueprint",
+      "channel": "X",
+      "type": "punchy",
+      "series_tag": "#100DayReform",
+      "theme": "Pensions & Capital",
+      "text": "The Lords voted 217 to 113 to strip ministers\u2019 power to direct DC pension investments. (https://www.international-adviser.com/house-of-lords-votes-to-scrap-government-power-to-mandate-where-pension-schemes-invest/)\n\nThe fight is about a backstop power tied to the Mansion House Accord. (https://www.pensionsage.com/pa/Lords-vote-to-remove-govt-s-mandation-power-from-PSB.php)\n\nThe pensions minister, Torsten Bell, should now publish a voluntary plan with measurable timelines instead of reaching for compulsion.\n\nBlueprint is tracking this. https://britblueprint.com\n\n#100DayReform",
+      "buffer_id": "69c8c0f3a194ba1503808065",
+      "buffer_dueAt": null,
+      "buffer_raw": null
     },
     {
       "account": "@Adam8Knight",
-      "text": "The Ofgem price cap fell 6.6% today. The headlines will say bills are falling.\n\nIn commodity markets, we'd call this anchoring bias — comparing to a recent high and calling the reversion 'good news.' Electricity at 24.67p/kWh is still roughly double the 2020 price and nearly 4x what US consumers pay.\n\nThe interesting number in the Ofgem breakdown isn't wholesale costs (down £38). It's network costs (up £66). The grid is being rebuilt to accommodate intermittent renewables, and that cost is growing faster than wholesale savings.\n\nThe structural problem hasn't been touched. We've documented it in detail at @BritBlueprint.\n\nbritblueprint.com",
-      "theme": "energy",
-      "buffer_id": "pending"
+      "channel": "X",
+      "type": "personal",
+      "series_tag": "",
+      "theme": "Pensions & Capital",
+      "text": "I\u2019ve spent enough time around capital markets to know one rule holds. Trust is an asset. Once you politicise it, you don\u2019t get it back quickly.\n\nThis week the Lords voted 217 to 113 to remove ministers\u2019 reserve power to direct where DC pension schemes invest. (https://www.international-adviser.com/house-of-lords-votes-to-scrap-government-power-to-mandate-where-pension-schemes-invest/)\n\nIf the UK wants more patient capital, the answer is better investable projects and better governance, not a statute-book threat over trustees.\n\nThis is exactly why I built @BritBlueprint. Inaction has a price tag. https://britblueprint.com",
+      "buffer_id": "69c8c0f6a194ba150380807f",
+      "buffer_dueAt": null,
+      "buffer_raw": null
+    },
+    {
+      "account": "@Adam8Knight",
+      "channel": "X",
+      "type": "personal",
+      "series_tag": "#PromiseVsDelivery",
+      "theme": "Tax & Fiscal",
+      "text": "In markets, we\u2019d call this a bad carry trade. You borrow at scale, then hope growth bails you out.\n\nThe ONS says the UK borrowed \u00a314.3bn in February 2026 and debt sits at 93.1% of GDP. (https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/february2026)\n\nThat debt load narrows every future choice. It pushes governments towards short-term fixes and away from long-term reform.\n\nI\u2019m building @BritBlueprint to make delivery measurable. https://britblueprint.com",
+      "buffer_id": "69c8c0fafeab37410714aaa5",
+      "buffer_dueAt": null,
+      "buffer_raw": null
+    },
+    {
+      "account": "Blueprint LinkedIn",
+      "channel": "LinkedIn",
+      "type": "institutional",
+      "series_tag": "#PromiseVsDelivery",
+      "theme": "Tax & Fiscal",
+      "text": "UK debt is no longer a background statistic. It is a delivery constraint.\n\nThe Office for National Statistics reported that the UK borrowed \u00a314.3bn in February 2026. That was \u00a32.2bn higher than the same month last year, and the second highest February since records began in 1993. The ONS also put public sector net debt at 93.1% of GDP at the end of February. (https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/february2026)\n\nThe gap is not a lack of plans. It is a lack of repeatable delivery. Borrowing keeps arriving in ugly monthly spikes because core systems still run hot: broken procurement, slow project approvals, and public bodies that can\u2019t shift spend when demand changes. We see the same pattern across departments. Ministers announce targets. Budgets get allocated. Then the state can\u2019t ship the work on time.\n\nFixing this does not require a new mega-spending promise. It requires named accountability for the cost drivers that sit behind monthly borrowing. Start with a published list of the 50 most expensive central government programmes by whole-life cost, each with a single senior responsible owner, a delivery scorecard, and a timetable to reset scope where it is slipping.\n\n#UKPolicy #PublicFinance #BritBlueprint",
+      "buffer_id": "69c8c0fda194ba15038080ad",
+      "buffer_dueAt": null,
+      "buffer_raw": null
+    },
+    {
+      "account": "Adam Knight LinkedIn",
+      "channel": "LinkedIn",
+      "type": "personal",
+      "series_tag": "",
+      "theme": "Daily briefing",
+      "text": "I\u2019ve run risk in markets where a single basis point move can wipe out months of work. Countries have the same problem. Small drifts compound into big constraints.\n\nHere are the UK data hooks that stood out today.\n\n1) Public finances\nThe ONS reported public sector borrowing of \u00a314.3bn in February 2026. That was \u00a32.2bn higher than February 2025, and \u00a36.9bn above the OBR forecast. Debt is now 93.1% of GDP. (https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/february2026)\n\n2) Household energy bills\nOfgem set the energy price cap for April to June 2026 at \u00a31,641 for a typical dual-fuel household paying by Direct Debit. That is down 6.6% from \u00a31,758 in January to March. (https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-explained)\n\n3) Housing supply signals\nGOV.UK\u2019s experimental housing supply indicators estimate 191,300 net additional homes delivered in England since 1 April 2025, and 342,100 since the start of Parliament (9 July 2024). (https://www.gov.uk/government/statistics/housing-supply-indicators-of-new-supply-england-october-to-december-2025/housing-supply-indicators-of-new-supply-england-october-to-december-2025)\n\n4) Pensions and the boundary between state and capital\nThe Lords voted 217 to 113 to remove ministers\u2019 reserve power to direct where defined contribution pension schemes invest. (https://www.international-adviser.com/house-of-lords-votes-to-scrap-government-power-to-mandate-where-pension-schemes-invest/)\n\nI\u2019ve posted the full daily briefing at https://britblueprint.com/briefing.\n\nWhat would you change first if you had to improve the UK\u2019s delivery capacity without passing a new Act of Parliament?",
+      "buffer_id": "69c8c101feab37410714aae5",
+      "buffer_dueAt": null,
+      "buffer_raw": null
+    },
+    {
+      "account": "Blueprint Facebook",
+      "channel": "Facebook",
+      "type": "human_cost",
+      "series_tag": "",
+      "theme": "Energy & Industrial Costs",
+      "text": "If you\u2019ve been rationing heating, skipping meals, or building up debt just to keep the lights on, this matters.\n\nOfgem has set the energy price cap for April to June 2026 at \u00a31,641 a year for a typical household paying by Direct Debit. That is down 6.6% from \u00a31,758 in January to March. (https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-explained)\n\nA lower headline number is welcome. But most people don\u2019t experience energy bills as a neat annual figure. They feel it as a shock when the meter runs, and a standing charge that keeps ticking even when you use less. The price cap still includes daily standing charges for electricity and gas. (https://www.ofgem.gov.uk/information-consumers/energy-advice-households/energy-price-cap-explained)\n\nThe fix is not another press release. The Energy Secretary should publish a clear plan to cut standing charges and connect cheaper power faster, with dates and named owners for the work.\n\nShare this if you want energy bills that fall because the system gets cheaper, not because families cut back.",
+      "metadata": {
+        "facebook": {
+          "type": "post"
+        }
+      },
+      "buffer_id": "69c8c122a194ba1503808179",
+      "buffer_dueAt": null,
+      "buffer_raw": {
+        "data": {
+          "createPost": {
+            "message": "Invalid post: Facebook posts require a type (post, story, or reel)."
+          }
+        }
+      }
     }
   ]
 }

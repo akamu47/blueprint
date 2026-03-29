@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QC82MM7JZJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-QC82MM7JZJ");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Nothing Gets Done — Blueprint for a Better Britain</title>
+<meta name="description" content="101 publications from 8 institutions. What Britain's policy world has found about government delivery — and where they agree.">
+<meta property="og:title" content="Why Nothing Gets Done — Blueprint for a Better Britain">
+<meta property="og:description" content="101 publications from 8 institutions. What Britain's policy world has found about government delivery — and where they agree.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://britblueprint.com/papers/delivery-research/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F0F1A;
+    --surface: #161625;
+    --border: #1E1E35;
+    --blue: #2563EB;
+    --blue-light: #60A5FA;
+    --text: #E2E8F0;
+    --muted: #8090A0;
+    --green: #10B981;
+    --amber: #F59E0B;
+    --red: #EF4444;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  /* ── Header ── */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: var(--bg);
+  }
+  .header a.logo {
+    color: var(--blue);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .header .nav-links { display: flex; gap: 1.5rem; }
+  .header .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+  .header .nav-links a:hover { color: var(--text); }
+  .nav-mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+
+  /* ── Page layout with sidebar TOC ── */
+  .page-wrapper {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  /* ── Sticky sidebar TOC ── */
+  .toc-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    padding: 2rem 0 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--border) transparent;
+  }
+  .toc-sidebar::-webkit-scrollbar { width: 4px; }
+  .toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  .toc-sidebar-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .toc-sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .toc-sidebar li { margin-bottom: 0; }
+  .toc-sidebar a {
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    color: var(--muted);
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem 0;
+    line-height: 1.4;
+    transition: color 0.15s;
+    border-left: 2px solid transparent;
+    padding-left: 0.75rem;
+  }
+  .toc-sidebar a:hover { color: var(--text); border-left-color: var(--blue-light); }
+  .toc-sidebar a.active { color: var(--blue-light); border-left-color: var(--blue); }
+  .toc-sidebar .toc-section-link {
+    font-weight: 600;
+    color: var(--text);
+    font-size: 13px;
+    padding-left: 0;
+    border-left: none;
+    margin-top: 0.85rem;
+    padding-top: 0.65rem;
+    border-top: 0.5px solid var(--border);
+  }
+  .toc-sidebar .toc-section-link:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  .toc-sidebar .toc-section-link:hover { color: var(--blue-light); }
+  .toc-sidebar .toc-sub-link {
+    padding-left: 1rem;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .toc-sidebar .badge-sm {
+    display: inline-block;
+    font-size: 9px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-left: 4px;
+    vertical-align: middle;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .badge-strong { background: rgba(16,185,129,0.15); color: #10B981; }
+  .badge-moderate { background: rgba(245,158,11,0.15); color: #F59E0B; }
+  .badge-contested { background: rgba(239,68,68,0.15); color: #EF4444; }
+
+  /* ── Mobile TOC (inline) ── */
+  .toc-mobile {
+    display: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+  }
+  .toc-mobile-title {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+  }
+  .toc-mobile-toggle { font-size: 0.75rem; opacity: 0.6; transition: transform 0.2s; }
+  .toc-mobile-toggle.open { transform: rotate(180deg); }
+  .toc-mobile-body { display: none; margin-top: 1rem; }
+  .toc-mobile-body.visible { display: block; }
+  .toc-mobile a {
+    color: var(--muted);
+    text-decoration: none;
+    display: block;
+    padding: 0.2rem 0;
+  }
+  .toc-mobile a:hover { color: var(--blue-light); }
+  .toc-mobile .toc-section-link {
+    font-weight: 600;
+    color: var(--text);
+    margin-top: 0.6rem;
+  }
+  .toc-mobile .toc-sub-link { padding-left: 1rem; font-size: 12px; }
+
+  /* ── Main article ── */
+  .article {
+    flex: 1;
+    min-width: 0;
+    padding: 3rem 0 5rem;
+  }
+
+  /* ── Breadcrumb ── */
+  .breadcrumb {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--blue-light); }
+  .breadcrumb .sep { opacity: 0.4; }
+
+  /* ── Label ── */
+  .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--muted);
+  }
+
+  /* ── Title ── */
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.01em;
+  }
+
+  /* ── Standfirst ── */
+  .standfirst {
+    font-size: 19px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  /* ── Meta ── */
+  .meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  .meta span { display: flex; align-items: center; gap: 5px; }
+
+  /* ── Body typography ── */
+  .body p { margin: 0 0 1.4rem; font-weight: 300; }
+  .body > p:first-child { margin-top: 0; }
+  .body a { color: var(--blue-light); text-decoration: none; }
+  .body a:hover { text-decoration: underline; }
+  .body em { font-style: italic; }
+  .body strong { font-weight: 600; color: var(--text); }
+
+  /* ── Headings ── */
+  .body h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 3.5rem 0 1.2rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 80px;
+  }
+  .body h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 2.5rem 0 0.9rem;
+    scroll-margin-top: 80px;
+  }
+  .body h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 2rem 0 0.6rem;
+  }
+
+  /* ── Pull quote ── */
+  .pull {
+    margin: 2.5rem 0;
+    padding: 1.5rem 1.75rem;
+    border-left: 3px solid var(--blue);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.55;
+    color: var(--text);
+  }
+
+  /* ── Divider ── */
+  .divider {
+    border: none;
+    border-top: 0.5px solid var(--border);
+    margin: 2.5rem 0;
+  }
+  .section-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 3.5rem 0;
+  }
+
+  /* ── Consensus area ── */
+  .consensus-area {
+    margin: 3rem 0;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 80px;
+  }
+  .consensus-area:last-of-type { border-bottom: none; }
+
+  .area-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .area-number {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 6px;
+    white-space: nowrap;
+  }
+  .area-title-group { flex: 1; min-width: 0; }
+  .area-title-group h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    scroll-margin-top: 80px;
+  }
+
+  /* ── Consensus Strength Badge ── */
+  .consensus-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .consensus-badge.strong {
+    background: rgba(16,185,129,0.12);
+    color: #10B981;
+    border: 1px solid rgba(16,185,129,0.2);
+  }
+  .consensus-badge.moderate {
+    background: rgba(245,158,11,0.12);
+    color: #F59E0B;
+    border: 1px solid rgba(245,158,11,0.2);
+  }
+  .consensus-badge.contested {
+    background: rgba(239,68,68,0.12);
+    color: #EF4444;
+    border: 1px solid rgba(239,68,68,0.2);
+  }
+  .consensus-badge::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  /* ── Dispute section ── */
+  .dispute-section {
+    margin: 3rem 0;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+    scroll-margin-top: 80px;
+  }
+  .dispute-section:last-of-type { border-bottom: none; }
+
+  /* ── Gap item ── */
+  .gap-item {
+    margin: 2rem 0;
+    padding: 1.5rem 1.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+  .gap-item h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 0.75rem;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .gap-item p { font-weight: 300; margin: 0 0 1rem; font-size: 16px; line-height: 1.7; }
+  .gap-item p:last-child { margin-bottom: 0; }
+
+  /* ── Publication Library ── */
+  .pub-library { margin: 2rem 0; }
+
+  .inst-section {
+    margin-bottom: 3rem;
+  }
+  .inst-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 2px solid var(--border);
+  }
+  .inst-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .inst-count {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 20px;
+    color: var(--muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  .pub-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    border-left: 3px solid transparent;
+    padding: 0.9rem 1.1rem;
+    margin-bottom: 0.6rem;
+    transition: background 0.15s;
+  }
+  .pub-card:hover { background: rgba(255,255,255,0.02); }
+
+  /* Institution colour coding */
+  .pub-card.inst-ifg   { border-left-color: #3B82F6; }
+  .pub-card.inst-tbi   { border-left-color: #8B5CF6; }
+  .pub-card.inst-pe    { border-left-color: #F97316; }
+  .pub-card.inst-nao   { border-left-color: #6B7280; }
+  .pub-card.inst-ippr  { border-left-color: #10B981; }
+  .pub-card.inst-cps   { border-left-color: #EF4444; }
+  .pub-card.inst-reform{ border-left-color: #14B8A6; }
+  .pub-card.inst-cbp   { border-left-color: #F59E0B; }
+
+  .pub-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--blue-light);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+  }
+  .pub-title:hover { text-decoration: underline; }
+  .pub-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+  .pub-summary {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* ── Share bar ── */
+  .share-bar {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .share-bar span { color: var(--muted); }
+  .share-bar a {
+    color: var(--blue-light);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .share-bar a:hover { text-decoration: underline; }
+
+  /* ── Footer ── */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-top: 3rem;
+    font-family: 'Inter', sans-serif;
+  }
+  .footer a { color: var(--blue); text-decoration: none; }
+
+  /* ── Scroll target offset ── */
+  [id] { scroll-margin-top: 80px; }
+
+  /* ── Responsive ── */
+  @media (max-width: 1024px) {
+    .toc-sidebar { display: none; }
+    .toc-mobile { display: block; }
+    .page-wrapper { padding: 0 1.25rem; }
+  }
+  @media (max-width: 640px) {
+    .page-wrapper { padding: 0 1rem; }
+    h1 { font-size: 30px; }
+    .article { padding: 2rem 0 4rem; }
+    .header { padding: 1rem 1rem; }
+    .header .nav-links { display: none; }
+    .nav-mobile-toggle { display: block; }
+    .pull { font-size: 17px; padding: 1.25rem 1.25rem; }
+    .area-header { flex-direction: column; gap: 0.5rem; }
+    .meta { gap: 0.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<div class="header">
+  <a href="../../" class="logo">Blueprint</a>
+  <nav class="nav-links">
+    <a href="../../">Home</a>
+    <a href="../../blog/">Blog</a>
+    <a href="../">Papers</a>
+    <a href="../../how-we-work/">How We Work</a>
+    <a href="../../briefing/">Briefing</a>
+  </nav>
+  <button class="nav-mobile-toggle" aria-label="Menu">☰</button>
+</div>
+
+<!-- ── Page wrapper ── -->
+<div class="page-wrapper">
+
+  <!-- ── Sidebar TOC (desktop) ── -->
+  <aside class="toc-sidebar" aria-label="Table of contents">
+    <div class="toc-sidebar-title">Contents</div>
+    <ul>
+      <li><a href="#exec-summary" class="toc-section-link">Executive Summary</a></li>
+      <li><a href="#part1" class="toc-section-link">Part 1: The Landscape</a></li>
+      <li><a href="#part1-ifg" class="toc-sub-link">Institute for Government</a></li>
+      <li><a href="#part1-tbi" class="toc-sub-link">Tony Blair Institute</a></li>
+      <li><a href="#part1-pe" class="toc-sub-link">Policy Exchange</a></li>
+      <li><a href="#part1-nao" class="toc-sub-link">National Audit Office</a></li>
+      <li><a href="#part1-ippr" class="toc-sub-link">IPPR</a></li>
+      <li><a href="#part1-cps-reform" class="toc-sub-link">CPS and Reform</a></li>
+      <li><a href="#part1-cbp" class="toc-sub-link">Centre for British Progress</a></li>
+      <li><a href="#part2" class="toc-section-link">Part 2: Six Areas of Consensus</a></li>
+      <li><a href="#consensus1" class="toc-sub-link">1. The Centre Is Too Weak <span class="badge-sm badge-strong">Strong</span></a></li>
+      <li><a href="#consensus2" class="toc-sub-link">2. Civil Service Capability <span class="badge-sm badge-strong">Strong</span></a></li>
+      <li><a href="#consensus3" class="toc-sub-link">3. Major Projects Broken <span class="badge-sm badge-strong">Strong</span></a></li>
+      <li><a href="#consensus4" class="toc-sub-link">4. Digital Under-Resourced <span class="badge-sm badge-moderate">Moderate</span></a></li>
+      <li><a href="#consensus5" class="toc-sub-link">5. Accountability Obstacles <span class="badge-sm badge-strong">Strong</span></a></li>
+      <li><a href="#consensus6" class="toc-sub-link">6. Treasury Problem <span class="badge-sm badge-strong">Strong</span></a></li>
+      <li><a href="#part3" class="toc-section-link">Part 3: Three Disputes</a></li>
+      <li><a href="#dispute1" class="toc-sub-link">1. Bigger or Smaller State? <span class="badge-sm badge-contested">Contested</span></a></li>
+      <li><a href="#dispute2" class="toc-sub-link">2. Centralise or Devolve? <span class="badge-sm badge-contested">Contested</span></a></li>
+      <li><a href="#dispute3" class="toc-sub-link">3. Tech Saviour or Supplement? <span class="badge-sm badge-contested">Contested</span></a></li>
+      <li><a href="#part4" class="toc-section-link">Part 4: What No One Is Saying</a></li>
+      <li><a href="#part5" class="toc-section-link">Part 5: Blueprint's Assessment</a></li>
+      <li><a href="#publication-index" class="toc-section-link">Publication Index</a></li>
+      <li><a href="#pub-ifg" class="toc-sub-link">IFG · 44</a></li>
+      <li><a href="#pub-tbi" class="toc-sub-link">TBI · 28</a></li>
+      <li><a href="#pub-pe" class="toc-sub-link">Policy Exchange · 6</a></li>
+      <li><a href="#pub-nao" class="toc-sub-link">NAO · 7</a></li>
+      <li><a href="#pub-ippr" class="toc-sub-link">IPPR · 3</a></li>
+      <li><a href="#pub-cps" class="toc-sub-link">CPS · 3</a></li>
+      <li><a href="#pub-reform" class="toc-sub-link">Reform · 5</a></li>
+      <li><a href="#pub-cbp" class="toc-sub-link">CBP · 5</a></li>
+    </ul>
+  </aside>
+
+  <!-- ── Article ── -->
+  <main class="article" id="main-content">
+
+    <!-- Mobile TOC -->
+    <div class="toc-mobile">
+      <div class="toc-mobile-title" id="toc-mobile-toggle">
+        Contents
+        <span class="toc-mobile-toggle" id="toc-toggle-icon">▼</span>
+      </div>
+      <div class="toc-mobile-body" id="toc-mobile-body">
+        <a href="#exec-summary" class="toc-section-link">Executive Summary</a>
+        <a href="#part1" class="toc-section-link">Part 1: The Landscape</a>
+        <a href="#part1-ifg" class="toc-sub-link">Institute for Government</a>
+        <a href="#part1-tbi" class="toc-sub-link">Tony Blair Institute</a>
+        <a href="#part1-pe" class="toc-sub-link">Policy Exchange</a>
+        <a href="#part1-nao" class="toc-sub-link">National Audit Office</a>
+        <a href="#part1-ippr" class="toc-sub-link">IPPR</a>
+        <a href="#part1-cps-reform" class="toc-sub-link">CPS and Reform</a>
+        <a href="#part1-cbp" class="toc-sub-link">Centre for British Progress</a>
+        <a href="#part2" class="toc-section-link">Part 2: Six Areas of Consensus</a>
+        <a href="#consensus1" class="toc-sub-link">1. The Centre Is Too Weak</a>
+        <a href="#consensus2" class="toc-sub-link">2. Civil Service Capability</a>
+        <a href="#consensus3" class="toc-sub-link">3. Major Projects Broken</a>
+        <a href="#consensus4" class="toc-sub-link">4. Digital Under-Resourced</a>
+        <a href="#consensus5" class="toc-sub-link">5. Accountability Obstacles</a>
+        <a href="#consensus6" class="toc-sub-link">6. Treasury Problem</a>
+        <a href="#part3" class="toc-section-link">Part 3: Three Disputes</a>
+        <a href="#dispute1" class="toc-sub-link">1. Bigger or Smaller State?</a>
+        <a href="#dispute2" class="toc-sub-link">2. Centralise or Devolve?</a>
+        <a href="#dispute3" class="toc-sub-link">3. Tech Saviour or Supplement?</a>
+        <a href="#part4" class="toc-section-link">Part 4: What No One Is Saying</a>
+        <a href="#part5" class="toc-section-link">Part 5: Blueprint's Assessment</a>
+        <a href="#publication-index" class="toc-section-link">Publication Index</a>
+      </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <a href="../../">Home</a>
+      <span class="sep">›</span>
+      <a href="../">Papers</a>
+      <span class="sep">›</span>
+      <span>Why Nothing Gets Done</span>
+    </div>
+
+    <!-- Label -->
+    <div class="label">Companion Paper · Blueprint for a Better Britain</div>
+
+    <!-- Title -->
+    <h1>Why Nothing Gets Done</h1>
+
+    <!-- Standfirst -->
+    <p class="standfirst">What Britain's policy institutions have found about government delivery — and where they agree.</p>
+
+    <!-- Meta -->
+    <div class="meta">
+      <span>March 2026</span>
+      <span>~12,000 words</span>
+      <span>101 publications</span>
+      <span>8 institutions</span>
+    </div>
+
+    <!-- Body -->
+    <div class="body">
+
+      <!-- ────────────────────────────────────────── -->
+      <!-- EXECUTIVE SUMMARY -->
+      <!-- ────────────────────────────────────────── -->
+      <h2 id="exec-summary">Executive Summary</h2>
+
+      <p>This paper synthesises 101 publications produced between 2020 and March 2026 by eight of Britain's most significant policy institutions: the Institute for Government (IFG), the Tony Blair Institute for Global Change (TBI), Policy Exchange, the National Audit Office (NAO), the Institute for Public Policy Research (IPPR), the Centre for Policy Studies (CPS), Reform, and the Centre for British Progress (CBP). These organisations span the full width of the British political spectrum. They disagree on tax, on the size of the state, on immigration, on the role of markets. What they don't disagree on is this: the British government cannot reliably deliver what it promises.</p>
+
+      <p>That consensus, documented here in granular detail for the first time, is the central finding of this paper.</p>
+
+      <p>The diagnosis is settled. Every serious policy institution in Britain has now produced substantial evidence that the UK state fails systemically at implementation. The IFG's annual Performance Tracker shows eight of nine public services performing worse in 2024 than in 2010, despite spending rising across the board. The NAO's audit data shows only around 11% of major government projects are rated green by the Infrastructure and Projects Authority, meaning on track to succeed. TBI's analysis of public sector productivity shows inputs to public services rose nearly 25% between 2019 and 2024, while output grew only 14%. The CPS finds public sector productivity still 5.7% below 2019 levels. Reform's workforce surveys document a civil service in which performance management is weak, specialist skills are scarce, and efficiency incentives are structurally absent. This is not contested terrain. It's a shared empirical reality.</p>
+
+      <div class="pull">"Every serious policy institution in Britain has now produced substantial evidence that the UK state fails systemically at implementation."</div>
+
+      <p><strong>Six areas of strong consensus emerge from the literature.</strong></p>
+
+      <p>First, the centre of government is too weak to drive delivery. No.10, the Cabinet Office, and the Treasury are structurally misaligned institutions that have failed successive prime ministers. The IFG's Commission on the Centre of Government spent a year gathering evidence from former prime ministers and permanent secretaries and reached this conclusion unambiguously. TBI and IPPR reach the same finding from different angles. So does Policy Exchange.</p>
+
+      <p>Second, civil service capability has eroded. The data here is stark and cross-partisan. Over half of top civil servants attended Oxbridge. Under a quarter have STEM degrees. Grade inflation has exploded — Grades 6 and 7 rose 121% since 2010. Specialist skills in digital, commercial, and project management are chronically short. Reform, IFG, Policy Exchange, and TBI all document this in detail.</p>
+
+      <p>Third, major project delivery is structurally broken. Only around 11% of government major projects are rated green by the IPA. The Government Major Projects Portfolio carries a whole-life cost of £834 billion as of March 2024. The NAO's megaprojects analysis, IFG's data, and CBP's infrastructure work all conclude that the UK's record by international standards is catastrophically bad.</p>
+
+      <p>Fourth, digital and AI transformation is necessary but under-resourced. TBI estimates £40 billion a year in potential productivity gains from AI. The NAO has traced persistent structural barriers to digital delivery — wrong sequencing, legacy system costs, supplier dependency, absent revenue funding. IFG cautions that the technology itself isn't the hard part. The agreement on the prize coexists with disagreement on the delivery vehicle.</p>
+
+      <p>Fifth, accountability mechanisms have become obstacles to delivery. Public inquiries take years and cost hundreds of millions. Judicial review creates strategic delay. Procurement rules generate compliance theatre. Planning and environmental regulation blocks infrastructure for decades. This is the politically charged consensus — it cuts across left and right, but the institutions agree: the UK's accountability architecture produces more process than accountability, and more delay than scrutiny.</p>
+
+      <p>Sixth, the Treasury controls too much and delivers too little. Cross-party frustration with Treasury dominance over delivery departments runs through the IFG, TBI, and IPPR. Departmental bilateral spending deals reinforce silos. Growth policy lacks strategic capacity at the centre. The 2025 Spending Review, by multiple accounts, failed to use missions to overcome this.</p>
+
+      <p><strong>Three areas of genuine dispute remain.</strong></p>
+
+      <p>Should the state get bigger or smaller? IPPR and TBI want more capacity, more institutions, more funded reform. CPS and Policy Exchange want a smaller state doing fewer things better. This is a real philosophical divide.</p>
+
+      <p>Should delivery be centralised or devolved? TBI and IFG broadly favour strengthening the centre with mission boards and delivery units. CBP wants powerful development corporations that bypass central government entirely. IPPR wants more powers for combined authorities. Policy Exchange is split.</p>
+
+      <p>Is technology the solution or the supplement? TBI is the most optimistic: £40 billion a year, reimagined services, a state that barely resembles today's. IFG is cautious: the technology isn't the hard part, the institutions are. NAO documents a decade of digital failure. Reform sits between the two.</p>
+
+      <p><strong>Blueprint's assessment</strong> is that the argument about diagnosis has been won. What the institutions can't protect is the remedy. Every serious reform — delivery units, spending frameworks, capability programmes, mission boards — has been reversed, diluted, or simply not implemented when governments changed. The obstacle to better delivery isn't ideas. It's the structural vulnerability of reform to political churn. The case for statutory, independently monitored delivery architecture — something with the permanence of the Climate Change Act — has never been stronger, and has never been made.</p>
+
+      <hr class="section-divider">
+
+      <!-- ────────────────────────────────────────── -->
+      <!-- PART 1 -->
+      <!-- ────────────────────────────────────────── -->
+      <h2 id="part1">Part 1: The Landscape</h2>
+
+      <h3>Who's Working on This</h3>
+
+      <p>Britain has never had more organisations studying why it can't deliver. The eight institutions covered in this synthesis have between them produced over 100 significant publications on government delivery in the six years from 2020 to March 2026. That's not a sign of a solved problem. It's a sign of a recognised crisis.</p>
+
+      <p>The institutions cluster into four rough groups by analytical character. The IFG and NAO are primarily evidence-producing bodies — they track data, audit performance, and document failure. TBI and IPPR are primarily prescription-generating bodies — they diagnose problems and propose solutions, with a broadly progressive instinct. Policy Exchange, CPS, and Reform are primarily reform-advocacy bodies — they argue for structural change, with a broadly conservative instinct. CBP occupies its own niche: infrastructure-focused, technocratic, and impatient with both left and right process instincts.</p>
+
+      <p>None of these categories is rigid. The IFG produces detailed proposals. Reform publishes empirical data. TBI generates evidence as well as prescription. But understanding the institutional character of each body matters for reading what follows.</p>
+
+      <h3 id="part1-ifg">The Institute for Government</h3>
+
+      <p>The IFG is the largest single contributor to the delivery literature in this synthesis. Its 44 publications cover every major dimension of delivery failure: annual public services data through the Performance Tracker; annual civil service data through Whitehall Monitor; structural analysis of the centre of government through its year-long Commission; major project data; digital government assessments; procurement accountability; and local government delivery.</p>
+
+      <p>The IFG's authority derives from its consistency. It doesn't shift position with governments. It told the Blair government that public service improvement was slower than spending suggested. It told the Coalition that headcount cuts without workforce planning would damage capability. It told Johnson that his delivery unit lacked the conditions for success. It told Starmer that mission boards were inadequate for mission delivery. The IFG's analysis isn't partisan — it's relentless. And what it relentlessly finds is that the state can't deliver.</p>
+
+      <p>The trend in IFG output since 2020 has been an escalating tone of urgency. The 2020 Performance Tracker documented fragility. The 2023 tracker described services that were "crumbling." The 2026 Whitehall Monitor concluded that Labour had "missed" its make-or-break year on reform. The IFG isn't crying wolf. It's documenting a structural deterioration over a decade and a half.</p>
+
+      <h3 id="part1-tbi">The Tony Blair Institute</h3>
+
+      <p>TBI has become the most prolific source of delivery prescription in Britain, particularly since July 2024. Its 28 publications are organised around a single thesis: the UK government's existing operating model is structurally incapable of meeting citizens' expectations, and AI offers the only viable path to a qualitatively different kind of state. TBI calls this the "Reimagined State."</p>
+
+      <p>TBI's influence on current government thinking is substantial. The mission boards concept, the delivery unit structure, the digital ID agenda, the AI Opportunities Action Plan — all carry TBI fingerprints. The institute's May 2024 flagship paper, <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-a-new-model-to-transform-the-state"><em>Governing in the Age of AI</em></a>, proposed an "AI Mission Control" at Number 10, a "Bezos mandate" requiring departmental APIs, and a Digital Public Assistant for every citizen by 2030. The £40 billion per year productivity estimate from that paper has become a reference point across the policy debate.</p>
+
+      <p>TBI's output is growing, not plateauing. It produced more publications in 2025 alone than in any previous year, reflecting both the institute's proximity to the current government and its conviction that the window for transformative reform is narrow.</p>
+
+      <h3 id="part1-pe">Policy Exchange</h3>
+
+      <p>Policy Exchange has produced the most sustained conservative-reformist analysis of delivery failure. Its Reform of Government Commission, launched in 2020 and chaired by Dame Patricia Hodgson, produced <a href="https://policyexchange.org.uk/publication/government-reimagined/"><em>Government Reimagined</em></a> in May 2021, a comprehensive indictment of Whitehall's structural failures that reads, in retrospect, as a template for debates that followed.</p>
+
+      <p>Policy Exchange's distinctive contribution is the argument that capability matters more than scale. The state doesn't need more civil servants; it needs better ones. It doesn't need more consultants; it needs fewer, because their dominance is a symptom of in-house skill gaps. It doesn't need more regulation; it needs regulation that can be tracked, challenged, and removed. Its <a href="https://policyexchange.org.uk/publication/the-rise-of-the-regulators/"><em>Rise of the Regulators</em></a> (December 2024) documented 1,200 regulations introduced between 2014 and 2024, finding that fewer than 20% came with proper Impact Assessments and that the regulatory system was gripped by a "risk aversion ratchet."</p>
+
+      <h3 id="part1-nao">The National Audit Office</h3>
+
+      <p>The NAO is in a different institutional category from the others. It doesn't advocate. It audits. Its findings carry legal weight because they're based on access to government data that no think tank can replicate. And what the NAO's data shows about delivery is damning.</p>
+
+      <p>Three NAO reports are particularly significant for this synthesis. <a href="https://www.nao.org.uk/reports/digital-transformation-in-government-addressing-the-barriers/"><em>Digital Transformation in Government</em></a> (March 2023) traced a consistent pattern of digital failure: decisions made before business problems are understood; capital funding allocated without revenue funding to operate new systems; legacy costs crowding out transformation budgets. <a href="https://www.nao.org.uk/insights/delivering-value-from-government-investment-in-major-projects/"><em>Delivering Value from Government Investment in Major Projects</em></a> (February 2024) examined the 244 projects in the Government Major Projects Portfolio and found that government rarely evaluates what happens after projects complete, whether they actually produced the value that justified their cost. <a href="https://www.nao.org.uk/wp-content/uploads/2025/03/lessons-learned-governance-and-decision-making-on-mega-projects.pdf"><em>Lessons Learned: Governance and Decision-Making on Mega-Projects</em></a> (March 2025) analysed the £834 billion portfolio and found that mega-projects fail when design isn't mature before commitment, when no single person has authority, and when leadership churn prevents institutional knowledge from accumulating.</p>
+
+      <h3 id="part1-ippr">IPPR</h3>
+
+      <p>IPPR approaches delivery failure from the progressive left. Its "Great Government" programme, launched in 2023, argues that New Public Management — the dominant reform paradigm since the 1980s — has run out of road. Importing private-sector targets and quasi-markets into public services has produced gaming, demotivation, and inequality. The new playbook needs to be built on high trust, high autonomy, and high skill.</p>
+
+      <p>IPPR's contribution is to frame delivery failure as a social contract problem, not just an administrative one. When government can't deliver, democratic legitimacy erodes. The <a href="https://www.ippr.org/articles/great-government-a-new-playbook-for-public-service-reform"><em>Great Government</em> series</a> draws on international comparisons — Finland's education system, Dutch social care, UK devolution — to argue that better delivery is possible. The question is whether the institutional conditions can be created and sustained.</p>
+
+      <h3 id="part1-cps-reform">CPS and Reform</h3>
+
+      <p>The CPS and Reform represent different strands of the right's case for delivery reform. CPS is primarily focused on fiscal sustainability and regulatory burden, approaching delivery through the lens of productivity and value for money. Its <a href="https://cps.org.uk/wp-content/uploads/2024/04/The-Future-of-Regulation-FINAL.pdf"><em>Future of Regulation</em></a> (April 2024) documented £35 billion in gross annual regulatory costs imposed between 2010 and 2019 and described the entire regulatory reform apparatus as a "Potemkin system." Its <a href="https://cps.org.uk/wp-content/uploads/2026/02/CPS_A5_A_PRODUCTIVITY_TOOLKIT_FOR_BRITAIN.pdf"><em>Productivity Toolkit for Britain</em></a> (February 2026) found public sector productivity still 5.7% below 2019 levels and identified specific levers — sick leave rates, estate utilisation, procurement waste — that could move the dial without additional headcount.</p>
+
+      <p>Reform is more focused on Whitehall culture and incentives. Its <a href="https://reform.uk/wp-content/uploads/2023/10/Efficiency-mindset.pdf"><em>Efficiency Mindset</em></a> (October 2023) argued that government lacks the performance management frameworks, incentives, and accountability structures to pursue efficiency gains. Its <a href="https://reform.uk/wp-content/uploads/2024/04/Making-the-grade.pdf"><em>Making the Grade</em></a> (April 2024) survey of 771 civil servants documented grade inflation, cognitive homogeneity, and specialist skill shortfalls. Its <a href="https://reform.uk/wp-content/uploads/2024/09/Getting-the-machine-learning.pdf"><em>Getting the Machine Learning</em></a> (September 2024) laid out why AI adoption was being squandered through the same institutional failures that have blocked previous technology waves.</p>
+
+      <h3 id="part1-cbp">Centre for British Progress</h3>
+
+      <p>CBP occupies a distinctive niche. Where other organisations focus on Whitehall, CBP focuses on the physical infrastructure delivery system — planning, consenting, development corporations, transport investment. Its argument is that Britain's inability to build houses, roads, railways, and energy infrastructure at competitive speed and cost is itself a delivery failure, rooted in institutional design choices that systematically empower blocking over building.</p>
+
+      <p>CBP's publications on <a href="https://britishprogress.org/reports/new-towns-for-a-new-generation">new towns</a>, the <a href="https://britishprogress.org/briefings/project-hawking-tripling-the-size-of-ox-cam-by-205">Oxford-Cambridge corridor</a>, <a href="https://britishprogress.org/reports/unblocking-ai-growth-zones">AI Growth Zones</a>, and <a href="https://britishprogress.org/reports/let-mayors-build-a-new-deal-for-transport">transport devolution</a> all make versions of the same argument: the UK's delivery system gives too many actors a veto and too few actors a mandate. Underground lines cost six times more per mile in Britain than in Spain. French trams cost half what British ones do. That's not a natural fact. It's a policy choice.</p>
+
+      <h3>The Publication Trend</h3>
+
+      <p>One thing the volume of output across these eight institutions confirms is that the delivery problem has been getting more, not less, urgent. Publication rates have accelerated. The IFG published more on delivery in 2024–25 than in any previous two-year period. TBI's output doubled between 2023 and 2025. CBP was founded specifically to address delivery gaps that other institutions were documenting but not solving.</p>
+
+      <p>This acceleration reflects both the worsening underlying data and a growing political appetite for answers. The 2024 general election brought a Labour government explicitly committed to "mission-driven" delivery. The think tank world mobilised around the question of whether missions could work in practice. The answer coming back, as of March 2026, is: not yet.</p>
+
+      <hr class="section-divider">
+
+      <!-- ────────────────────────────────────────── -->
+      <!-- PART 2 -->
+      <!-- ────────────────────────────────────────── -->
+      <h2 id="part2">Part 2: The Six Areas of Consensus</h2>
+
+      <!-- CONSENSUS 1 -->
+      <div class="consensus-area" id="consensus1">
+        <div class="area-header">
+          <span class="area-number">Consensus 1</span>
+          <div class="area-title-group">
+            <h3>The Centre of Government Is Too Weak to Drive Delivery</h3>
+            <span class="consensus-badge strong">Strong consensus</span>
+          </div>
+        </div>
+
+        <p>The most important structural finding in the delivery literature is this: every prime minister since at least 1997 has wanted to deliver more than the institutional machinery of British government allows. The centre, as constituted, blocks delivery rather than driving it.</p>
+
+        <p>The IFG spent a year investigating this through its <a href="https://www.instituteforgovernment.org.uk/commission-centre-government">Commission on the Centre of Government</a>, which reported in March 2024. The Commission's final report, <a href="https://www.instituteforgovernment.org.uk/publication/power-with-purpose-centre-commission"><em>Power with Purpose</em></a>, was blunt: "The centre of government has failed to give successive prime ministers the strategic support they need to deliver their priorities." No.10, the Cabinet Office, and the Treasury are structurally misaligned — unclear roles, duplicated functions, insufficient strategic capacity, and fragmented accountability. The result is a government that is reactive rather than strategic.</p>
+
+        <p>The Commission's seven recommendations form the most comprehensive reform blueprint in the literature. They include: a new "Priorities for Government" framework agreed at the start of each parliament; an Executive Cabinet Committee of key ministers; a new senior first secretary of state for delivery; a restructured Department of the Prime Minister and Cabinet; a separate Department for the Civil Service; separated cabinet secretary and head of civil service roles; and a shared strategy, budget, and performance management process linking priorities to resources.</p>
+
+        <p>TBI reaches the same diagnosis from a different direction. Its foundational <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-a-new-model-to-transform-the-state"><em>Governing in the Age of AI</em></a> paper calls for an "AI Mission Control" at Number 10, headed by an "AI Mission CEO" with a mandate to drive cross-government transformation. The Chief Secretary to the Treasury should own AI transformation, with authority to direct departmental spending bids. The logic: without a powerful centre with real authority, AI transformation will fragment into departmental pilots that never connect.</p>
+
+        <p>TBI's <a href="https://institute.global/insights/politics-and-governance/reimagining-the-spending-review-a-new-model-for-smarter-public-spending"><em>Reimagining the Spending Review</em></a> paper (June 2025) makes the institutional argument most explicitly: the existing Spending Review process is itself a barrier to delivery, driven by bilateral departmental bargaining that the centre cannot override. The missions framework, which Labour hoped would change this, "failed to meaningfully supplant entrenched patterns of departmental bargaining" in the 2025 Spending Review.</p>
+
+        <p>Policy Exchange's <a href="https://policyexchange.org.uk/publication/government-reimagined/"><em>Government Reimagined</em></a> reaches the same conclusion through its Reform of Government Commission work. The Prime Minister's office lacks the institutional machinery to force delivery across Whitehall. Extended Ministerial Offices should be restored to give secretaries of state access to expert advisers. Permanent Secretary tenures should be made conditional on delivery track records.</p>
+
+        <p>The IFG's <a href="https://www.instituteforgovernment.org.uk/publication/five-steps-government-missions"><em>Mission Launch</em></a> paper (September 2024) found that two months into the Starmer government, Labour had made commitments but not established the institutional architecture needed to deliver them. It proposed a Mission Strategy Board chaired by the PM, lead cabinet ministers for each mission, and mission strategy teams with cross-departmental authority. The subsequent <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2026">Whitehall Monitor 2026</a> found these recommendations largely unimplemented: mission governance had "collapsed" into a confusing array of rebranding exercises, and 2025 had been "missed" as a reform window.</p>
+
+        <p>IPPR's <a href="https://www.ippr.org/articles/mission-driven-government"><em>Mission-Driven Government</em></a> paper (May 2024) contributed interview evidence from over 30 experts to the same finding: missions require institutional equivalents of the 1997 reforms — spending reviews, delivery units, outcome frameworks — but calibrated to the complexity of cross-cutting missions that can't be reduced to simple metrics. The feedback loop between policy design and frontline delivery needs to be rebuilt, not patched.</p>
+
+        <p>The strength of this consensus is remarkable. The IFG and Policy Exchange don't agree on much. TBI and Reform approach government reform from very different assumptions. IPPR and CPS disagree about the size of the state. But they all agree that the current centre of government can't drive delivery, and they all propose versions of the same fix: give the centre more authority, more strategic capacity, and more real accountability for outcomes.</p>
+
+        <div class="pull">"The Blair PMDU, the gold standard of UK delivery architecture, was abolished by Cameron in 2010. Oliver Letwin later called this 'a terrible mistake.'"</div>
+
+        <p>What the consensus doesn't contain is a convincing account of how these reforms survive the change of government. The Blair PMDU, the gold standard of UK delivery architecture, was abolished by Cameron in 2010. Oliver Letwin later called this "a terrible mistake." The Thatcher efficiency programme was diluted by Major. Every reform of the centre has been restructured or reversed within two parliaments. The consensus exists; the institutional protection doesn't.</p>
+      </div>
+
+      <!-- CONSENSUS 2 -->
+      <div class="consensus-area" id="consensus2">
+        <div class="area-header">
+          <span class="area-number">Consensus 2</span>
+          <div class="area-title-group">
+            <h3>Civil Service Capability Has Eroded</h3>
+            <span class="consensus-badge strong">Strong consensus</span>
+          </div>
+        </div>
+
+        <p>The civil service has grown. It has not improved. That tension runs through the entire delivery literature, and the data is cross-partisan and consistent.</p>
+
+        <p>The IFG's <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2025"><em>Whitehall Monitor</em> series</a> tracks the numbers annually. The civil service grew from under 380,000 to 520,440 FTE between 2016 and 2025. Grades 6 and 7 rose 121% since 2010. Turnover reached 12.7%, the second highest since 2010. Median civil service pay is still slightly below its 2010 real-terms level despite 2024 pay rises. Consultancy and temporary staff spending rose 40% in real terms since 2018/19 — a direct measure of the in-house capability gap.</p>
+
+        <p>The capability picture is documented in detail by the IFG's <a href="https://www.instituteforgovernment.org.uk/publication/who-runs-whitehall"><em>Who Runs Whitehall</em></a> report (May 2024). Of 148 permanent secretaries and directors general studied, 52% attended Oxbridge. Only 23% have STEM degrees. Only 12% are based outside London. Policy professionals are "numerically and culturally dominant," making up 43% of the senior tier. Only 22% of permanent secretaries have had leadership roles outside government for more than three years.</p>
+
+        <p>The <a href="https://www.instituteforgovernment.org.uk/publication/civil-service-external-recruitment"><em>Opening Up</em></a> report (December 2022) found that only 18% of new entrants to the senior civil service in 2020/21 were external recruits. The IFG's <a href="https://www.instituteforgovernment.org.uk/publication/ways-improve-civil-service"><em>20 Ways to Improve the Civil Service</em></a> (August 2024) synthesised over a decade of research into concrete, legislation-free actions: enforce minimum terms of service, advertise all jobs externally by default, set up large-scale secondment programmes, create senior specialist roles.</p>
+
+        <p>Policy Exchange's <a href="https://policyexchange.org.uk/publication/government-reimagined/"><em>Government Reimagined</em></a> identified the same capability gaps in 2021 and proposed specific fixes: a new pay grade above the SCS to attract specialists; dramatically more Senior Responsible Owners for major programmes; mandatory training on procurement, project management, and digital delivery for ministers and permanent secretaries.</p>
+
+        <p>Its <a href="https://policyexchange.org.uk/publication/smaller-better-higher-paid/"><em>Smaller, Better, Higher Paid?</em></a> paper (May 2025) updated the diagnosis. Since 2016, the civil service expanded from under 380,000 to over 514,000 by 2024. The grade inflation, rapid churn, uncompetitive specialist pay, and excessive management layers serve nobody — not service users, ministers, or civil servants themselves. The paper proposes £5 billion in savings through structural delayering, recycling money into competitive pay for digital, commercial, and scientific roles.</p>
+
+        <p>Reform's <a href="https://reform.uk/wp-content/uploads/2024/04/Making-the-grade.pdf"><em>Making the Grade</em></a> survey of 771 civil servants found that grade inflation has produced excessive management layers, the fast stream has become cognitively homogeneous in a way that generates groupthink, and specialist skills remain chronically undersupplied. Its <a href="https://reform.uk/wp-content/uploads/2024/06/Final-manifesto-for-delivery-4.pdf"><em>Manifesto for Delivery</em></a> (June 2024) found civil servants themselves identifying the same problems: cultural premium on policy over delivery expertise, inadequate cross-departmental collaboration mechanisms, weak evaluation and learning systems.</p>
+
+        <p>TBI's analysis of skills from a technology angle reaches the same conclusion. AI transformation requires civil servants who can write problem definitions, manage vendors, act as intelligent clients for technical work, and interpret data outputs. These skills are systematically absent. <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-a-new-model-to-transform-the-state"><em>Governing in the Age of AI</em></a> proposes benchmarking AI-related civil service salaries to at least 75% of private-sector market rates. <a href="https://institute.global/insights/tech-and-digitalisation/delivering-ai-impact-a-leadership-agenda-for-turning-technology-into-public-value"><em>Delivering AI Impact</em></a> (February 2026) identifies the binding constraint on AI transformation as "institutional and political, not technological" — the skills and incentive problem, not the tool problem.</p>
+
+        <p>The IPPR's <a href="https://www.ippr.org/articles/mission-driven-government"><em>Mission-Driven Government</em></a> argues that an activist industrial state requires capabilities that the current civil service doesn't possess — co-design, partnership, and analytical skills suited to running complex multi-sector programmes, not just commissioning and regulating.</p>
+
+        <p>The NAO's <a href="https://www.nao.org.uk/insights/improving-operational-delivery-in-government/"><em>Improving Operational Delivery in Government</em></a> (March 2021) identified operational management capability — not policy design — as the critical limiting factor on service quality. Senior leaders lack the frameworks, incentives, and skills to manage service delivery effectively. That finding, made in 2021, has been confirmed repeatedly by the data since.</p>
+
+        <p>There is one area of genuine divergence within this consensus. CPS and Policy Exchange argue that capability problems are partly caused by a civil service that is too large — that grade inflation and management bloat crowd out specialisation. IFG and IPPR are more agnostic on size, focusing instead on the composition and skills of whoever is there. Reform sits closer to the CPS/Policy Exchange view on workforce structure, while agreeing with IFG on the cultural dimension. This doesn't crack the consensus — they all agree capability has eroded — but it matters for the remedy.</p>
+      </div>
+
+      <!-- CONSENSUS 3 -->
+      <div class="consensus-area" id="consensus3">
+        <div class="area-header">
+          <span class="area-number">Consensus 3</span>
+          <div class="area-title-group">
+            <h3>Major Project Delivery Is Structurally Broken</h3>
+            <span class="consensus-badge strong">Strong consensus</span>
+          </div>
+        </div>
+
+        <p>The data on major project delivery is the most alarming in the entire delivery literature, and it's the area where the cross-institutional consensus is most complete. Britain can't build things. The evidence is not contested.</p>
+
+        <p>The Government Major Projects Portfolio contained 227 projects as of March 2024, with a combined whole-life cost of £834 billion, according to the NAO's <a href="https://www.nao.org.uk/wp-content/uploads/2025/03/lessons-learned-governance-and-decision-making-on-mega-projects.pdf"><em>Lessons Learned: Governance and Decision-Making on Mega-Projects</em></a> (March 2025). Of those, only around 11% carry a "green" Delivery Confidence Assessment from the Infrastructure and Projects Authority, meaning on track to succeed. TBI's <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-a-new-model-to-transform-the-state"><em>Governing in the Age of AI</em></a> cites the same figure: only around 10% of government major projects have a green rating, while 183 are rated amber.</p>
+
+        <p>The IFG's <a href="https://www.instituteforgovernment.org.uk/article/explainer/major-projects-government"><em>Major Projects in Government</em></a> explainer found that in 2020, 11 projects in the portfolio (9%) were rated "unfeasible" — a record high, up 6 percentage points from 2019. Only 3 of 123 projects with known ratings (2%) were rated "highly likely" to succeed on time and on budget. HS2 was rated "unfeasible" for the first time in 2020, with whole-life costs of £55.7 billion. By the time Phase 2 was cancelled, it had become a case study in premature commitment and inadequate design maturity.</p>
+
+        <p>The NAO's <a href="https://www.nao.org.uk/insights/delivering-value-from-government-investment-in-major-projects/"><em>Delivering Value from Government Investment in Major Projects</em></a> (February 2024) went further than the confidence ratings. It found that government rarely evaluates what happens after major projects are completed. It tracks delivery to budget and schedule, but not whether projects produced the value — for citizens, service users, or the environment — that justified their cost. By examining six completed projects including High Speed 1 and the Diamond Light Source, it identified seven factors that determine whether major investments create or destroy value. A clear vision of intended benefits, maintained through design decisions, is the most important. It's the one most commonly absent.</p>
+
+        <p>The NAO's megaprojects report identified the structural causes of failure with precision: designs and consents committed to before they're mature; no single authoritative decision-maker; leadership churn that prevents institutional knowledge from accumulating. The report quotes the Institution of Civil Engineers directly: be "ruthless at gate reviews and controls until design and planning are sufficiently mature." Immature designs are the primary driver of cost escalation. The UK consistently doesn't wait.</p>
+
+        <p>CBP's analysis of infrastructure delivery costs makes the international comparison explicit. <a href="https://britishprogress.org/reports/let-mayors-build-a-new-deal-for-transport"><em>Let Mayors Build</em></a> (October 2025) found that underground lines in Spain cost one-sixth as much per mile as in Britain and French trams cost half as much as British ones. This isn't a natural feature of geography or geology. It's the product of incentive structures: when projects are funded with national money, localities have no reason to control costs; when approval is controlled centrally, there's no pressure to move quickly. The institutional design produces the cost premium.</p>
+
+        <p>CBP's <a href="https://britishprogress.org/briefings/project-hawking-tripling-the-size-of-ox-cam-by-205"><em>Project Hawking</em></a> report (December 2025) on the Oxford-Cambridge corridor identifies the same failure mode at scale. Incremental interventions — Development Consent Orders, local planning decisions, piecemeal development corporations — can't deliver at the speed and scale the corridor needs. The "unholy trinity" of local politics, dysfunctional regulation, and insufficient financing blocks every approach. The solution CBP proposes is radical: a single development corporation with supreme planning authority, outside normal government processes, self-funding through land value capture.</p>
+
+        <p>Policy Exchange's <a href="https://policyexchange.org.uk/publication/government-reimagined/"><em>Government Reimagined</em></a> identified the shortage of capable Senior Responsible Owners as a critical delivery bottleneck, arguing that £600 billion in gross public sector infrastructure investment cannot be managed with the current SRO cadre. The NAO's megaprojects report and Reform's <a href="https://reform.uk/wp-content/uploads/2024/06/Final-manifesto-for-delivery-4.pdf"><em>Manifesto for Delivery</em></a> reach the same conclusion independently: senior responsible owners need to stay in post longer, and their accountability needs to be tied to delivery outcomes, not just business case approval.</p>
+
+        <p>The NAO's <a href="https://www.nao.org.uk/reports/government-shared-services/"><em>Government Shared Services</em></a> reports (November 2022 and March 2026) document the same failure pattern applied to internal reform programmes. Since 2004, central government has repeatedly tried to cut costs by sharing back-office functions across departments. Every strategy has failed to deliver intended savings. The refreshed 2021 strategy, grouping departments into five cloud-based shared service clusters by 2028, is similarly at risk. The fundamental enablers of process standardisation and data convergence have not been put in place. Four years in, the pattern of the previous 17 years is repeating.</p>
+
+        <p>The defence procurement picture adds another dimension. CBP's <a href="https://britishprogress.org/reports/fixing-uk-defence-procurement"><em>Fixing UK Defence Procurement</em></a> (December 2025) identifies four systemic failures in defence major programmes: scope creep and over-specification; inter-service rivalry creating too many decision-making layers; feast-and-famine ordering patterns that hollow out sovereign industrial capacity; and procurement cycles too slow to adopt software-driven, AI-enabled capabilities. These failures are structural, not accidental. They're built into the institutional architecture.</p>
+      </div>
+
+      <!-- CONSENSUS 4 -->
+      <div class="consensus-area" id="consensus4">
+        <div class="area-header">
+          <span class="area-number">Consensus 4</span>
+          <div class="area-title-group">
+            <h3>Digital and AI Transformation Is Necessary but Under-Resourced</h3>
+            <span class="consensus-badge moderate">Moderate consensus</span>
+          </div>
+        </div>
+
+        <p>There's a number that now anchors the digital delivery debate: £40 billion. TBI's <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-a-new-model-to-transform-the-state"><em>Governing in the Age of AI</em></a> estimates that AI could generate £40 billion per year in public sector productivity gains, totalling £200 billion over five years. IPPR's <a href="https://www.ippr.org/articles/great-government-a-new-playbook-for-public-service-reform"><em>Great Government</em></a> estimates £24 billion per year. CPS and Reform reference the government's own internal estimate that a third of civil service tasks could be automated. None of these figures are identical, but they're all large enough to change the fiscal position fundamentally. The institutions agree on the scale of the prize.</p>
+
+        <p>They also agree that the prize isn't being captured. The NAO has tracked this most systematically. Its <a href="https://www.nao.org.uk/reports/digital-transformation-in-government-addressing-the-barriers/"><em>Digital Transformation in Government</em></a> report (March 2023) found that despite the creation of the Central Digital and Data Office in 2021 and a new Digital and Data Roadmap, government's track record of digital transformation remained poor. Technology decisions are taken too early, before business problems are properly understood. Capital funding is secured without the revenue funding to operate new systems. Legacy systems consume an ever-growing share of digital budgets, crowding out transformation.</p>
+
+        <p>The NAO's <a href="https://www.nao.org.uk/insights/governments-approach-to-technology-suppliers-addressing-the-challenges/"><em>Government's Approach to Technology Suppliers</em></a> (January 2025) found that government spends at least £14 billion annually on digital procurement, with £3 billion in cost increases identified across just five digital programmes. Commercial teams in departments lead procurement decisions without adequate digital expertise. Post-contract supplier management is almost entirely absent. The centre has not aligned responsibilities, skills, or resources to lead digital procurement strategically.</p>
+
+        <p>TBI's departmental case studies bring this to life. Its <a href="https://institute.global/insights/politics-and-governance/reimagining-uk-department-for-work-and-pensions">DWP analysis</a> found that DWP could free up 40% of its time using AI tools, equivalent to nearly £1 billion per year. DWP fraud and error cost close to £9 billion per year. The tools to address this exist. The deployment architecture doesn't. Its <a href="https://institute.global/insights/public-services/preparing-the-nhs-for-the-ai-era-a-digital-health-record-for-every-citizen">NHS analysis</a> found that without a universal digital health record as foundational infrastructure, the NHS can't unlock AI-era benefits because health data remain fragmented across GP practices, hospitals, and pharmacies.</p>
+
+        <p>TBI's <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-reimagining-local-government"><em>Reimagining Local Government</em></a> (May 2025) quantifies the local dimension: AI could automate or improve 26% of local government tasks, equivalent to 1 million hours per year in a single council, or £8 billion nationally. A 227,000-person care assessment backlog could be cleared in one month with AI-enabled processing. Only 20% of major planning applications are settled within the statutory timeframe. Seven in ten councils cite high-quality data availability as a barrier to innovation.</p>
+
+        <p>IFG's assessment of digital government is notably more cautious. Its <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2025/part-2-state-civil-service">Digital Transformation and AI</a> chapter in Whitehall Monitor 2025 noted that the civil service is taking AI more seriously than before, with encouraging pilots and the consolidation of digital teams in DSIT, but that legacy IT systems remain a serious problem and the government lacks a clear roadmap that addresses underlying fragmentation. Its January 2026 <a href="https://www.instituteforgovernment.org.uk/comment/digital-centre-government-roadmap">commentary on the government's digital roadmap</a> said it "points to an appealing future but fails to set out how to get there."</p>
+
+        <p>Reform's <a href="https://reform.uk/wp-content/uploads/2024/09/Getting-the-machine-learning.pdf"><em>Getting the Machine Learning</em></a> identified why AI adoption specifically is being squandered: there is no single point of leadership, no systematic approach to high-value use cases, no cross-government procurement framework, and no mechanism for scaling successful pilots. The creation of the digital centre of government in DSIT provides an opportunity to make these changes, but only if DSIT is given genuine authority, not just a title.</p>
+
+        <p>The 2025 Spending Review allocated significant sums — £10 billion to digitalise the NHS, £1.2 billion for cross-government digital, £2 billion for the AI Opportunities Action Plan. But TBI's <a href="https://institute.global/insights/economic-prosperity/unpacking-the-2025-uk-spending-review-sensible-choices-within-a-tight-fiscal"><em>Unpacking the 2025 UK Spending Review</em></a> noted that the Health Foundation estimates NHS and adult social care digitalisation actually requires £21 billion over five years, significantly more than allocated. The gap between what's needed and what's funded is the story of UK digital government for three decades.</p>
+      </div>
+
+      <!-- CONSENSUS 5 -->
+      <div class="consensus-area" id="consensus5">
+        <div class="area-header">
+          <span class="area-number">Consensus 5</span>
+          <div class="area-title-group">
+            <h3>Accountability Mechanisms Have Become Obstacles to Delivery</h3>
+            <span class="consensus-badge strong">Strong consensus</span>
+          </div>
+        </div>
+
+        <p>This is the most politically charged of the six consensuses because it cuts directly against the instincts of both the parliamentary left (which values public inquiries as accountability tools) and the legal and professional establishment (which values judicial review and impact assessment requirements). But the evidence base for it is now substantial and cross-partisan.</p>
+
+        <p>The IFG's <a href="https://www.instituteforgovernment.org.uk/publication/how-government-ensure-inquiries-succeed"><em>How Can the Government Ensure Inquiries Are Set Up to Succeed?</em></a> (December 2025) found that 27 public inquiries were underway simultaneously in December 2025, a record. Seven new ones were announced in 2025 alone. The Covid-19 Inquiry alone has cost the government £100 million in response costs, including £56.4 million in legal costs. Inquiries are taking longer, costing more, and too often failing to deliver meaningful change. The underlying drivers include low public trust pushing demand toward statutory inquiries, an absence of systematic knowledge-sharing, and risk aversion discouraging innovation in how inquiries are run.</p>
+
+        <p>Policy Exchange's <a href="https://policyexchange.org.uk/publication/the-rise-of-the-regulators/"><em>Rise of the Regulators</em></a> documents the regulation side of the same problem. Based on analysis of over 1,200 regulations introduced between 2014 and 2024, it finds that the UK's regulatory state is gripped by a "risk aversion ratchet" that generates new rules and almost never removes old ones. The result is a productivity-suppressing ceiling that is diverting doctors, nurses, and police officers from core duties. Natural England's nutrient neutrality requirements alone paused 150,000 homes. The regulatory expansion represents a democratic deficit: elected lawmakers outsourcing executive power to agencies with little parliamentary accountability.</p>
+
+        <p>The CPS's <a href="https://cps.org.uk/wp-content/uploads/2024/04/The-Future-of-Regulation-FINAL.pdf"><em>Future of Regulation</em></a> takes this further. The entire regulatory reform apparatus is described as a "Potemkin system" — Impact Assessments produced by junior civil servants late in the day to justify decisions already made, read by almost no ministers, subject to systematic measurement errors. The system creates the appearance of accountability without delivering it.</p>
+
+        <p>CBP's infrastructure analysis shows what this means in practice. Its <a href="https://britishprogress.org/reports/unblocking-ai-growth-zones"><em>Unblocking AI Growth Zones</em></a> paper (October 2025) found that the planning and environmental regulatory requirements that blocked energy, housing, and transport projects will equally block AI datacentre development if not addressed. The typical five-year approval timeline for nationally significant infrastructure projects is a delivery killer. Its <a href="https://britishprogress.org/reports/new-towns-for-a-new-generation"><em>New Towns for a New Generation</em></a> work found that just one in five major planning applications are decided within the 13-week statutory period and that costs of obtaining permission had risen more than 30% for half of SME builders since 2021.</p>
+
+        <p>Reform's productivity analysis confirms the cost. The <a href="https://reform.uk/wp-content/uploads/2025/02/state-of-the-state-2025-report.pdf"><em>State of the State 2025</em></a> survey of public sector leaders found that more directive central leadership is needed to accelerate digital transformation — the current devolved, departmental approach is too slow. Leaders express concern about governance mechanisms. The compliance burden — the Social Value Act, the Public Sector Equality Duty as applied to procurement, box-ticking requirements — diverts resources from actual delivery.</p>
+
+        <p>The IFG's <a href="https://www.instituteforgovernment.org.uk/publication/improving-accountability-government-procurement"><em>Improving Accountability in Government Procurement</em></a> (September 2024) found that the Procurement Act 2023 improved transparency requirements, but that implementation risks falling short because departments lack commercial capability to set meaningful KPIs. The accountability architecture creates the appearance of oversight without the substance.</p>
+
+        <div class="pull">"The UK's accountability architecture produces more process than accountability — and more delay than scrutiny."</div>
+
+        <p>What these institutions agree on is that the UK's accountability architecture produces more process than accountability. Inquiries that take years and cost millions but rarely change policy. Impact Assessments that are written after decisions are made. Judicial review processes that allow strategic delay of nationally significant decisions. Procurement rules that prioritise compliance over outcomes. Environmental regulations that apply serially rather than being resolved strategically. The consensus is that this system doesn't work, but the institutions disagree sharply on what to do about it — which is why this consensus is politically charged without generating a coherent reform programme.</p>
+      </div>
+
+      <!-- CONSENSUS 6 -->
+      <div class="consensus-area" id="consensus6">
+        <div class="area-header">
+          <span class="area-number">Consensus 6</span>
+          <div class="area-title-group">
+            <h3>The Treasury Controls Too Much and Delivers Too Little</h3>
+            <span class="consensus-badge strong">Strong consensus</span>
+          </div>
+        </div>
+
+        <p>The final area of consensus is about fiscal architecture. The Treasury, in its current form, is a barrier to delivery. That's not a claim the Treasury makes about itself. But it's a claim that emerges from across the spectrum.</p>
+
+        <p>The IFG's <a href="https://www.instituteforgovernment.org.uk/publication/centre-government-growth-policy"><em>How the Centre of Government Can Design Better Growth Policy</em></a> (January 2026) argues that the UK's chronic growth failure is substantially a governance failure — the centre of government lacks the strategic capacity, institutional authority, and cross-departmental co-ordination needed to design and sustain coherent growth policy. The Treasury is part of this problem. Its departmental bilateral spending deals reinforce silos and prevent cross-cutting missions from generating their own funding streams.</p>
+
+        <p>TBI's <a href="https://institute.global/insights/politics-and-governance/reimagining-the-spending-review-a-new-model-for-smarter-public-spending"><em>Reimagining the Spending Review</em></a> (June 2025) is the most detailed critique. The UK Spending Review process is itself a delivery barrier — bureaucratic, opaque, driven by bilateral departmental bargaining, and fundamentally misaligned with outcomes-focused cross-cutting missions. It proposes replacing the SR with an AI-powered "Strategic Review" — a real-time portfolio-management system that funds what works and reallocates from what doesn't. Its analysis of the SR 2025 found that the missions approach "failed to meaningfully supplant entrenched patterns of departmental bargaining" — the Treasury's institutional culture absorbed the missions framework rather than being changed by it.</p>
+
+        <p>IPPR's <a href="https://www.ippr.org/media-office/two-term-turnaround-it-will-take-until-2030s-to-fix-public-services-says-ippr"><em>Great Government: Public Service Reform in the 2020s</em></a> argues for long-term cross-sector missions with independent accountability bodies modelled on the Climate Change Committee, precisely because this takes accountability out of the departmental bilateral structure and places it in an independent institution that can't be negotiated away in a spending round.</p>
+
+        <p>IFG's <a href="https://www.instituteforgovernment.org.uk/publication/impact-labour-first-budget-public-services"><em>Austerity Postponed?</em></a> assessment of Labour's first budget noted that while day-to-day spending rose substantially in 2024/25 and 2025/26, spending growth slows sharply after that, implying further cuts to unprotected areas. The Treasury's medium-term fiscal position continues to squeeze the very services and reforms the government says are its priorities. The fiscal architecture and the delivery architecture are misaligned.</p>
+
+        <p>The <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2026">IFG's Whitehall Monitor 2026</a> found that the 2025 Spending Review "reinforced departmental silos rather than enabling cross-mission working." It failed to create shared mission budgets despite the rhetoric. The government needs to shed 29,000–40,000 civil servants by 2029/30 to meet admin budget targets, but has no credible workforce plan for doing this.</p>
+
+        <p>The CPS and Reform approach the Treasury's role from a different angle, focusing on how Treasury rules make efficiency savings difficult to sustain. Reform's <a href="https://reform.uk/wp-content/uploads/2023/10/Efficiency-mindset.pdf"><em>Efficiency Mindset</em></a> argues that departments should keep a share of any efficiency savings they generate, rather than having these automatically recaptured by HMT. The current system creates a perverse incentive: why pursue efficiency if the Treasury pockets the gains?</p>
+
+        <p>Policy Exchange's <a href="https://policyexchange.org.uk/publication/government-reimagined/"><em>Government Reimagined</em></a> recommends reforming the Green Book and procurement rules to make long-term investment decisions less distorted by Treasury discount rate assumptions and short-term value-for-money tests. Infrastructure with long payback horizons is systematically undervalued by the current analytical framework.</p>
+
+        <p>The consensus is that the Treasury, as currently designed, optimises for fiscal control rather than for delivery outcomes. It's good at stopping money being spent; it's not good at ensuring that money spent achieves what it's supposed to. Cross-cutting missions require cross-cutting budgets. The Treasury's bilateral structure prevents both.</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- ────────────────────────────────────────── -->
+      <!-- PART 3 -->
+      <!-- ────────────────────────────────────────── -->
+      <h2 id="part3">Part 3: The Three Areas of Genuine Dispute</h2>
+
+      <!-- DISPUTE 1 -->
+      <div class="dispute-section" id="dispute1">
+        <div class="area-header">
+          <span class="area-number">Dispute 1</span>
+          <div class="area-title-group">
+            <h3>Should the State Get Bigger or Smaller?</h3>
+            <span class="consensus-badge contested">Contested</span>
+          </div>
+        </div>
+
+        <p>This is the sharpest ideological fault line in the delivery literature, and it's genuinely a philosophical divide, not a manufactured one.</p>
+
+        <p>IPPR and TBI start from the premise that the UK state is under-resourced for the tasks it's being asked to perform. IPPR's <a href="https://www.ippr.org/articles/great-government-a-new-playbook-for-public-service-reform"><em>Great Government</em></a> argues that public services require more investment, but investment structured around reform — prevention over acute services, devolution over central command, learning ecosystems over target-setting. TBI goes further: its <a href="https://institute.global/insights/economic-prosperity/the-economic-case-for-reimagining-the-state"><em>Economic Case for Reimagining the State</em></a> (July 2024) notes that government spends almost 10% of national income on public sector wages and needs to invest £4 billion per year in AI rollout costs this parliament to unlock the productivity gains that would eventually reduce that share. The immediate prescription is spend more to spend less later.</p>
+
+        <p>IFG's position is closer to neutral on size, but its data points consistently to under-resourcing. The <a href="https://www.instituteforgovernment.org.uk/publication/public-services-performance-tracker-2025">Performance Tracker series</a> documents services that have been starved of capital investment for decades — the £37 billion maintenance backlog across schools, hospitals, prisons, courts, and roads documented in its 2024 pre-election report. This isn't a case for a larger state per se, but the data shows that the existing state can't function adequately on existing resources.</p>
+
+        <p>CPS, Policy Exchange, and Reform argue the opposite. Policy Exchange's <a href="https://policyexchange.org.uk/publication/smaller-better-higher-paid/"><em>Smaller, Better, Higher Paid?</em></a> makes the case explicitly: the civil service has expanded by 135,000 FTE since 2016 without a corresponding improvement in delivery. The expansion has produced more management, more grade inflation, more process, and less capacity to actually do things. A smaller, better-paid, more specialist civil service would deliver more. The paper proposes £5 billion in annual savings through structural delayering.</p>
+
+        <p>CPS's <a href="https://cps.org.uk/wp-content/uploads/2026/02/CPS_A5_A_PRODUCTIVITY_TOOLKIT_FOR_BRITAIN.pdf"><em>Productivity Toolkit</em></a> focuses on the NHS specifically: government spending plans for health are predicated on NHS productivity improving at four times its recent historical average. If this doesn't happen, the Chancellor will need an additional £20 billion for the NHS by 2028-29. The implication is that more spending without structural reform doesn't solve the delivery problem — it just moves it further down the road.</p>
+
+        <p>Reform sits between these positions in an interesting way. Its <a href="https://reform.uk/wp-content/uploads/2023/10/Efficiency-mindset.pdf"><em>Efficiency Mindset</em></a> argues that the question of size is less important than the question of culture: a large civil service with strong performance management and efficiency incentives would be better than a small one without them. Its <a href="https://reform.uk/wp-content/uploads/2025/02/state-of-the-state-2025-report.pdf"><em>State of the State 2025</em></a> (with Deloitte) found public sector leaders calling for more directive central leadership to accelerate change, which implies a more effective centre, not necessarily a smaller one.</p>
+
+        <p>The dispute matters for the delivery literature because it shapes what reforms are even attempted. If you believe the state needs more capacity, you propose more institutions, more civil servants with better skills, more investment. If you believe the state needs to do less, you propose cuts to management layers, regulatory rollback, and concentration of effort on genuinely critical priorities. Both positions have evidence behind them. Neither has been tested at sufficient scale in the UK to produce a decisive verdict.</p>
+
+        <p>What neither side has resolved is the sequencing problem. Even those who believe the state ultimately needs to be smaller accept that building specialist capability takes time and investment. Even those who believe the state needs more resource accept that additional spending on the existing system without reform is wasteful. The practical gap between "invest to reform" and "reform to invest" is narrower than the rhetoric suggests, but the political and fiscal framing is very different — and that framing shapes what's politically achievable.</p>
+      </div>
+
+      <!-- DISPUTE 2 -->
+      <div class="dispute-section" id="dispute2">
+        <div class="area-header">
+          <span class="area-number">Dispute 2</span>
+          <div class="area-title-group">
+            <h3>Centralise or Devolve?</h3>
+            <span class="consensus-badge contested">Contested</span>
+          </div>
+        </div>
+
+        <p>The second genuine dispute is about architecture: should delivery be driven from the centre, or should it be handed to local and regional institutions with the mandate and resources to do it themselves?</p>
+
+        <p>TBI's reform agenda is explicitly centrist. Its <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-a-new-model-to-transform-the-state"><em>Governing in the Age of AI</em></a> calls for a powerful AI Mission Control at Number 10, a Chief Secretary to the Treasury directing departmental technology spending, and a "Bezos mandate" requiring all departments to open their APIs. Its <a href="https://institute.global/insights/politics-and-governance/time-for-digital-id-a-new-consensus-for-a-state-that-works"><em>Time for Digital ID</em></a> (September 2025) proposes a dedicated Digital ID Delivery Unit backed by the Prime Minister's direct authority. The logic is consistent: transformation at scale requires central authority. Without it, departments fragment into incompatible silos and pilots never become systems.</p>
+
+        <p>IFG broadly agrees that the centre needs strengthening, but its <a href="https://www.instituteforgovernment.org.uk/commission-centre-government">Commission on the Centre of Government</a> simultaneously recommends devolution as a necessary complement. Its <a href="https://www.instituteforgovernment.org.uk/publication/total-place-2.0"><em>Case for Total Place 2.0</em></a> (May 2025) argues for 10–15 pilot areas with genuine integration of health, social care, housing, and criminal justice spending — a fundamentally local approach to cross-cutting delivery. Its <a href="https://www.instituteforgovernment.org.uk/publication/governments-public-service-reform-plans"><em>Do the Government's Public Service Reform Plans Add Up?</em></a> (March 2026) warns against "re-centralisation" undermining the government's stated commitment to devolution and integration.</p>
+
+        <p>IPPR is the most clearly pro-devolution voice in the literature. Its <a href="https://www.ippr.org/articles/mission-driven-government"><em>Mission-Driven Government</em></a> explicitly calls for more powers for combined authorities. The <a href="https://www.ippr.org/articles/great-government-a-new-playbook-for-public-service-reform"><em>Great Government</em></a> playbook draws on Finnish education and Dutch social care — both highly devolved, high-trust models — as the template. The argument is that frontline autonomy and local flexibility are the conditions for the intrinsic motivation that makes reform sustainable.</p>
+
+        <p>CBP represents a third position that doesn't fit neatly into either camp. Its development corporation model — the <a href="https://britishprogress.org/briefings/project-hawking-tripling-the-size-of-ox-cam-by-205">Hawking DevCo</a>, the <a href="https://britishprogress.org/reports/unblocking-ai-growth-zones">AI Growth Zone Authority</a>, the New Towns development corporations — bypasses both central government processes and local government structures. These are purpose-built delivery institutions with statutory authority, operating at the scale of a region or corridor, accountable to Parliament for outcomes rather than to any existing tier of government. They're neither central nor local in the conventional sense.</p>
+
+        <p>CBP's <a href="https://britishprogress.org/reports/let-mayors-build-a-new-deal-for-transport"><em>Let Mayors Build</em></a> advocates devolution of transport funding to metro mayors, but on formula-based terms that give mayors genuine fiscal incentives to control costs — not the current system of competitive bidding for project-specific national grants that gives mayors no reason to care about value for money.</p>
+
+        <p>Policy Exchange is genuinely divided internally on devolution. Its civil service reform work favours centralising some standards and recruitment processes while its planning and housing work recognises that local political opposition is a primary delivery bottleneck. Its <a href="https://policyexchange.org.uk/wp-content/uploads/v3-PX4-The-UKs-Broken-Housing-Market-Web.pdf"><em>Broken Housing Market</em></a> paper calls for a rules-based planning system with a presumption in favour of development, which is effectively a form of centralising the policy while decentralising execution.</p>
+
+        <p>The dispute is genuine because both centralisation and devolution address real problems. Centralisation enables standards, prevents lowest-common-denominator compromises, and allows scarce specialist capacity to be shared. Devolution enables local ownership, prevents one-size-fits-all failure modes, and allows services to be shaped to local needs. The UK's current system combines the costs of both: centralised enough to prevent local innovation, devolved enough to prevent national standards. The debate about which direction to move is real, and the institutions diverge meaningfully on the answer.</p>
+      </div>
+
+      <!-- DISPUTE 3 -->
+      <div class="dispute-section" id="dispute3">
+        <div class="area-header">
+          <span class="area-number">Dispute 3</span>
+          <div class="area-title-group">
+            <h3>Technology as Saviour or Supplement?</h3>
+            <span class="consensus-badge contested">Contested</span>
+          </div>
+        </div>
+
+        <p>The most forward-looking dispute in the literature is about the role of technology. TBI is the most techno-optimist institution in the field. IFG is the most cautious. NAO's audit record is the most sobering. Reform sits between them. The gap between these positions matters because it shapes how urgently transformation is pursued and how much institutional change is required to support it.</p>
+
+        <p>TBI's position is the boldest. Its <a href="https://institute.global/insights/politics-and-governance/public-service-reform-in-the-age-of-ai"><em>Public-Service Reform in the Age of AI</em></a> (January 2026) proposes a complete reimagining of how government operates: three new infrastructure layers (universal digital ID, modular public-service platforms, a real-time system-intelligence layer), a shift from command-and-control to "signal and steer" governance, and the replacement of locked institutional budgets with modular, outcome-based funding. This isn't incremental digitisation. It's a claim that the current model of government — bureaucratic, labour-intensive, standardised, reactive — will be replaced by something qualitatively different. The <a href="https://institute.global/insights/politics-and-governance/reimagining-uk-department-for-work-and-pensions">DWP case study</a> shows this in concrete terms: AI tools could free up 40% of DWP staff time, clear the PIP backlog in 10 months, and reduce the £9 billion per year fraud and error bill.</p>
+
+        <p>IFG's assessment is more measured. Its <a href="https://www.instituteforgovernment.org.uk/comment/digital-centre-government-roadmap">January 2026 commentary</a> on the government's digital roadmap found it "points to an appealing future but fails to set out how to get there." Its Whitehall Monitor 2025 chapter on digital and AI noted encouraging pilots and welcome consolidation of digital teams in DSIT, but warned that legacy IT systems remain a serious problem and that the government lacks a clear implementation plan. The subtext of much IFG digital analysis is consistent: the technology isn't the hard part. The institutions, the incentives, the skills, and the procurement architecture are the hard part. Fixing those first would allow almost any technology to work. Not fixing them means the best technology will produce the same results as everything before it.</p>
+
+        <p>NAO's audit record is the most sobering. Its <a href="https://www.nao.org.uk/reports/digital-transformation-in-government-addressing-the-barriers/"><em>Digital Transformation in Government</em></a> (March 2023) traced a consistent failure pattern across two decades of digital government initiatives: wrong sequencing, capital without revenue funding, legacy costs dominating budgets, supplier dependency, and absent post-contract management. The <a href="https://www.nao.org.uk/insights/governments-approach-to-technology-suppliers-addressing-the-challenges/"><em>Government's Approach to Technology Suppliers</em></a> (January 2025) found £3 billion in cost increases across just five digital programmes, and a government that still doesn't know accurately how much it spends on digital procurement. This isn't a case against digital transformation — NAO explicitly calls for it. It's evidence that the current institutional architecture can't deliver it.</p>
+
+        <p>Reform's position in <a href="https://reform.uk/wp-content/uploads/2024/09/Getting-the-machine-learning.pdf"><em>Getting the Machine Learning</em></a> acknowledges the transformative potential of AI while focusing on why adoption isn't happening: no single point of leadership, no framework for high-value use cases, no cross-government procurement structure, no mechanism for scaling pilots. Reform is broadly pro-technology, but its analysis suggests that the technology optimism of TBI needs to be grounded in the institutional realism of IFG and NAO before it can translate into delivery.</p>
+
+        <p>TBI itself recognises this tension in some of its work. Its <a href="https://institute.global/insights/tech-and-digitalisation/delivering-ai-impact-a-leadership-agenda-for-turning-technology-into-public-value"><em>Delivering AI Impact</em></a> (February 2026), focused on international examples, explicitly says the binding constraint on AI transformation is "institutional and political, not technological." Its <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-reimagining-local-government"><em>Reimagining Local Government</em></a> paper notes that seven in ten councils cite high-quality data availability as a barrier to innovation — a data governance problem, not a technology problem. There's a version of TBI's argument that is compatible with IFG's caution: the technology is necessary but the institutions have to change first.</p>
+
+        <p>The dispute matters because it shapes the policy sequencing. If technology is the primary lever, you prioritise digital investment and AI procurement, and you accept that institutional reform will follow. If institutions are the primary lever, you fix the centre of government, the SRO cadre, the procurement architecture, and the skills pipeline first, then invest in technology on top. The two approaches aren't mutually exclusive, but they're different in emphasis, and the difference is real.</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- ────────────────────────────────────────── -->
+      <!-- PART 4 -->
+      <!-- ────────────────────────────────────────── -->
+      <h2 id="part4">Part 4: What No One Is Saying</h2>
+
+      <p>The 101 publications reviewed here represent the most comprehensive body of analysis on UK government delivery ever produced. They contain important insights, strong evidence, and genuine proposals. They also contain some significant gaps.</p>
+
+      <div class="gap-item">
+        <h4>No institution has a convincing theory of political protection for reform.</h4>
+        <p>The Blair PMDU was abolished by Cameron. Oliver Letwin called this "a terrible mistake." The Coalition's efficiency reforms were diluted by Cameron and then effectively abandoned by May. The Levelling Up agenda, such as it was, collapsed within two years of the legislation that created it. HS2 Phase 2 was cancelled after decades of commitment. The pattern is not random: UK government reform is structurally vulnerable to political change. When leadership changes, reforms that were "owned" by the previous administration are restructured or reversed — sometimes for good reasons and sometimes for bad ones.</p>
+        <p>The institutions have documented this pattern. None of them has proposed a convincing solution to it. The IFG's Commission on the Centre recommends new structural arrangements for No.10 and the Cabinet Office, but these could be reversed by any incoming prime minister. TBI's delivery unit proposals are vulnerable to the same charge. IPPR's independent accountability bodies modelled on the Climate Change Committee are the closest the literature gets to institutional protection, but IPPR applies this specifically to public service missions, not to the delivery architecture itself.</p>
+        <p>The Climate Change Act model is instructive precisely because it's the exception that proves the rule. The Act locked in carbon targets in statute, created an independent committee to monitor progress, and required the government to explain publicly why it was deviating from its own trajectory. Every subsequent government has maintained it, not because it was politically convenient to do so, but because the costs of departing from it — reputational, legal, and political — were too high. The question of whether something analogous could protect delivery architecture has barely been asked.</p>
+      </div>
+
+      <div class="gap-item">
+        <h4>Almost no one is working on delivery culture.</h4>
+        <p>The literature is full of proposals for delivery structures: mission boards, delivery units, development corporations, SRO tenures, procurement frameworks. It's almost silent on delivery culture — the attitudes, incentives, and working norms that determine how the people inside those structures actually behave.</p>
+        <p>Reform's <a href="https://reform.uk/wp-content/uploads/2023/10/Efficiency-mindset.pdf"><em>Efficiency Mindset</em></a> is a partial exception, arguing that Whitehall lacks the efficiency culture that would make structural reforms effective. IFG's <a href="https://www.instituteforgovernment.org.uk/publication/policy-making-real-world"><em>Policy Making in the Real World</em></a> (December 2024), based on 50 interviews with senior civil servants and 20 former ministers, found that reforms to process, qualities, structures, and politics all fell short because they failed to account for the role of political incentives. But this is rare in the literature. Most institutions focus on org charts and financial flows, not on the lived experience of people trying to deliver things inside a system that doesn't reward delivery.</p>
+        <p>The gap matters because structural reforms don't change culture automatically. The PMDU had the right structure and created substantial culture change in departments that it worked with closely — and left much of Whitehall untouched. Mission boards, however well designed, will be staffed by civil servants whose career progression depends on avoiding failure rather than achieving success. Until the promotion criteria, the appraisal systems, and the informal norms around risk-taking are addressed, structural reform will have limited impact on the actual experience of delivering.</p>
+      </div>
+
+      <div class="gap-item">
+        <h4>The incentive structure for risk aversion has been under-analysed.</h4>
+        <p>Why are civil servants risk-averse? The question seems obvious, but the answer is more specific and addressable than the general culture diagnosis suggests. Accountability for failure is immediate and public — select committees, NAO reports, ministerial blame. Accountability for success is delayed and diffuse — outcomes emerge years after decisions. The career costs of a visible failure are high; the career rewards of a quiet success are low. This isn't a character trait of civil servants. It's a rational response to the incentive structure they operate in.</p>
+        <p>Almost none of the institutions have proposed directly rewiring these incentives. The IFG's <a href="https://www.instituteforgovernment.org.uk/publication/ways-improve-civil-service"><em>20 Ways to Improve the Civil Service</em></a> addresses tenure and pay, but not the fundamental accountability asymmetry. Reform's efficiency paper proposes that departments keep a share of efficiency savings — a partial incentive fix. But the core problem — that the system creates stronger disincentives for failure than incentives for success — hasn't been addressed by any institution with a comprehensive proposal.</p>
+      </div>
+
+      <div class="gap-item">
+        <h4>No institution has seriously proposed statutory delivery targets applied to public services.</h4>
+        <p>IPPR's <a href="https://www.ippr.org/media-office/two-term-turnaround-it-will-take-until-2030s-to-fix-public-services-says-ippr"><em>Great Government: Public Service Reform in the 2020s</em></a> proposes legislating new national missions with independent accountability bodies modelled on the Climate Change Committee. This is the closest the literature gets. But it applies the model to outcome missions (the healthiest country, the safest country), not to delivery mechanisms themselves. No institution has proposed a statutory framework that requires the government to report independently verified delivery progress against a fixed schedule, with legal consequences for persistent failure.</p>
+        <p>The Climate Change Act model works because it bites. The consequences of missing carbon budgets are political and legal, not just reputational. There's no equivalent in public services. Waiting list targets, crime reduction commitments, housing delivery promises — all can be quietly dropped, redefined, or blamed on external factors without triggering any formal accountability mechanism. The institutional architecture for holding governments to their own delivery commitments simply doesn't exist.</p>
+      </div>
+
+      <div class="gap-item">
+        <h4>The local government delivery gap is under-researched.</h4>
+        <p>The IFG has done useful work on local government funding through its <a href="https://www.instituteforgovernment.org.uk/publication/neighbourhood-services-under-strain"><em>Neighbourhood Services Under Strain</em></a> analysis and its local government sections in the Performance Tracker. CBP has focused on infrastructure delivery at local level. TBI's <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-reimagining-local-government"><em>Reimagining Local Government</em></a> provides a technology lens. But what's missing is a comprehensive analysis of local government as a delivery institution: its capability, its accountability architecture, its relationship with central government, and its capacity to absorb the devolution that multiple institutions are calling for.</p>
+        <p>Seven councils have effectively gone bankrupt since 2018. Section 114 notices (council effective bankruptcies) appeared six times more frequently in six years than in the previous three decades. Adult social care has a 227,000-person backlog. Children's services are overwhelmed. And yet the delivery literature on how local government actually operates — what determines whether a council is effective at delivery, and how capability can be built and maintained — is thin. If devolution is part of the answer to the central delivery problem, the question of local government delivery capacity deserves more rigorous treatment than it's currently receiving.</p>
+      </div>
+
+      <hr class="section-divider">
+
+      <!-- ────────────────────────────────────────── -->
+      <!-- PART 5 -->
+      <!-- ────────────────────────────────────────── -->
+      <h2 id="part5">Part 5: Blueprint's Assessment</h2>
+
+      <h3>The Diagnosis Is Settled</h3>
+
+      <p>The first and most important thing to say is that the argument has been won. You don't have to take Blueprint's word for it that the British state can't reliably implement policy. You can read the IFG's Performance Tracker, which shows eight of nine public services performing worse in 2024 than in 2010. You can read the NAO's major projects data, which shows only 11% of the Government Major Projects Portfolio rated green. You can read TBI's productivity analysis, which shows inputs to public services rising 25% between 2019 and 2024 while output grew 14%. You can read Reform's civil service surveys, Policy Exchange's regulatory burden analysis, and CPS's productivity data.</p>
+
+      <p>These are not marginal institutions with fringe views. They span the full width of the British political spectrum. They compete for influence, disagree on policy, and serve different parts of the political coalition. What they don't disagree on is that the state cannot reliably deliver what it promises — and that this failure is structural rather than incidental.</p>
+
+      <p>This matters because a political debate that used to be about whether the problem exists can now be about what to do. The institutions have collectively moved the Overton window on state capacity from a specialist concern to an organising question for British politics. That's a significant shift, and Blueprint has been part of producing it.</p>
+
+      <h3>The Remedy Requires Institutional Protection</h3>
+
+      <p>The second conclusion is harder. Even if we know what works — tightly focused delivery units with prime ministerial authority, capable SROs with long tenure, cross-departmental mission budgets, specialist skills built in-house, digital infrastructure properly sequenced — we don't have a reliable way of making these things stick.</p>
+
+      <p>The history documented in this synthesis is a history of reforms adopted and then reversed. Blair's PMDU was abolished in 2010. The coalition's efficiency programme was diluted. Mission boards were introduced in 2024 and had "collapsed" into rebrand territory by 2026, according to IFG's own assessment. HS2 Phase 2 was cancelled after decades of commitment. The pattern is not bad luck. It's a structural feature of Westminster government: each administration inherits the apparatus of the previous one and has both the motivation and the constitutional authority to reshape it to its own priorities.</p>
+
+      <p>This is why Blueprint's core thesis — the Gap Tracker — focuses on institutional permanence. Reforms that can be reversed by the next government aren't really reforms. They're demonstrations of intent, some of which happen to produce results before they're undone. What the delivery system needs is architecture that survives changes of government: statutory, independently monitored, with real consequences for failure.</p>
+
+      <h3>The Case for Statutory Delivery Architecture</h3>
+
+      <p>The Climate Change Act 2008 is the model. It passed with near-unanimous support. It created an independent Climate Change Committee to set carbon budgets and monitor progress. It required the government to explain publicly when it was deviating from its own trajectory. It survived changes of government. It has been strengthened, not weakened, over time. And it created the conditions for sustained, cross-party progress on an enormously difficult delivery challenge.</p>
+
+      <p>There is no equivalent in public services. Waiting lists can be redefined. Housing targets can be quietly dropped. Crime reduction commitments disappear. When the NAO reports failure, the government explains, and the cycle continues. The accountability architecture creates the appearance of scrutiny without the substance of consequences.</p>
+
+      <div class="pull">"The obstacle to better delivery isn't ideas. It's the structural vulnerability of reform to political churn. The case for statutory delivery architecture has never been stronger — and has never been made."</div>
+
+      <p>Blueprint's proposal for a permanent delivery tracker takes the Climate Change Act model seriously. It would require the government to publish, at fixed intervals, independently verified data on delivery progress across a defined set of public service commitments. It would create an independent body with statutory authority to assess that data and publish findings. It would require the government to explain publicly when it deviates from its own trajectory. It would not remove ministerial discretion — governments would still be able to change course. But they would have to do so transparently, against a baseline that can't be quietly manipulated.</p>
+
+      <p>IPPR's <a href="https://www.ippr.org/media-office/two-term-turnaround-it-will-take-until-2030s-to-fix-public-services-says-ippr"><em>Great Government: Public Service Reform in the 2020s</em></a> proposed independent accountability bodies modelled on the Climate Change Committee for each mission. This is directionally right but insufficiently focused on the delivery mechanism. The accountability body shouldn't just track outcomes. It should track the delivery commitments that are supposed to produce those outcomes — the SRO appointments, the programme timelines, the milestone schedules, the budget allocations. That's what a delivery tracker does.</p>
+
+      <h3>The Technology Argument Is Necessary but Not Sufficient</h3>
+
+      <p>TBI's case for AI-driven public service transformation is compelling. The potential gains are real. The DWP case study is persuasive. The NHS digital health record proposal is well-argued. The £40 billion per year estimate, even if it's an upper bound, represents a scale of opportunity that justifies significant investment and institutional energy.</p>
+
+      <p>But IFG and NAO are also right. The technology isn't the hard part. The institutions are. A government that can't maintain SRO tenure for major projects, that can't sequence digital investments correctly, that can't manage strategic suppliers as an intelligent client, and that doesn't have revenue funding to operate new systems it builds — that government will not capture the AI productivity prize no matter how good the technology gets.</p>
+
+      <p>The right sequencing is: fix the institutional architecture first, then use it to deploy technology at scale. That means a centre of government that can drive cross-departmental change, a civil service with the specialist capability to act as intelligent clients for technology procurement, a procurement framework that can run iterative test-and-learn approaches rather than waterfall contracts, and a legacy systems replacement programme with genuine political backing and dedicated resource.</p>
+
+      <p>TBI's <a href="https://institute.global/insights/tech-and-digitalisation/delivering-ai-impact-a-leadership-agenda-for-turning-technology-into-public-value"><em>Delivering AI Impact</em></a> says this directly, even if it's not the headline message: "the binding constraint is institutional and political, not technological." Blueprint agrees. The technology argument is a reason to get the institutions right urgently, not a reason to hope that technology fixes broken institutions.</p>
+
+      <h3>The Consensus Is Strong Enough to Act On</h3>
+
+      <p>The final conclusion is the most important one. The obstacle to better delivery isn't ideas. It's not a lack of evidence. It's not a missing proposal or an unidentified mechanism.</p>
+
+      <p>Every institution covered in this synthesis — from CPS on the right to IPPR on the left, from TBI inside the current government's intellectual orbit to NAO as independent auditor — agrees on the core diagnosis. The centre is too weak. Civil service capability has eroded. Major projects are structurally broken. Digital transformation is necessary and under-resourced. Accountability mechanisms produce process more than accountability. The Treasury's bilateral structure blocks cross-cutting delivery.</p>
+
+      <p>They disagree on some of the remedies. They disagree on how big the state should be, on how much to centralise versus devolve, and on whether technology is the primary lever or a supplement. These are real disagreements, and Blueprint has its own views on them. But they don't undermine the core consensus. They're arguments about the best route to a destination that everyone agrees needs to be reached.</p>
+
+      <p>The question isn't whether to fix UK government delivery. It's how to fix it in a way that survives the next election. And that question — the question of institutional protection for reform — is where the next phase of the policy argument needs to focus. The diagnosis is done. The prescription is substantially agreed. The missing piece is the architecture that makes the cure stick.</p>
+
+      <hr class="section-divider">
+
+      <!-- ────────────────────────────────────────── -->
+      <!-- PUBLICATION INDEX -->
+      <!-- ────────────────────────────────────────── -->
+      <h2 id="publication-index">Publication Index</h2>
+
+      <p style="font-family:'Inter',sans-serif; font-size:14px; color:var(--muted); margin-bottom:2rem;">All 101 publications referenced in this paper, organised by institution. Each entry includes title, date, and a brief summary.</p>
+
+      <div class="pub-library">
+
+        <!-- IFG -->
+        <div class="inst-section" id="pub-ifg">
+          <div class="inst-header">
+            <span class="inst-name">Institute for Government</span>
+            <span class="inst-count" style="border-left: 3px solid #3B82F6;">IFG · 44</span>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/performance-tracker-2020" class="pub-title" target="_blank" rel="noopener">Performance Tracker 2020</a>
+            <div class="pub-meta">October 2020</div>
+            <div class="pub-summary">Annual assessment of nine public services — NHS, social care, schools, criminal justice, roads, rail, housing, local government, and welfare — documenting growing fragility before the pandemic had fully landed.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/performance-tracker-2021" class="pub-title" target="_blank" rel="noopener">Performance Tracker 2021</a>
+            <div class="pub-meta">October 2021</div>
+            <div class="pub-summary">Tracks recovery and continued strain across public services following two years of Covid disruption. Documents divergence between spending rises and outcome improvements.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/report/performance-tracker-2022-0" class="pub-title" target="_blank" rel="noopener">Performance Tracker 2022: Public Services after Two Years of Covid</a>
+            <div class="pub-meta">October 2022</div>
+            <div class="pub-summary">Comprehensive assessment finding that public services were in worse shape than before the pandemic, with growing backlogs and workforce shortfalls in every major service area.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/performance-tracker-2022-23-spring-update" class="pub-title" target="_blank" rel="noopener">Performance Tracker 2022/23: Spring Update</a>
+            <div class="pub-meta">February 2023</div>
+            <div class="pub-summary">Mid-year update showing deterioration in NHS waiting lists, court backlogs, and children's social care, with the data outpacing improvement plans.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/performance-tracker-2023" class="pub-title" target="_blank" rel="noopener">Performance Tracker 2023</a>
+            <div class="pub-meta">October 2023</div>
+            <div class="pub-summary">Described services as "crumbling" in key areas. Concluded that improvement plans lacked the resources, timelines, or institutional backing to succeed.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/general-election-2024-precarious-state/public-services" class="pub-title" target="_blank" rel="noopener">The Precarious State of the State: Public Services</a>
+            <div class="pub-meta">June 2024</div>
+            <div class="pub-summary">Pre-election analysis documenting the £37 billion maintenance backlog across key public infrastructure and the structural fiscal constraints facing any incoming government.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/fixing-public-services-labour-government" class="pub-title" target="_blank" rel="noopener">Fixing Public Services: Priorities for the New Labour Government</a>
+            <div class="pub-meta">July 2024</div>
+            <div class="pub-summary">Immediate post-election analysis setting out the most critical structural reforms needed across NHS, social care, criminal justice, and housing in Labour's first term.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/impact-labour-first-budget-public-services" class="pub-title" target="_blank" rel="noopener">Austerity Postponed? The Impact of Labour's First Budget on Public Services</a>
+            <div class="pub-meta">November 2024</div>
+            <div class="pub-summary">Assesses the October 2024 Budget, finding that while near-term spending rose substantially, the implied squeeze on unprotected areas from 2025/26 onwards poses a serious delivery risk.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/public-services-performance-tracker-2025" class="pub-title" target="_blank" rel="noopener">Public Services Performance Tracker 2025</a>
+            <div class="pub-meta">October–November 2025</div>
+            <div class="pub-summary">Annual tracker finding that eight of nine public services perform worse than in 2010 despite significantly higher spending. NHS waiting lists, court backlogs, and children's services remain worst-in-generation.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2021" class="pub-title" target="_blank" rel="noopener">Whitehall Monitor 2021</a>
+            <div class="pub-meta">January 2021</div>
+            <div class="pub-summary">Annual data compendium on the civil service, covering headcount, pay, turnover, diversity, and ministerial churn. Identifies early warning signs of capability erosion.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2022" class="pub-title" target="_blank" rel="noopener">Whitehall Monitor 2022</a>
+            <div class="pub-meta">January 2022</div>
+            <div class="pub-summary">Documents accelerating grade inflation, rising consultancy spend, and the continued dominance of policy generalists over specialists at senior levels.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2023" class="pub-title" target="_blank" rel="noopener">Whitehall Monitor 2023</a>
+            <div class="pub-meta">January 2023</div>
+            <div class="pub-summary">Tracks civil service growth to over 480,000 FTE. Notes that the civil service has expanded through the pay freeze period without the productivity gains that would justify the growth.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2024" class="pub-title" target="_blank" rel="noopener">Whitehall Monitor 2024</a>
+            <div class="pub-meta">January 2024</div>
+            <div class="pub-summary">Includes analysis of the delivery capability gap and the relationship between ministerial churn and departmental performance. Documents 52% Oxbridge representation among permanent secretaries.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2025" class="pub-title" target="_blank" rel="noopener">Whitehall Monitor 2025</a>
+            <div class="pub-meta">January 2025</div>
+            <div class="pub-summary">Comprehensive annual data resource. Highlights 121% growth in Grades 6 and 7 since 2010, 40% real-terms increase in consultancy spending, and widening specialist skill deficits in digital and commercial roles.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2026" class="pub-title" target="_blank" rel="noopener">Whitehall Monitor 2026</a>
+            <div class="pub-meta">January 2026</div>
+            <div class="pub-summary">Concludes Labour "missed" 2025 as a reform window. Mission governance had collapsed into rebranding. The Spending Review reinforced silos. No credible plan to shed the 29,000–40,000 civil servants needed to meet admin budget targets.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/explainer/mission-driven-government-labour" class="pub-title" target="_blank" rel="noopener">Mission-Driven Government: What Has Labour Committed To?</a>
+            <div class="pub-meta">March 2024</div>
+            <div class="pub-summary">Pre-election explainer setting out what Labour's five missions would actually require in institutional terms — and the gap between the rhetoric and the operational design.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/mission-driven-approach-government" class="pub-title" target="_blank" rel="noopener">What Does a 'Mission-Driven' Approach to Government Mean and How Could It Work?</a>
+            <div class="pub-meta">July 2024</div>
+            <div class="pub-summary">Detailed analysis of the conditions necessary for mission governance to succeed. Warns that without cross-departmental authority and dedicated budgets, missions will default to existing departmental silos.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/five-steps-government-missions" class="pub-title" target="_blank" rel="noopener">Mission Launch: Five Steps the Government Must Take to Deliver Its Five Missions</a>
+            <div class="pub-meta">September 2024</div>
+            <div class="pub-summary">Proposes a Mission Strategy Board chaired by the PM, lead cabinet ministers per mission, and cross-departmental strategy teams. Finds the institutional architecture to be largely absent two months into the new government.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/total-place-2.0" class="pub-title" target="_blank" rel="noopener">The Case for Total Place 2.0</a>
+            <div class="pub-meta">May 2025</div>
+            <div class="pub-summary">Proposes 10–15 pilot areas with genuine integration of health, social care, housing, and criminal justice. Argues that local integration is the only way to deliver cross-cutting outcomes that departmental silos structurally prevent.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/governments-public-service-reform-plans" class="pub-title" target="_blank" rel="noopener">Do the Government's Public Service Reform Plans Add Up?</a>
+            <div class="pub-meta">March 2026</div>
+            <div class="pub-summary">Critical assessment of Labour's reform agenda finding that re-centralisation risks undermining devolution commitments, reform timelines are unrealistic, and the productivity assumptions embedded in the NHS plan are implausible.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/article/comment/new-prime-ministers-delivery-unit-needs-prime-ministerial-authority-and-attention" class="pub-title" target="_blank" rel="noopener">The New Prime Minister's Delivery Unit Needs Prime Ministerial Authority and Attention</a>
+            <div class="pub-meta">May 2021</div>
+            <div class="pub-summary">Commentary on Johnson's delivery unit creation. Sets out the conditions under which delivery units succeed — direct PM ownership, clear priority focus, access to data — and the risks that the new unit will replicate past failures.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/civil-service-external-recruitment" class="pub-title" target="_blank" rel="noopener">Opening Up: How to Strengthen the Civil Service through External Recruitment</a>
+            <div class="pub-meta">December 2022</div>
+            <div class="pub-summary">Finds only 18% of senior civil service entrants were external recruits in 2020/21. Proposes advertising all SCS roles externally by default and building structured secondment programmes with the private sector and academia.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/report/cutting-civil-service" class="pub-title" target="_blank" rel="noopener">Cutting the Civil Service: How Best to Slim Down and Save Money</a>
+            <div class="pub-meta">November 2022</div>
+            <div class="pub-summary">Assesses options for civil service reduction, arguing that unplanned headcount cuts without workforce strategy consistently damage capability, increase consultancy dependency, and cost more than they save.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/who-runs-whitehall" class="pub-title" target="_blank" rel="noopener">Who Runs Whitehall? The Background, Appointment, Management, and Pay of the Civil Service's Top Talent</a>
+            <div class="pub-meta">May 2024</div>
+            <div class="pub-summary">Detailed analysis of 148 permanent secretaries and directors general. Finds 52% Oxbridge, 23% STEM, 12% outside London. Policy professionals dominate a system that badly needs digital, commercial, and operational expertise.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/ways-improve-civil-service" class="pub-title" target="_blank" rel="noopener">20 Ways to Improve the Civil Service</a>
+            <div class="pub-meta">August 2024</div>
+            <div class="pub-summary">Synthesises a decade of IFG research into 20 concrete, legislation-free actions for improving civil service performance. Covers minimum tenure policies, external recruitment, secondments, specialist pay, and evaluation.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/civil-service-fast-stream-reform" class="pub-title" target="_blank" rel="noopener">Changing Course: How to Reform the Civil Service Fast Stream</a>
+            <div class="pub-meta">September 2025</div>
+            <div class="pub-summary">Argues the Fast Stream has become too homogeneous — reinforcing cognitive monoculture rather than building the diverse specialist capability government needs. Proposes radical redesign around functional tracks.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/rapid-policy-making" class="pub-title" target="_blank" rel="noopener">Rapid Policy Making: How Civil Servants Can Make Effective Policies under Pressure</a>
+            <div class="pub-meta">December 2025</div>
+            <div class="pub-summary">Draws on case studies of policy made under time pressure — including Covid, energy crisis, and the 2022 fiscal crisis — to identify what works and what fails when government has to move fast.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/policy-making-real-world" class="pub-title" target="_blank" rel="noopener">Policy Making in the Real World</a>
+            <div class="pub-meta">December 2024</div>
+            <div class="pub-summary">Based on 50 interviews with senior civil servants and 20 former ministers. Finds that reforms to process and structure fail to change behaviour when the underlying political incentives remain unchanged.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/commission-centre-government" class="pub-title" target="_blank" rel="noopener">Commission on the Centre of Government</a>
+            <div class="pub-meta">March 2023 (launched)</div>
+            <div class="pub-summary">Year-long inquiry gathering evidence from former prime ministers, permanent secretaries, and international experts on how to reform No.10, the Cabinet Office, and Treasury to enable effective delivery.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/power-with-purpose-centre-commission" class="pub-title" target="_blank" rel="noopener">Power with Purpose: Final Report of the Commission on the Centre of Government</a>
+            <div class="pub-meta">March 2024</div>
+            <div class="pub-summary">Definitive reform blueprint for the centre of government. Seven major recommendations including a new Department for the PM, separated cabinet secretary roles, and a cross-government Priorities Framework.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/centre-government-growth-policy" class="pub-title" target="_blank" rel="noopener">How the Centre of Government Can Design Better Growth Policy</a>
+            <div class="pub-meta">January 2026</div>
+            <div class="pub-summary">Argues that the UK's chronic growth failure is substantially a governance failure. The centre lacks the strategic capacity to design and sustain coherent growth policy across the machinery of government.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/article/explainer/major-projects-government" class="pub-title" target="_blank" rel="noopener">Major Projects in Government (Explainer)</a>
+            <div class="pub-meta">July 2020 (updated)</div>
+            <div class="pub-summary">Authoritative explainer on the Government Major Projects Portfolio. Documents that in 2020, only 2% of projects were rated "highly likely" to succeed on time and on budget, and 9% were rated "unfeasible."</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2025/part-2-state-civil-service" class="pub-title" target="_blank" rel="noopener">Digital Transformation and AI (Whitehall Monitor 2025 chapter)</a>
+            <div class="pub-meta">January 2025</div>
+            <div class="pub-summary">Assesses government's AI readiness, finding encouraging pilots alongside persistent legacy IT problems and an absence of a clear implementation roadmap. Notes the consolidation of digital leadership in DSIT as a positive structural change.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/comment/digital-centre-government-roadmap" class="pub-title" target="_blank" rel="noopener">The Government Needs to Set Out How It Will Achieve Its Vision of a Modern Digital Government</a>
+            <div class="pub-meta">January 2026</div>
+            <div class="pub-summary">Commentary on the government's digital roadmap finding it "points to an appealing future but fails to set out how to get there." Identifies missing elements: legacy systems plan, revenue funding commitments, and skills strategy.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/improving-accountability-government-procurement" class="pub-title" target="_blank" rel="noopener">Improving Accountability in Government Procurement</a>
+            <div class="pub-meta">September 2024</div>
+            <div class="pub-summary">Assesses the Procurement Act 2023, finding that improved transparency requirements risk falling short because departments lack the commercial capability to set meaningful KPIs and enforce supplier contracts.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/procurement-government-missions-delivery" class="pub-title" target="_blank" rel="noopener">The Role of Procurement in Delivering Mission-Led Government</a>
+            <div class="pub-meta">September 2025</div>
+            <div class="pub-summary">Examines how procurement can be redesigned to support mission delivery rather than just value-for-money compliance. Identifies the commercial capability gap as the primary barrier.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/how-government-ensure-inquiries-succeed" class="pub-title" target="_blank" rel="noopener">How Can the Government Ensure Inquiries Are Set Up to Succeed?</a>
+            <div class="pub-meta">December 2025</div>
+            <div class="pub-summary">Finds 27 public inquiries underway simultaneously, a record. The Covid-19 Inquiry cost £100 million in government response costs. Proposes structural reforms to make inquiries faster, cheaper, and more likely to produce lasting change.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/public-inquiries" class="pub-title" target="_blank" rel="noopener">Accountability and Scrutiny: Public Inquiries Explainer</a>
+            <div class="pub-meta">Ongoing (updated to December 2025)</div>
+            <div class="pub-summary">Living reference document tracking all active and completed public inquiries, their costs, duration, and implementation of recommendations.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/neighbourhood-services-under-strain" class="pub-title" target="_blank" rel="noopener">Neighbourhood Services Under Strain</a>
+            <div class="pub-meta">May 2022</div>
+            <div class="pub-summary">Documents the cumulative impact of austerity on local government services — libraries, parks, leisure centres, and planning — and the fiscal pressures driving councils toward effective bankruptcy.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/enabling-integrated-care-systems" class="pub-title" target="_blank" rel="noopener">Enabling Integrated Care Systems to Work Better</a>
+            <div class="pub-meta">October 2023</div>
+            <div class="pub-summary">Assesses the early implementation of Integrated Care Systems, finding persistent fragmentation between NHS and local authority responsibilities and underpowered accountability frameworks.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/report/how-fit-were-public-services-coronavirus" class="pub-title" target="_blank" rel="noopener">How Fit Were Public Services for Coronavirus?</a>
+            <div class="pub-meta">August 2020</div>
+            <div class="pub-summary">Post-first-wave assessment finding that a decade of underinvestment and capability erosion left public services severely underprepared for the pandemic, amplifying its impact on lives and economic disruption.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2023/government-reform" class="pub-title" target="_blank" rel="noopener">Whitehall Monitor 2023: Government Reform Chapter</a>
+            <div class="pub-meta">January 2023</div>
+            <div class="pub-summary">Dedicated chapter assessing the state of the government reform programme under Sunak, finding early-term energy dissipating into familiar patterns of structural churn without sustained improvement.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk" class="pub-title" target="_blank" rel="noopener">IFG Work on PMDU and International Delivery Units (Historical Context)</a>
+            <div class="pub-meta">Various</div>
+            <div class="pub-summary">Body of historical analysis on the Blair Prime Minister's Delivery Unit and comparable international delivery units in Canada, Australia, and Malaysia — providing the comparative baseline for current reform debates.</div>
+          </div>
+
+          <div class="pub-card inst-ifg">
+            <a href="https://www.instituteforgovernment.org.uk/publication/whitehall-monitor-2026" class="pub-title" target="_blank" rel="noopener">Whitehall Monitor 2026: Civil Service Data Chapter</a>
+            <div class="pub-meta">January 2026</div>
+            <div class="pub-summary">Detailed data on civil service headcount trajectory, the gap between admin budget targets and current headcount, and the absence of a credible workforce reduction plan to close it by 2029/30.</div>
+          </div>
+        </div>
+
+        <!-- TBI -->
+        <div class="inst-section" id="pub-tbi">
+          <div class="inst-header">
+            <span class="inst-name">Tony Blair Institute for Global Change</span>
+            <span class="inst-count" style="border-left: 3px solid #8B5CF6;">TBI · 28</span>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-a-new-model-to-transform-the-state" class="pub-title" target="_blank" rel="noopener">Governing in the Age of AI: A New Model to Transform the State</a>
+            <div class="pub-meta">May 2024</div>
+            <div class="pub-summary">Flagship paper proposing "AI Mission Control" at Number 10, a "Bezos mandate" for departmental APIs, and a Digital Public Assistant for every citizen by 2030. The £40bn/year productivity estimate originates here.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/economic-prosperity/the-economic-case-for-reimagining-the-state" class="pub-title" target="_blank" rel="noopener">The Economic Case for Reimagining the State</a>
+            <div class="pub-meta">July 2024</div>
+            <div class="pub-summary">Makes the fiscal argument for AI investment: £4 billion per year this parliament unlocks £40 billion in annual productivity gains and a long-run reduction in the state's wage bill as a share of national income.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/reimagining-uk-department-for-work-and-pensions" class="pub-title" target="_blank" rel="noopener">Governing in the Age of AI: Reimagining the UK Department for Work and Pensions</a>
+            <div class="pub-meta">July 2024</div>
+            <div class="pub-summary">Case study showing AI tools could free up 40% of DWP staff time (nearly £1bn/year), clear the PIP backlog in 10 months, and materially reduce the £9bn annual fraud and error bill.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/public-services/preparing-the-nhs-for-the-ai-era-a-digital-health-record-for-every-citizen" class="pub-title" target="_blank" rel="noopener">Preparing the NHS for the AI Era: A Digital Health Record for Every Citizen</a>
+            <div class="pub-meta">August 2024</div>
+            <div class="pub-summary">Argues a universal digital health record is the foundational infrastructure without which the NHS cannot unlock AI-era benefits. Data fragmentation across GP practices, hospitals, and pharmacies is the primary barrier.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/public-service-reform-in-the-age-of-ai" class="pub-title" target="_blank" rel="noopener">Public-Service Reform in the Age of AI</a>
+            <div class="pub-meta">January 2026</div>
+            <div class="pub-summary">Proposes three new infrastructure layers (digital ID, modular platforms, real-time system intelligence) and a shift to "signal and steer" governance with outcome-based funding replacing locked departmental budgets.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/governing-in-the-age-of-ai-reimagining-local-government" class="pub-title" target="_blank" rel="noopener">Governing in the Age of AI: Reimagining Local Government</a>
+            <div class="pub-meta">May 2025</div>
+            <div class="pub-summary">Quantifies AI's local government potential: 26% of tasks automatable, £8 billion nationally, 227,000-person care backlog clearable in one month. Finds 70% of councils cite data quality as the primary barrier.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/disruptive-delivery-meeting-the-unmet-demand-in-politics" class="pub-title" target="_blank" rel="noopener">Disruptive Delivery: Meeting the Unmet Demand in Politics</a>
+            <div class="pub-meta">January 2025</div>
+            <div class="pub-summary">Diagnoses the political context for delivery failure: citizens want government to work, politicians promise it will, institutions systematically prevent it. Makes the case for transformation as the only politically viable path.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/disruptive-delivery-reversing-decline-transforming-britain" class="pub-title" target="_blank" rel="noopener">Disruptive Delivery: Reversing Decline, Transforming Britain</a>
+            <div class="pub-meta">September 2025</div>
+            <div class="pub-summary">Midterm assessment of the Starmer government's delivery record, finding significant early-term energy but insufficient structural reform of the centre to sustain delivery beyond individual departments.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/reimagining-the-state-a-playbook-for-2026" class="pub-title" target="_blank" rel="noopener">Reimagining the State: A Playbook for 2026</a>
+            <div class="pub-meta">December 2025</div>
+            <div class="pub-summary">End-of-year synthesis proposing specific institutional changes needed in 2026 to keep the delivery transformation on track: a strengthened AI delivery unit, mandatory departmental transformation plans, and a revised civil service pay framework.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/reimagining-the-spending-review-a-new-model-for-smarter-public-spending" class="pub-title" target="_blank" rel="noopener">Reimagining the Spending Review: A New Model for Smarter Public Spending</a>
+            <div class="pub-meta">June 2025</div>
+            <div class="pub-summary">Detailed critique of the Spending Review as a delivery barrier. Proposes an AI-powered "Strategic Review" as a real-time portfolio system. Finds the 2025 SR failed to overcome bilateral departmental bargaining despite the missions framework.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/economic-prosperity/unpacking-the-2025-uk-spending-review-sensible-choices-within-a-tight-fiscal" class="pub-title" target="_blank" rel="noopener">Unpacking the 2025 UK Spending Review: Sensible Choices Within a Tight Fiscal</a>
+            <div class="pub-meta">June 2025</div>
+            <div class="pub-summary">Post-SR analysis noting that digital allocations fall significantly short of what the Health Foundation estimates is needed. The gap between what's funded and what transformation requires remains structural.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/time-for-digital-id-a-new-consensus-for-a-state-that-works" class="pub-title" target="_blank" rel="noopener">Time for Digital ID: A New Consensus for a State That Works</a>
+            <div class="pub-meta">September 2025</div>
+            <div class="pub-summary">Makes the case for a national digital ID as foundational delivery infrastructure. Proposes a dedicated Digital ID Delivery Unit backed by PM authority to overcome the departmental coordination failures that have blocked previous attempts.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/what-does-the-uk-public-think-about-digital-id" class="pub-title" target="_blank" rel="noopener">What Does the UK Public Think About Digital ID?</a>
+            <div class="pub-meta">March 2026</div>
+            <div class="pub-summary">Polling and focus group research finding strong public support for digital ID when framed around service access and convenience, with concerns concentrated around data security and mission creep.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/tech-and-digitalisation/sovereignty-security-scale-a-uk-strategy-for-ai-infrastructure" class="pub-title" target="_blank" rel="noopener">Sovereignty, Security, Scale: A UK Strategy for AI Infrastructure</a>
+            <div class="pub-meta">July 2025</div>
+            <div class="pub-summary">Argues the UK needs a sovereign AI infrastructure strategy — compute, data centres, and connectivity — to avoid strategic dependency on US or Chinese hyperscalers for public sector AI deployment.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/tech-and-digitalisation/sovereignty-in-the-age-of-ai-strategic-choices-structural-dependencies" class="pub-title" target="_blank" rel="noopener">Sovereignty in the Age of AI: Strategic Choices, Structural Dependencies</a>
+            <div class="pub-meta">January 2026</div>
+            <div class="pub-summary">Examines the structural dependencies created by government reliance on a small number of large AI and cloud providers and the strategic choices needed to maintain meaningful national control over critical digital infrastructure.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/tech-and-digitalisation/delivering-ai-impact-a-leadership-agenda-for-turning-technology-into-public-value" class="pub-title" target="_blank" rel="noopener">Delivering AI Impact: A Leadership Agenda for Turning Technology into Public Value</a>
+            <div class="pub-meta">February 2026</div>
+            <div class="pub-summary">International case study analysis concluding that "the binding constraint on AI transformation is institutional and political, not technological." Leadership, procurement, and governance matter more than the technology itself.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/public-services/who-controls-access-to-nhs-care-in-the-age-of-big-tech" class="pub-title" target="_blank" rel="noopener">Who Controls Access to NHS Care in the Age of Big Tech?</a>
+            <div class="pub-meta">March 2026</div>
+            <div class="pub-summary">Examines the governance risks of NHS-Big Tech partnerships, arguing that without clear data sovereignty frameworks, the NHS risks outsourcing strategic control over health data to commercial entities.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/economic-prosperity/the-urgent-need-to-build-more-homes" class="pub-title" target="_blank" rel="noopener">The Urgent Need to Build More Homes</a>
+            <div class="pub-meta">September 2024</div>
+            <div class="pub-summary">Makes the economic and social case for housing delivery as the central test of the government's ability to build anything. Connects housing delivery failure to planning obstruction and institutional risk aversion.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/public-services/our-housing-problem-not-just-about-how-many-homes-we-build" class="pub-title" target="_blank" rel="noopener">Our Housing Problem Is Not Just About How Many Homes We Build</a>
+            <div class="pub-meta">September 2021</div>
+            <div class="pub-summary">Argues that housing quality, tenure mix, and location matter as much as volume. The planning system's failure to deliver mixed, well-located housing is a delivery failure of a different kind from pure quantity shortfall.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/economic-prosperity/looking-beyond-uk-budget-2024-priority-reforms-for-2025" class="pub-title" target="_blank" rel="noopener">Looking Beyond UK Budget 2024: Priority Reforms for 2025</a>
+            <div class="pub-meta">October 2024</div>
+            <div class="pub-summary">Post-budget reform agenda identifying planning, civil service capability, AI procurement, and regulatory reform as the priority areas for 2025 action.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/economic-prosperity/a-pro-growth-roadmap-for-business-tax-reform" class="pub-title" target="_blank" rel="noopener">A Pro-Growth Roadmap for Business-Tax Reform</a>
+            <div class="pub-meta">April 2025</div>
+            <div class="pub-summary">Proposes structural business tax reforms to improve investment incentives. Frames delivery of tax reform itself as a test of institutional capability — previous reforms have repeatedly failed in implementation.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/economic-prosperity/uk-budget-2025-a-growth-bargain-for-government-and-business" class="pub-title" target="_blank" rel="noopener">UK Budget 2025: A Growth Bargain for Government and Business</a>
+            <div class="pub-meta">November 2025</div>
+            <div class="pub-summary">Pre-budget analysis proposing a "growth bargain" — regulatory reform and planning liberalisation in exchange for business investment commitments — as the framework for the Autumn 2025 fiscal statement.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/economic-prosperity/taking-the-brakes-off-uk-growth-building-a-more-dynamic-economy-for-a-faster" class="pub-title" target="_blank" rel="noopener">Taking the Brakes Off UK Growth: Building a More Dynamic Economy for a Faster-Growing Country</a>
+            <div class="pub-meta">March 2026</div>
+            <div class="pub-summary">Comprehensive growth agenda covering planning, skills, regulation, and investment. Frames each policy area in terms of the delivery architecture needed to implement it — not just the policy content.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/a-plan-for-the-future-making-the-planning-and-infrastructure-bill-work-for" class="pub-title" target="_blank" rel="noopener">A Plan for the Future: Making the Planning and Infrastructure Bill Work</a>
+            <div class="pub-meta">March 2025</div>
+            <div class="pub-summary">Detailed analysis of the Planning and Infrastructure Bill, identifying the clauses most likely to accelerate delivery and those most at risk of being hollowed out in parliamentary passage.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/politics-and-governance/africa-delivery-exchange-adx-2022" class="pub-title" target="_blank" rel="noopener">Africa Delivery Exchange (ADX) 2022, Conference Report</a>
+            <div class="pub-meta">December 2022</div>
+            <div class="pub-summary">Documents delivery unit experience and lessons from across Africa, providing comparative international context for the UK delivery debate.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/tech-and-digitalisation/europe-in-the-age-of-ai-how-technology-leadership-can-boost-competitiveness-and-security" class="pub-title" target="_blank" rel="noopener">Europe in the Age of AI: How Technology Leadership Can Boost Competitiveness and Security</a>
+            <div class="pub-meta">November 2025</div>
+            <div class="pub-summary">Places the UK's AI delivery challenge in a European context, comparing adoption rates, public sector AI investment, and governance frameworks across EU member states and the UK.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/tech-and-digitalisation/what-the-uk-thinks-about-ai-building-public-trust-to-accelerate-adoption" class="pub-title" target="_blank" rel="noopener">What the UK Thinks About AI: Building Public Trust to Accelerate Adoption</a>
+            <div class="pub-meta">September 2025</div>
+            <div class="pub-summary">Public attitudes research finding that trust in government AI is conditioned on transparency, accountability, and demonstrable benefit — and that trust is currently insufficient to unlock the adoption rates needed for significant productivity gains.</div>
+          </div>
+
+          <div class="pub-card inst-tbi">
+            <a href="https://institute.global/insights/economic-prosperity/building-a-future-ready-evidence-base-in-the-uk" class="pub-title" target="_blank" rel="noopener">Building a Future-Ready Evidence Base in the UK</a>
+            <div class="pub-meta">March 2026</div>
+            <div class="pub-summary">Argues that the UK's policy evidence infrastructure — evaluation frameworks, administrative data access, and the statistical system — needs to be rebuilt to support the kind of learning, adaptive delivery that missions require.</div>
+          </div>
+        </div>
+
+        <!-- Policy Exchange -->
+        <div class="inst-section" id="pub-pe">
+          <div class="inst-header">
+            <span class="inst-name">Policy Exchange</span>
+            <span class="inst-count" style="border-left: 3px solid #F97316;">PE · 6</span>
+          </div>
+
+          <div class="pub-card inst-pe">
+            <a href="https://policyexchange.org.uk/publication/government-reimagined/" class="pub-title" target="_blank" rel="noopener">Government Reimagined: A Handbook for Reform</a>
+            <div class="pub-meta">May 2021</div>
+            <div class="pub-summary">Comprehensive reform blueprint from the Reform of Government Commission chaired by Dame Patricia Hodgson. Covers civil service capability, ministerial effectiveness, procurement, digital delivery, and the centre of government. Remains the most detailed conservative-reformist analysis of delivery failure.</div>
+          </div>
+
+          <div class="pub-card inst-pe">
+            <a href="https://policyexchange.org.uk/wp-content/uploads/2022/08/Reform-of-Government-What-do-we-want-from-the-next-Prime-Minister.pdf" class="pub-title" target="_blank" rel="noopener">Reform of Government: What Do We Want from the Next Prime Minister?</a>
+            <div class="pub-meta">August 2022</div>
+            <div class="pub-summary">Leadership contest paper setting out the government reform agenda for the next Conservative prime minister. Identifies capability, accountability, and centre-of-government reform as the priority areas.</div>
+          </div>
+
+          <div class="pub-card inst-pe">
+            <a href="https://policyexchange.org.uk/publication/the-rise-of-the-regulators/" class="pub-title" target="_blank" rel="noopener">The Rise of the Regulators</a>
+            <div class="pub-meta">December 2024</div>
+            <div class="pub-summary">Analysis of 1,200+ regulations introduced between 2014 and 2024. Finds fewer than 20% came with proper Impact Assessments. Identifies a "risk aversion ratchet" in the regulatory system. Natural England's nutrient neutrality rules alone paused 150,000 homes.</div>
+          </div>
+
+          <div class="pub-card inst-pe">
+            <a href="https://policyexchange.org.uk/publication/smaller-better-higher-paid/" class="pub-title" target="_blank" rel="noopener">Smaller, Better, Higher Paid?</a>
+            <div class="pub-meta">May 2025</div>
+            <div class="pub-summary">Makes the case for a smaller, more specialist civil service. Proposes £5 billion in savings through structural delayering, recycled into competitive pay for digital, commercial, and scientific roles. Documents 135,000 FTE expansion since 2016 without delivery improvement.</div>
+          </div>
+
+          <div class="pub-card inst-pe">
+            <a href="https://policyexchange.org.uk/wp-content/uploads/v3-PX4-The-UKs-Broken-Housing-Market-Web.pdf" class="pub-title" target="_blank" rel="noopener">The UK's Broken Housing Market</a>
+            <div class="pub-meta">2024</div>
+            <div class="pub-summary">Analysis of planning system failure as delivery failure. Proposes a rules-based planning system with presumption in favour of development — effectively centralising policy while decentralising execution.</div>
+          </div>
+
+          <div class="pub-card inst-pe">
+            <a href="https://policyexchange.org.uk" class="pub-title" target="_blank" rel="noopener">Taking Back Control (Regulatory Post-Brexit Reform)</a>
+            <div class="pub-meta">Ongoing</div>
+            <div class="pub-summary">Ongoing programme of work on post-Brexit regulatory reform, examining how the UK can diverge from EU regulatory frameworks in ways that reduce the delivery burden while maintaining necessary standards.</div>
+          </div>
+        </div>
+
+        <!-- NAO -->
+        <div class="inst-section" id="pub-nao">
+          <div class="inst-header">
+            <span class="inst-name">National Audit Office</span>
+            <span class="inst-count" style="border-left: 3px solid #6B7280;">NAO · 7</span>
+          </div>
+
+          <div class="pub-card inst-nao">
+            <a href="https://www.nao.org.uk/insights/improving-operational-delivery-in-government/" class="pub-title" target="_blank" rel="noopener">Improving Operational Delivery in Government: A Good Practice Guide for Senior Leaders</a>
+            <div class="pub-meta">March 2021</div>
+            <div class="pub-summary">Identifies operational management capability — not policy design — as the critical limiting factor on service quality. Senior leaders lack frameworks, incentives, and skills to manage delivery effectively. Based on analysis of delivery failures across multiple departments.</div>
+          </div>
+
+          <div class="pub-card inst-nao">
+            <a href="https://www.nao.org.uk/reports/digital-transformation-in-government-addressing-the-barriers/" class="pub-title" target="_blank" rel="noopener">Digital Transformation in Government: Addressing the Barriers to Efficiency</a>
+            <div class="pub-meta">March 2023</div>
+            <div class="pub-summary">Definitive NAO assessment of digital failure. Finds consistent pattern: technology decisions before business problems understood; capital allocated without revenue funding; legacy costs crowding out transformation. The CDDO had not broken this cycle.</div>
+          </div>
+
+          <div class="pub-card inst-nao">
+            <a href="https://www.nao.org.uk/reports/government-shared-services/" class="pub-title" target="_blank" rel="noopener">Government Shared Services</a>
+            <div class="pub-meta">November 2022</div>
+            <div class="pub-summary">Documents how since 2004, every strategy to share back-office functions across government has failed to deliver intended savings. Finds the refreshed 2021 strategy similarly at risk due to absent process standardisation and data convergence.</div>
+          </div>
+
+          <div class="pub-card inst-nao">
+            <a href="https://www.nao.org.uk/insights/delivering-value-from-government-investment-in-major-projects/" class="pub-title" target="_blank" rel="noopener">Delivering Value from Government Investment in Major Projects</a>
+            <div class="pub-meta">February 2024</div>
+            <div class="pub-summary">Examines whether completed major projects actually delivered the value that justified their cost. Finds government rarely evaluates post-completion. Identifies seven determinants of value creation; clear vision of benefits maintained through design decisions is the most important and most commonly absent.</div>
+          </div>
+
+          <div class="pub-card inst-nao">
+            <a href="https://www.nao.org.uk/insights/governments-approach-to-technology-suppliers-addressing-the-challenges/" class="pub-title" target="_blank" rel="noopener">Government's Approach to Technology Suppliers: Addressing the Challenges</a>
+            <div class="pub-meta">January 2025</div>
+            <div class="pub-summary">Finds government spends £14bn+ annually on digital procurement with £3bn in cost increases across just five programmes. Commercial teams lack digital expertise. Post-contract management is almost entirely absent. Strategic supplier management doesn't exist.</div>
+          </div>
+
+          <div class="pub-card inst-nao">
+            <a href="https://www.nao.org.uk/wp-content/uploads/2025/03/lessons-learned-governance-and-decision-making-on-mega-projects.pdf" class="pub-title" target="_blank" rel="noopener">Lessons Learned: Governance and Decision-Making on Mega-Projects</a>
+            <div class="pub-meta">March 2025</div>
+            <div class="pub-summary">Analysis of the £834bn Government Major Projects Portfolio. Identifies three structural causes of failure: immature designs committed to before consenting; no single authoritative decision-maker; leadership churn preventing institutional knowledge. Only ~11% rated green.</div>
+          </div>
+
+          <div class="pub-card inst-nao">
+            <a href="https://www.nao.org.uk/reports/update-on-government-shared-services-2026/" class="pub-title" target="_blank" rel="noopener">Update on Government Shared Services</a>
+            <div class="pub-meta">March 2026</div>
+            <div class="pub-summary">Follow-up to the 2022 report finding the five-cluster shared services consolidation programme is repeating the pattern of the previous 17 years: inadequate data standardisation, insufficient departmental commitment, and timeline slippage.</div>
+          </div>
+        </div>
+
+        <!-- IPPR -->
+        <div class="inst-section" id="pub-ippr">
+          <div class="inst-header">
+            <span class="inst-name">IPPR — Institute for Public Policy Research</span>
+            <span class="inst-count" style="border-left: 3px solid #10B981;">IPPR · 3</span>
+          </div>
+
+          <div class="pub-card inst-ippr">
+            <a href="https://www.ippr.org/articles/great-government-a-new-playbook-for-public-service-reform" class="pub-title" target="_blank" rel="noopener">Great Government: A New Playbook for Public Service Reform</a>
+            <div class="pub-meta">June 2023</div>
+            <div class="pub-summary">Launches IPPR's "Great Government" programme arguing that New Public Management has run out of road. Proposes a new reform paradigm built on high trust, high autonomy, and high skill, drawing on Finland, the Netherlands, and UK devolution as models.</div>
+          </div>
+
+          <div class="pub-card inst-ippr">
+            <a href="https://www.ippr.org/media-office/two-term-turnaround-it-will-take-until-2030s-to-fix-public-services-says-ippr" class="pub-title" target="_blank" rel="noopener">Great Government: Public Service Reform in the 2020s</a>
+            <div class="pub-meta">December 2023</div>
+            <div class="pub-summary">Proposes legislating national missions with independent accountability bodies modelled on the Climate Change Committee. Argues it will take until the 2030s to fix public services — the closest the progressive literature gets to proposing statutory delivery accountability.</div>
+          </div>
+
+          <div class="pub-card inst-ippr">
+            <a href="https://www.ippr.org/articles/mission-driven-government" class="pub-title" target="_blank" rel="noopener">Mission-Driven Government: Delivering for the British Public in an Age of Distrust and Disruption</a>
+            <div class="pub-meta">May 2024</div>
+            <div class="pub-summary">Based on 30+ expert interviews. Finds missions require institutional equivalents of the 1997 reforms. Argues for more powers for combined authorities. Frames delivery failure as a democratic legitimacy problem, not just an administrative one.</div>
+          </div>
+        </div>
+
+        <!-- CPS -->
+        <div class="inst-section" id="pub-cps">
+          <div class="inst-header">
+            <span class="inst-name">Centre for Policy Studies</span>
+            <span class="inst-count" style="border-left: 3px solid #EF4444;">CPS · 3</span>
+          </div>
+
+          <div class="pub-card inst-cps">
+            <a href="https://cps.org.uk/research/after-the-virus/" class="pub-title" target="_blank" rel="noopener">After the Virus: A Plan for Restoring Growth</a>
+            <div class="pub-meta">June 2020</div>
+            <div class="pub-summary">Post-pandemic recovery plan setting out the structural reforms needed to restore growth. Frames delivery of the recovery programme itself as requiring a leaner, more capable state rather than a larger one.</div>
+          </div>
+
+          <div class="pub-card inst-cps">
+            <a href="https://cps.org.uk/wp-content/uploads/2024/04/The-Future-of-Regulation-FINAL.pdf" class="pub-title" target="_blank" rel="noopener">The Future of Regulation</a>
+            <div class="pub-meta">April 2024</div>
+            <div class="pub-summary">Documents £35bn in gross annual regulatory costs imposed between 2010 and 2019. Describes the regulatory reform apparatus as a "Potemkin system." Impact Assessments are written after decisions and read by almost no ministers. Argues for root-and-branch regulatory reform.</div>
+          </div>
+
+          <div class="pub-card inst-cps">
+            <a href="https://cps.org.uk/wp-content/uploads/2026/02/CPS_A5_A_PRODUCTIVITY_TOOLKIT_FOR_BRITAIN.pdf" class="pub-title" target="_blank" rel="noopener">A Productivity Toolkit for Britain</a>
+            <div class="pub-meta">February 2026</div>
+            <div class="pub-summary">Finds public sector productivity 5.7% below 2019 levels. Identifies specific levers: sick leave rates, estate utilisation, procurement waste, and management layers. NHS productivity assumptions embedded in spending plans require improvement at four times historical average rates.</div>
+          </div>
+        </div>
+
+        <!-- Reform -->
+        <div class="inst-section" id="pub-reform">
+          <div class="inst-header">
+            <span class="inst-name">Reform</span>
+            <span class="inst-count" style="border-left: 3px solid #14B8A6;">Reform · 5</span>
+          </div>
+
+          <div class="pub-card inst-reform">
+            <a href="https://reform.uk/wp-content/uploads/2023/10/Efficiency-mindset.pdf" class="pub-title" target="_blank" rel="noopener">An Efficiency Mindset: Prioritising Efficiency in Whitehall's Everyday Work</a>
+            <div class="pub-meta">October 2023</div>
+            <div class="pub-summary">Argues Whitehall lacks the performance management frameworks, incentives, and accountability structures for efficiency. Proposes departments keep a share of savings they generate — currently the Treasury recaptures all efficiency gains, removing the incentive to pursue them.</div>
+          </div>
+
+          <div class="pub-card inst-reform">
+            <a href="https://reform.uk/wp-content/uploads/2024/04/Making-the-grade.pdf" class="pub-title" target="_blank" rel="noopener">Making the Grade: Prioritising Performance in Whitehall</a>
+            <div class="pub-meta">April 2024</div>
+            <div class="pub-summary">Survey of 771 civil servants documenting grade inflation, cognitive homogeneity in the fast stream, chronic specialist skill shortfalls, and excessive management layers. Civil servants themselves identify the same structural problems their managers deny.</div>
+          </div>
+
+          <div class="pub-card inst-reform">
+            <a href="https://reform.uk/wp-content/uploads/2024/06/Final-manifesto-for-delivery-4.pdf" class="pub-title" target="_blank" rel="noopener">A Manifesto for Delivery: 14 Ideas for a Better Whitehall</a>
+            <div class="pub-meta">June 2024</div>
+            <div class="pub-summary">Fourteen practical reforms for improving Whitehall delivery. Civil servants themselves identify the priorities: cultural premium on policy over delivery, inadequate collaboration mechanisms, and weak evaluation and learning systems.</div>
+          </div>
+
+          <div class="pub-card inst-reform">
+            <a href="https://reform.uk/wp-content/uploads/2024/09/Getting-the-machine-learning.pdf" class="pub-title" target="_blank" rel="noopener">Getting the Machine Learning: AI Adoption in the Public Sector</a>
+            <div class="pub-meta">September 2024</div>
+            <div class="pub-summary">Identifies why AI adoption is being squandered: no single leadership point, no high-value use case framework, no cross-government procurement structure, no pilot-to-scale mechanism. The creation of DSIT's digital centre offers an opportunity, but only if it is given genuine authority.</div>
+          </div>
+
+          <div class="pub-card inst-reform">
+            <a href="https://reform.uk/wp-content/uploads/2025/02/state-of-the-state-2025-report.pdf" class="pub-title" target="_blank" rel="noopener">State of the State 2025</a>
+            <div class="pub-meta">February 2025 (with Deloitte)</div>
+            <div class="pub-summary">Annual survey of public sector leaders. Finds calls for more directive central leadership to accelerate digital transformation. Identifies compliance burdens — Social Value Act, PSED applied to procurement — as diverting significant resources from core delivery.</div>
+          </div>
+        </div>
+
+        <!-- CBP -->
+        <div class="inst-section" id="pub-cbp">
+          <div class="inst-header">
+            <span class="inst-name">Centre for British Progress</span>
+            <span class="inst-count" style="border-left: 3px solid #F59E0B;">CBP · 5</span>
+          </div>
+
+          <div class="pub-card inst-cbp">
+            <a href="https://britishprogress.org/reports/new-towns-for-a-new-generation" class="pub-title" target="_blank" rel="noopener">New Towns for a New Generation</a>
+            <div class="pub-meta">January 2025</div>
+            <div class="pub-summary">Proposes a new towns programme using development corporations with statutory authority outside normal planning processes. Finds one in five major planning applications are decided within the statutory 13-week period, and SME builder costs of obtaining permission are up 30%+ since 2021.</div>
+          </div>
+
+          <div class="pub-card inst-cbp">
+            <a href="https://britishprogress.org/briefings/project-hawking-tripling-the-size-of-ox-cam-by-205" class="pub-title" target="_blank" rel="noopener">Project Hawking: Tripling the Size of the Oxford-Cambridge Corridor by 2050</a>
+            <div class="pub-meta">December 2025</div>
+            <div class="pub-summary">Identifies the "unholy trinity" of local politics, dysfunctional regulation, and insufficient financing blocking delivery at corridor scale. Proposes a single DevCo with supreme planning authority and self-funding through land value capture as the only workable architecture.</div>
+          </div>
+
+          <div class="pub-card inst-cbp">
+            <a href="https://britishprogress.org/reports/unblocking-ai-growth-zones" class="pub-title" target="_blank" rel="noopener">Unblocking AI Growth Zones</a>
+            <div class="pub-meta">October 2025</div>
+            <div class="pub-summary">Finds the same planning and environmental regulatory barriers that blocked energy, housing, and transport infrastructure will equally block AI datacentre development without reform. The typical five-year approval timeline is a delivery killer for time-sensitive AI investment.</div>
+          </div>
+
+          <div class="pub-card inst-cbp">
+            <a href="https://britishprogress.org/reports/let-mayors-build-a-new-deal-for-transport" class="pub-title" target="_blank" rel="noopener">Let Mayors Build: A New Deal for Transport</a>
+            <div class="pub-meta">October 2025</div>
+            <div class="pub-summary">Documents that underground lines cost six times more per mile in Britain than Spain, French trams half as much as British ones. Proposes formula-based devolution of transport funding to metro mayors — giving them fiscal incentives to control costs rather than competitive bidding for national grants.</div>
+          </div>
+
+          <div class="pub-card inst-cbp">
+            <a href="https://britishprogress.org/reports/fixing-uk-defence-procurement" class="pub-title" target="_blank" rel="noopener">Fixing UK Defence Procurement</a>
+            <div class="pub-meta">December 2025</div>
+            <div class="pub-summary">Identifies four systemic defence procurement failures: scope creep and over-specification; inter-service rivalry causing excess decision-making layers; feast-and-famine ordering patterns hollowing out industrial capacity; and cycles too slow for software-driven AI-enabled capabilities.</div>
+          </div>
+        </div>
+
+      </div><!-- /pub-library -->
+
+      <p style="font-family:'Inter',sans-serif; font-size:13px; color:var(--muted); margin-top:1.5rem; font-style:italic;">Total: 101 publications. Compiled March 2026. Blueprint for a Better Britain is an independent policy initiative focused on institutional reform and government delivery. This paper is intended as a reference document for policymakers, officials, select committee staff, and researchers working on UK state capacity.</p>
+
+      <!-- Share bar -->
+      <div class="share-bar">
+        <span>Share:</span>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbritblueprint.com%2Fpapers%2Fdelivery-research%2F&text=Why+Nothing+Gets+Done+%E2%80%94+101+publications+from+8+institutions+on+UK+government+delivery" target="_blank" rel="noopener">Twitter / X</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbritblueprint.com%2Fpapers%2Fdelivery-research%2F" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://britblueprint.com/papers/delivery-research/">britblueprint.com/papers/delivery-research/</a>
+      </div>
+
+    </div><!-- /body -->
+  </main>
+</div><!-- /page-wrapper -->
+
+<div class="footer">
+  <a href="../../">Blueprint for a Better Britain</a> · Independent policy research · <a href="../../how-we-work/">How We Work</a>
+</div>
+
+<script>
+  // Mobile TOC toggle
+  document.getElementById('toc-mobile-toggle').addEventListener('click', function() {
+    var body = document.getElementById('toc-mobile-body');
+    var icon = document.getElementById('toc-toggle-icon');
+    body.classList.toggle('visible');
+    icon.classList.toggle('open');
+  });
+
+  // Active TOC highlighting on scroll
+  var headings = document.querySelectorAll('[id]');
+  var tocLinks = document.querySelectorAll('.toc-sidebar a[href^="#"]');
+
+  function updateActiveToc() {
+    var scrollPos = window.scrollY + 120;
+    var current = '';
+    headings.forEach(function(h) {
+      if (h.offsetTop <= scrollPos) {
+        current = h.id;
+      }
+    });
+    tocLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+</script>
+</body>
+</html>

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QC82MM7JZJ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-QC82MM7JZJ");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Dashboard — Blueprint for a Better Britain</title>
+<meta name="description" content="Eight metrics. Updated on release dates. The accountability layer. Blueprint tracks government delivery failures against targets and benchmarks.">
+<meta property="og:title" content="The Dashboard — Blueprint for a Better Britain">
+<meta property="og:description" content="Eight metrics. Updated on release dates. The accountability layer.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://britblueprint.com/dashboard/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0F0F1A;
+    --surface: #161625;
+    --border: #1E1E35;
+    --blue: #2563EB;
+    --blue-light: #60A5FA;
+    --text: #E2E8F0;
+    --muted: #8090A0;
+    --faint: #4A5568;
+    --green: #10B981;
+    --red: #EF4444;
+    --amber: #F59E0B;
+    --green-dim: rgba(16,185,129,0.1);
+    --red-dim: rgba(239,68,68,0.1);
+    --amber-dim: rgba(245,158,11,0.1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+  }
+  .header .logo {
+    color: var(--blue);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.01em;
+  }
+  .header .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .header .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.15s;
+  }
+  .header .nav-links a:hover { color: var(--text); }
+
+  /* ── PAGE WRAPPER ── */
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+  }
+
+  /* ── PAGE HEADER ── */
+  .page-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .page-label::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--muted);
+  }
+
+  .page-title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-subtitle {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+
+  .page-meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--faint);
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── SUMMARY BAR ── */
+  .summary-bar {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0;
+    margin-bottom: 2.5rem;
+    overflow: hidden;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .summary-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    gap: 4px;
+    border-right: 1px solid var(--border);
+    transition: background 0.15s;
+  }
+  .summary-item:last-child { border-right: none; }
+
+  .summary-count {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  .summary-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .summary-item.red .summary-count { color: var(--red); }
+  .summary-item.amber .summary-count { color: var(--amber); }
+  .summary-item.green .summary-count { color: var(--green); }
+
+  /* ── GRID ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+  }
+
+  /* ── METRIC CARD ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow: hidden;
+    transition: border-color 0.15s;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 6px 0 0 6px;
+  }
+
+  .card.deteriorating::before { background: var(--red); }
+  .card.static::before { background: var(--amber); }
+  .card.improving::before { background: var(--green); }
+
+  .card:hover { border-color: var(--faint); }
+
+  /* Card header */
+  .card-name {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+  }
+
+  /* Current value */
+  .card-value {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    font-variant-numeric: tabular-nums lining-nums;
+    margin-bottom: 0.25rem;
+  }
+
+  .card.deteriorating .card-value { color: var(--red); }
+  .card.static .card-value { color: var(--amber); }
+  .card.improving .card-value { color: var(--green); }
+
+  .card-value-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--muted);
+    margin-bottom: 0.85rem;
+  }
+
+  /* Benchmark */
+  .card-benchmark {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 0.85rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+  }
+
+  .card-benchmark strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* Trend */
+  .card-trend {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .card.deteriorating .card-trend { color: var(--red); }
+  .card.static .card-trend { color: var(--amber); }
+  .card.improving .card-trend { color: var(--green); }
+
+  .trend-arrow {
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .trend-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 2px;
+  }
+
+  /* Footer meta */
+  .card-footer {
+    margin-top: auto;
+    padding-top: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .card-updated {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--faint);
+  }
+
+  .card-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .card-links a {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    color: var(--blue-light);
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    transition: color 0.15s;
+  }
+  .card-links a:hover { color: var(--text); }
+  .card-links a::after { content: '↗'; font-size: 9px; opacity: 0.7; }
+
+  /* ── HOW THIS WORKS ── */
+  .methodology {
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.75rem 2rem;
+    background: var(--surface);
+    margin-bottom: 3rem;
+  }
+
+  .methodology-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .methodology p {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 720px;
+  }
+
+  .methodology a {
+    color: var(--blue-light);
+    text-decoration: none;
+  }
+  .methodology a:hover { text-decoration: underline; }
+
+  /* ── FOOTER ── */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    font-family: 'Inter', sans-serif;
+  }
+  .footer a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    .page { padding: 2rem 1rem 4rem; }
+    .grid { grid-template-columns: 1fr; gap: 1rem; }
+    .header { padding: 1rem; }
+    .header .nav-links { gap: 1rem; }
+    .header .nav-links a { font-size: 0.8rem; }
+    .summary-bar { flex-wrap: wrap; }
+    .summary-item {
+      flex: 1 1 40%;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .summary-item:last-child { border-bottom: none; }
+    .card-value { font-size: 1.9rem; }
+    .methodology { padding: 1.25rem; }
+  }
+
+  @media (max-width: 480px) {
+    .header .nav-links { gap: 0.75rem; }
+    .header .nav-links a { font-size: 0.75rem; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <a href="../" class="logo">Blueprint</a>
+    <div class="nav-links">
+      <a href="../">Home</a>
+      <a href="../blog/">Blog</a>
+      <a href="../papers/">Papers</a>
+      <a href="../how-we-work/">How We Work</a>
+      <a href="../briefing/">Briefing</a>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- PAGE HEADER -->
+    <div class="page-label">Accountability · Blueprint for a Better Britain</div>
+    <h1 class="page-title">The Dashboard</h1>
+    <p class="page-subtitle">Eight metrics. Updated on release dates. The accountability layer.</p>
+    <div class="page-meta">Last updated: April 2026</div>
+
+    <!-- SUMMARY BAR -->
+    <div class="summary-bar">
+      <div class="summary-item red">
+        <span class="summary-count">5</span>
+        <span class="summary-label">Deteriorating</span>
+      </div>
+      <div class="summary-item amber">
+        <span class="summary-count">3</span>
+        <span class="summary-label">Static</span>
+      </div>
+      <div class="summary-item green">
+        <span class="summary-count">0</span>
+        <span class="summary-label">Improving</span>
+      </div>
+      <div class="summary-item" style="flex:2; border-right:none;">
+        <span style="font-family:'Source Serif 4',serif; font-style:italic; font-size:13px; color:var(--muted); font-weight:300; text-align:center; line-height:1.5;">5 of 8 tracked metrics are moving in the wrong direction.<br>None are improving.</span>
+      </div>
+    </div>
+
+    <!-- METRIC GRID -->
+    <div class="grid">
+
+      <!-- 1. National Debt -->
+      <div class="card deteriorating">
+        <div class="card-name">National Debt</div>
+        <div class="card-value">£2,879.5bn</div>
+        <div class="card-value-sub">93.1% of GDP</div>
+        <div class="card-benchmark">
+          Target: <strong>60% of GDP</strong> — OBR sustainable level. Was 35% in 2007.
+        </div>
+        <div class="card-trend">
+          <span class="trend-arrow">↑</span>
+          Deteriorating
+        </div>
+        <div class="trend-detail">Debt has nearly tripled as a share of GDP since 2007</div>
+        <div class="card-footer">
+          <div class="card-updated">Last updated: February 2026</div>
+          <div class="card-links">
+            <a href="https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/february2026" target="_blank" rel="noopener">ONS Public Sector Finances</a>
+            <a href="../papers/" target="_blank" rel="noopener">Gap Tracker — Fiscal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Debt Interest -->
+      <div class="card deteriorating">
+        <div class="card-name">Debt Interest</div>
+        <div class="card-value">£111bn</div>
+        <div class="card-value-sub">per year (2025–26 forecast)</div>
+        <div class="card-benchmark">
+          Benchmark: <strong>£39bn</strong> — 2019–20 actual (pre-COVID)
+        </div>
+        <div class="card-trend">
+          <span class="trend-arrow">↑</span>
+          Deteriorating
+        </div>
+        <div class="trend-detail">Tripled in 5 years — more than the defence budget</div>
+        <div class="card-footer">
+          <div class="card-updated">Last updated: March 2026</div>
+          <div class="card-links">
+            <a href="https://obr.uk/efo/economic-and-fiscal-outlook-march-2026/" target="_blank" rel="noopener">OBR Economic & Fiscal Outlook</a>
+            <a href="../papers/" target="_blank" rel="noopener">Gap Tracker — Fiscal</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Real Wage Growth -->
+      <div class="card static">
+        <div class="card-name">Real Wage Growth</div>
+        <div class="card-value">+3.5%</div>
+        <div class="card-value-sub">total over 14 years (2009–2024)</div>
+        <div class="card-benchmark">
+          Benchmark: <strong>+25–30%</strong> — pre-2008 trend over equivalent period
+        </div>
+        <div class="card-trend">
+          <span class="trend-arrow">→</span>
+          Static
+        </div>
+        <div class="trend-detail">14 years of near-zero real wage growth</div>
+        <div class="card-footer">
+          <div class="card-updated">Last updated: 2024</div>
+          <div class="card-links">
+            <a href="https://ifs.org.uk/publications/living-standards-audit-2024" target="_blank" rel="noopener">IFS Living Standards Audit 2024</a>
+            <a href="../papers/" target="_blank" rel="noopener">Gap Tracker — Growth</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Housing Completions -->
+      <div class="card deteriorating">
+        <div class="card-name">Housing Completions</div>
+        <div class="card-value">~220,000</div>
+        <div class="card-value-sub">net additional dwellings/year (2023–24)</div>
+        <div class="card-benchmark">
+          Target: <strong>300,000/year</strong> — government target since 2017
+        </div>
+        <div class="card-trend">
+          <span class="trend-arrow">↑</span>
+          Deteriorating
+        </div>
+        <div class="trend-detail">Private output −6.3% in 3 months to January 2026</div>
+        <div class="card-footer">
+          <div class="card-updated">Last updated: Oct–Dec 2025</div>
+          <div class="card-links">
+            <a href="https://www.gov.uk/government/statistics/housing-supply-indicators-of-new-supply-england-october-to-december-2025/" target="_blank" rel="noopener">MHCLG Housing Supply Indicators</a>
+            <a href="../papers/" target="_blank" rel="noopener">Gap Tracker — Housing</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Industrial Electricity Price -->
+      <div class="card deteriorating">
+        <div class="card-name">Industrial Electricity Price</div>
+        <div class="card-value">26.63p</div>
+        <div class="card-value-sub">per kWh (UK industrial rate)</div>
+        <div class="card-benchmark">
+          Benchmark: <strong>6.67p/kWh</strong> — US industrial equivalent (IEA)
+        </div>
+        <div class="card-trend">
+          <span class="trend-arrow">↑</span>
+          Deteriorating
+        </div>
+        <div class="trend-detail">UK among the highest in the IEA — 4× the US rate</div>
+        <div class="card-footer">
+          <div class="card-updated">Last updated: 2025</div>
+          <div class="card-links">
+            <a href="https://www.iea.org/data-and-statistics/data-tools/energy-prices-data-explorer" target="_blank" rel="noopener">IEA Energy Prices Data Explorer</a>
+            <a href="../papers/" target="_blank" rel="noopener">Energy Growth Drag paper</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. Major Project Delivery -->
+      <div class="card static">
+        <div class="card-name">Major Project Delivery</div>
+        <div class="card-value">11%</div>
+        <div class="card-value-sub">rated Green / on track by IPA/NISTA</div>
+        <div class="card-benchmark">
+          Target: <strong>100%</strong> — by definition, projects should deliver as planned
+        </div>
+        <div class="card-trend">
+          <span class="trend-arrow">→</span>
+          Static
+        </div>
+        <div class="trend-detail">IFG: portfolio health "plateaued for four years"</div>
+        <div class="card-footer">
+          <div class="card-updated">Last updated: 2024</div>
+          <div class="card-links">
+            <a href="https://www.gov.uk/government/publications/infrastructure-and-projects-authority-annual-report-2024" target="_blank" rel="noopener">IPA/NISTA Annual Report 2024</a>
+            <a href="../papers/" target="_blank" rel="noopener">Gap Tracker — Delivery</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. NHS 18-Week Target -->
+      <div class="card deteriorating">
+        <div class="card-name">NHS 18-Week Target</div>
+        <div class="card-value">55.4%</div>
+        <div class="card-value-sub">compliance (February 2026)</div>
+        <div class="card-benchmark">
+          Target: <strong>92%</strong> — NHS constitutional standard (set 2008). Waiting list: 7.5m.
+        </div>
+        <div class="card-trend">
+          <span class="trend-arrow">↑</span>
+          Deteriorating
+        </div>
+        <div class="trend-detail">Target last met in 2016 — 37 percentage points off standard</div>
+        <div class="card-footer">
+          <div class="card-updated">Last updated: February 2026</div>
+          <div class="card-links">
+            <a href="https://www.england.nhs.uk/statistics/statistical-work-areas/rtt-waiting-times/" target="_blank" rel="noopener">NHS England RTT Statistics</a>
+            <a href="../papers/" target="_blank" rel="noopener">Gap Tracker — Delivery</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 8. Digital Government -->
+      <div class="card static">
+        <div class="card-name">Digital Government</div>
+        <div class="card-value">~12</div>
+        <div class="card-value-sub">end-to-end digital services (UK)</div>
+        <div class="card-benchmark">
+          Benchmark: <strong>99% (Estonia)</strong>, <strong>94% (Denmark)</strong> — services fully digital
+        </div>
+        <div class="card-trend">
+          <span class="trend-arrow">→</span>
+          Static
+        </div>
+        <div class="trend-detail">GDS capability eroded since 2016 peak</div>
+        <div class="card-footer">
+          <div class="card-updated">Last updated: 2024</div>
+          <div class="card-links">
+            <a href="https://www.nao.org.uk/reports/digital-transformation-in-government-addressing-the-barriers-to-efficiency/" target="_blank" rel="noopener">NAO Digital Transformation Report</a>
+            <a href="../papers/" target="_blank" rel="noopener">Intelligent State paper</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /grid -->
+
+    <!-- HOW THIS WORKS -->
+    <div class="methodology">
+      <div class="methodology-label">How this works</div>
+      <p>Blueprint tracks eight metrics from primary government sources. Data is updated on release dates. Each metric links to the relevant section of our companion papers. If you spot an error or have a challenge to any figure, <a href="../briefing/">contact us</a>.</p>
+    </div>
+
+  </div><!-- /page -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <a href="../">Blueprint for a Better Britain</a> · <a href="https://x.com/BritBlueprint">@BritBlueprint</a> · Inaction has a price tag. We calculated it.
+    <br><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+  </div>
+
+</body>
+</html>
